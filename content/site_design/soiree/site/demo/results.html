@@ -1,0 +1,316 @@
+<html>
+    <head>
+        <title>Soiree: Search Results</title>
+		<!--    iPhone browser meta instructions    -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0; minimum-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="shortcut icon" href="images/favicon.png" />
+        
+        <!--    load the stylesheet    -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8rc3.custom.css" media="screen" />
+
+        <!--   required JS files    -->
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAJTL-xagleUQU5gMhgeOoexS7e4m22MgXGQe4c_91Mcqre2ldthRl4xGNveFFuq6mRgM15KoJ_Sjmrw"></script>
+        <script type="text/javascript" src="javascript/soiree.js"></script>
+
+    </head>
+     <script type="text/javascript">
+     	google.load("jquery", "1.4.2");
+     	google.load("jqueryui", "1.7.2");
+     	
+	</script> 
+    
+    <body>
+		<div id="soireeMain">
+    		<div id="header"></div>
+    		<div id="soireeContent">
+    				<div id="soireeSummary"></div>
+    			<div id="searchResults">
+    				<div id="searchResultsHeader">
+    					<div class="searchTerm">
+    						"French"
+    						<span class="searchTermSmall">is tagged on</span>
+    						53 Recipes
+    					</div>
+    					<div class="searchMeta">
+    					 	Results: 1 - 10 of 53  
+    					</div>
+    					<div class="clear"></div>
+    				</div>
+    				<div class="searchResultsElem">
+    					<div class="searchResultsImgWrapper">
+    						<img src="images/food/beef_bourguignon.jpg" />
+    						<div class="addRecipeBtn" id="BeefBourguignon">
+    								<a href="#" class="soireeBTN" onClick="soiree.addRecipe('Beef Bourguignon', 'BeefBourguignon')">+ Add Dish</a>
+    							</div>
+    					</div>
+    					<div class="searchResultsMeta">
+    						<div class="serpHeader">
+    						 	<div class="fl">
+    						 			<a href="recipeDetails.html">Beef Bourguignon</a>
+    						 	</div>
+    						 	<div class="recipeRating stars4">    						 	
+    						 	</div>
+    						 	<div class="clear"></div>
+    						</div>
+    						<div class="serpDesc">
+    						 	This is a well known traditional French recipe. It is a stew prepared with beef braised in Burgundy, beef broth, onions, garlic, and mushrooms.
+
+    						</div>
+    						<div class="serpMeta">
+    							<div class="fl">
+	    							<span class="key">Tags:</span>
+	    							<span class="keyLinks">
+	    								<a href="#">French</a>
+	    								<a href="#">Beef</a>
+	    								<a href="#">Bacon</a>
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Difficulty:</span>
+	    							<span class="keyLinks">
+	    								Hard
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Cook Time:</span>
+	    							<span class="keyLinks">
+	    								1.5hours
+	    							</span>
+    							</div>
+    							
+    							<div class="clear"></div>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				  <div class="searchResultsElem">
+    					<div class="searchResultsImgWrapper">
+    						<img src="images/food/creme_brulee.jpg" />
+    						<div class="addRecipeBtn" id="CremeBrulee">
+    								<a href="#" class="soireeBTN" onClick="soiree.addRecipe('Creme Brulee', 'CremeBrulee')">+ Add Dish</a>
+    							</div>
+    					</div>
+                        <div class="searchResultsMeta">
+    						<div class="serpHeader">
+    						 	<div class="fl">
+    						 			<a href="recipeDetails.html">Creme Brulee</a>
+    						 	</div>
+    						 	<div class="recipeRating stars4">    						 	
+    						 	</div>
+                                <div class="searchResultsWarning">Missing Equpiment: You do not have a torch.&nbsp;&nbsp; (<a href="#" style="font-size:10px">Incorrect?</a>)
+                                </div>
+    						 	<div class="clear"></div>
+    						</div>
+    						<div class="serpDesc">
+    						 	Creme brulee, French for burnt cream, is a custard dessert topped with a layer of burnt suger. It is served cold and traditionally flavored with vanilla.
+    						</div>
+    						<div class="serpMeta">
+    							<div class="fl">
+	    							<span class="key">Tags:</span>
+	    							<span class="keyLinks">
+	    								<a href="#">French</a>
+	    								<a href="#">Cream</a>
+	    								<a href="#">Dessert</a>
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Difficulty:</span>
+	    							<span class="keyLinks">
+	    								Medium
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Cook Time:</span>
+	    							<span class="keyLinks">
+	    								1 hour
+	    							</span>
+    							</div>
+    							
+    							<div class="clear"></div>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				<div class="searchResultsElem">
+    					<div class="searchResultsImgWrapper">
+    						<img src="images/food/food8.jpg" />
+    						<div class="addRecipeBtn" id="PotatoPave">
+    								<a href="#" class="soireeBTN" onClick="soiree.addRecipe('Potato Pave', 'PotatoPave')">+ Add Dish</a>
+    							</div>
+    					</div>
+    					<div class="searchResultsMeta">
+    						<div class="serpHeader">
+    						 	<div class="fl">
+    						 			<a href="recipeDetails.html">Potato Pave</a>
+    						 	</div>
+    						 	<div class="recipeRating stars5">    						 	
+    						 	</div>
+    						 	<div class="clear"></div>
+    						</div>
+    						<div class="serpDesc">
+    							A refined version of scalloped potatoes, potatoes pave is an unforgettable French dish.
+    						</div>
+    						<div class="serpMeta">
+    							<div class="fl">
+	    							<span class="key">Tags:</span>
+	    							<span class="keyLinks">
+	    								<a href="#">Butter</a>
+	    								<a href="#">Cream</a>
+	    								<a href="#">French</a>
+	    								<a href="#">Potato</a>
+	    								<a href="#">Thyme</a>
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Difficulty:</span>
+	    							<span class="keyLinks">
+	    								Easy
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Cook Time:</span>
+	    							<span class="keyLinks">
+	    								60 minutes
+	    							</span>
+    							</div>
+    							
+    							<div class="clear"></div>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				
+    				
+    				
+    				<div class="searchResultsElem">
+    					<div class="searchResultsImgWrapper">
+    						<img src="images/food/food10.jpg" />
+    						<div class="addRecipeBtn" id="addRecipeLink1">
+    								<a href="#" class="soireeBTN" onClick="soiree.addRecipe('French Onion Soup', 'addRecipeLink1')">+ Add Dish</a>
+    							</div>
+    					</div>
+    					<div class="searchResultsMeta">
+    						<div class="serpHeader">
+    						 	<div class="fl">
+    						 			<a href="recipeDetails.html">French Onion Soup</a>
+    						 	</div>
+    						 	<div class="recipeRating stars3">    						 	
+    						 	</div>
+    						 	<div class="clear"></div>
+    						</div>
+    						<div class="serpDesc">
+    						 	A delicious soup made from beef stock, onion and cheese.  This traditional soup will be sure to warm you up.
+    						</div>
+    						<div class="serpMeta">
+    							<div class="fl">
+	    							<span class="key">Tags:</span>
+	    							<span class="keyLinks">
+	    								<a href="#">Caramelize</a>
+	    								<a href="#">French</a>
+	    								<a href="#">Garlic</a>
+	    								<a href="#">Thyme</a>
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Difficulty:</span>
+	    							<span class="keyLinks">
+	    								Medium
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Cook Time:</span>
+	    							<span class="keyLinks">
+	    								25 minutes
+	    							</span>
+    							</div>
+    							
+    							<div class="clear"></div>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				
+    				
+    				<div class="searchResultsElem">
+    					<div class="searchResultsImgWrapper">
+    						<img src="images/food/cassoulet.jpg" />
+    						<div class="addRecipeBtn" id="Cassoulet">
+    								<a href="#" class="soireeBTN" onClick="soiree.addRecipe('Cassoulet', 'Cassoulet')">+ Add Dish</a>
+    							</div>
+    					</div>
+    					<div class="searchResultsMeta">
+    						<div class="serpHeader">
+    						 	<div class="fl">
+    						 			<a href="recipeDetails.html">Cassoulet</a>
+    						 	</div>
+    						 	<div class="recipeRating stars3">    						 	
+    						 	</div>
+    						 	<div class="clear"></div>
+    						</div>
+    						<div class="serpDesc">
+    						 	Cassoulet is a rich combination of beans baked with meats, as much a part of Southwestern France as Boston baked beans are of New England
+    						</div>
+    						<div class="serpMeta">
+    							<div class="fl">
+	    							<span class="key">Tags:</span>
+	    							<span class="keyLinks">
+	    								<a href="#">Duck</a>
+	    								<a href="#">French</a>
+	    								<a href="#">Plum</a>
+	    								<a href="#">Veal</a>
+	    								<a href="#">Chop</a>
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Difficulty:</span>
+	    							<span class="keyLinks">
+	    								Medium
+	    							</span>
+	    							&nbsp;|&nbsp;
+	    							<span class="key">Cook Time:</span>
+	    							<span class="keyLinks">
+	    								2 hours
+	    							</span>
+    							</div>
+    							
+    							<div class="clear"></div>
+    						</div>
+    					</div>
+                        </div>
+                        
+                   
+    		</div>
+    		<div class="pagination">
+				<ul>
+					<li class="selected">1</li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+				
+					<li class="dots">...</li>			
+
+					<li><a href="#">10</a></li>
+		
+					
+				</ul>
+				<div class="clear"></div>		
+				</div>
+
+    				
+    			</div>	
+    			<div class="clear"></div>
+    		
+	    	<div id="footer"></div>
+	    	<div class="clear"></div>
+    	</div>
+    </body>
+    
+    <script type="text/javascript">
+     
+		var soiree = new soiree();	 	
+		soiree.loadHeader(1);
+		soiree.loadFooter();
+		soiree.loadSummary('addDishes', 'step1');
+
+    </script>
+ </html>

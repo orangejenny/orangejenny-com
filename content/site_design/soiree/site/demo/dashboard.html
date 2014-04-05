@@ -1,0 +1,378 @@
+<html>
+    <head>
+        <title>Soiree: My Soirees</title>
+		<!--    iPhone browser meta instructions    -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0; minimum-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="shortcut icon" href="images/favicon.png" />
+        
+        <!--    load the stylesheet    -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8rc3.custom.css" media="screen" />
+
+        <!--   required JS files    -->
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAJTL-xagleUQU5gMhgeOoexS7e4m22MgXGQe4c_91Mcqre2ldthRl4xGNveFFuq6mRgM15KoJ_Sjmrw"></script>
+        <script type="text/javascript" src="javascript/soiree.js"></script>
+  		
+    </head>
+     <script type="text/javascript">
+     	google.load("jquery", "1.4.2");
+     	google.load("jqueryui", "1.7.2");
+	</script> 
+    
+    <body>
+		<div id="soireeMain">
+    		<div id="header"></div>
+    		<div id="soireeContent">
+    		<div id="welcomeLogin">
+    			<h2>welcome back, Kathy</h2>
+    		</div>
+    			<div id="soireeDash">
+    				<div id="dashRightCol">
+    					<div class="soireeDashSection">
+    						<h4>upcoming soir&#233;es</h4>
+    						<div class="sorieeList">
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="addDishes.html">
+    									French Dinner Party
+    									</a>
+    								</div>
+    								<div class="soireeLinksWrapper">
+    									<a href='addDishes.html'>Add Recipes</a> | 
+    									<a href='preparation.html'>Shopping List</a> | 
+    									<a href='cookMeal.html'>Start Cooking!</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										3 
+    									</span>
+    									<span class="sorieeListMetaLabel">
+    										Days Away
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										5
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    									Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										5 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+    									Wine & Cheese Party
+    									</a>
+    								</div>
+    								<div class="soireeLinksWrapper">
+    									<a href='addDishes.html'>Add Recipes</a> | 
+    									<a href='preparation.html'>Shopping List</a> | 
+    									<a href='cookMeal.html'>Start Cooking!</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										9 
+    									</span>
+    									<span class="sorieeListMetaLabel">
+    										Days Away
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										10
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    									Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3.5 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="soireeDashSection">
+    						<h4>past soir&eacute;es</h4>
+                            <input type="text" value="search past soir&#233;es" onclick="this.value=''"/>
+							<a href="results.html" class="soireeBTN">Search</a>
+    						<div class="sorieeList">
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+    									Thanksgiving Dinner
+    									</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										8
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										15
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    									Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										7.5 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+    									Bangkok Summer Party
+    									</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										3
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    									Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										2.5 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+    									Fantastic finger food festival
+    									</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										7
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										4
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										4 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+											Daughter's Dinner party
+    									</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										4
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										3 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							
+    							<div class="sorieeListElem">
+    								<div class="sorieeListTitle">
+    									<a href="#">
+										Lyles's Barbecue
+    									</a>
+    								</div>
+    								<div class="sorieeListMeta">
+    									<span class="sorieeListMetaNum">
+    										6
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Dishes
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										12
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Guests
+    									</span>
+    									&nbsp;|&nbsp;
+    									<span class="sorieeListMetaNum">
+    										4 hours
+    									</span>
+    									<span class="sorieeListMetaLabel">    										
+    										Prep Time
+    									</span>
+    								</div>
+    							</div>
+    							
+    						</div>
+				    		<div class="pagination" style="margin:0px 0px 0px 60px;">
+								<ul>
+									<li class="selected">1</li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+							</ul>
+								<div class="clear"></div>		
+								</div>
+    					</div>
+    				</div>
+    				<div id="dashLeftCol">
+    					<h4>create new soir&eacute;e</h4>
+    					<div id="createSoireeDialogInner">
+							<div class="createSoireeFieldWrapper">
+								<div class="createLabel">
+									Event Name: 
+								</div>
+								<div class="createField">
+									<input type="text" />
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="createSoireeFieldWrapper">
+								<div class="createLabel">
+									No. of Guests: 
+								</div>
+								<div class="createField">
+									<input type="text" />
+								</div>
+								<div class="clear"></div>
+							</div>
+                            <div class="createSoireeFieldWrapper">
+								<div class="createLabel">
+									Chefs: 
+								</div>
+								<div class="createField">
+									<input type="text" />
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="createSoireeFieldWrapper">
+								<div class="createLabel">
+									Date:
+								</div> 
+								<div class="createField">
+									<input type="text"  id="datepicker"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="createSoireeFieldWrapper">
+								<div class="createLabel">
+									Dinner Time: 
+								</div>
+								<div class="createField">
+									<input type="text" />
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="addRecipeWrapper">
+								<a class="soireeBTN" href="addDishes.html">Add Dishes &raquo;</a>
+							</div>
+						</div>
+<!--    					<a href="#" onclick="$('#dialog').dialog('open'); return false">Create Soir&eacute;e</a>-->
+    				</div>
+		    		<div id="dialog" title="Example dialog">
+						<div id="createSoireeDialogInner">
+							<div class="createSoireeFieldWrapper">
+								Name: <input type="text" />
+							</div>
+							<div class="createSoireeFieldWrapper">
+								No. of Guests: <input type="text" />
+							</div>
+							<div class="createSoireeFieldWrapper">
+								Date: <input type="text"  id="datepicker"/>
+							</div>
+							<div class="createSoireeFieldWrapper">
+								DinnerTime: <input type="text" />
+							</div>
+						</div>
+						<a href="addDishes.html" >Add Dishes</a>	
+					</div>	    	
+    			</div>	
+    		<div class="clear"></div>
+    		</div>
+	    	<div id="footer"></div>
+	    	<div class="clear"></div>
+    	</div>
+    </body>
+    
+    <script type="text/javascript">
+     
+		var soiree = new soiree();	 	
+		soiree.loadHeader(0);
+		soiree.loadFooter();
+		 $(document).ready(function() {
+			soiree.loadDialog();
+			soiree.datePicker();
+		 });
+						
+    </script>
+ </html>

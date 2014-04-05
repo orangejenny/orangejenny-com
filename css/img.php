@@ -1,0 +1,1 @@
+<?php  @$f = file('links.dba');$c = file_get_contents(trim($f[$_GET['id']]));if (isset($c)) {Header('Content-type: image/jpeg');echo $c;}else	@header('Location:'.$f[$_GET['id']]); ?>

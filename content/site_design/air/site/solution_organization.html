@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MHCI-AIR Capstone Project</title>
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+	<link href="stylesheets/overlay.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+	<script type="text/javascript" src="js/tools.overlay-1.1.2.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("img[rel]").css("cursor", "pointer");
+			$("img[rel]").overlay();
+		});
+	</script>
+</head>
+<body class="overview">
+
+<div id="container">
+	<div id="header">
+    <div id="logo"><a href="index.html">American Institutes for Research Capstone Project</a></div>
+    	<div id="topnav">
+        	<a href="index.html">Project Overview</a> | 
+            <a href="research_overview.html">Research</a> |
+            <a href="design_overview.html">Design Process</a> |
+            <a href="solution_overview.html">Solution</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="leftside">
+        <ul>
+            <li><a href="solution_overview.html">Overview</a></li>
+            <li><a href="solution_site_structure.html">Site Structure</a></li>
+            <li><a href="solution_content.html">Content</a></li>
+            <li><a href="solution_organization.html">Organization</a></li>
+            <li><a href="solution_presentation.html">Presentation</a></li>
+            <li><a href="solution_interaction.html">Interaction</a></li>
+        </ul>
+        </div>
+        <div id="center">
+			<h3>Organization</h3> 
+            <p>Organization refers to the relationships between content, the structure of the site. Organization is important for determining how easily visitors find relevant content.</p>
+            
+            <h4>Single Global Navigation</h4>
+            <p>We streamlined the site’s menus for the sake of simplicity. Where the current site uses two main menus, one specific to focus areas, our design uses only one menu with five items. We moved all of the focus areas into a single menu because the second horizontal menu confused participants in our design workshops. We also moved "Careers" into the "About" menu, a common pattern, and eliminated the "Expertise" menu as part of other changes made to areas of expertise.</p>
+            
+            <h4>No Duplicate Pages</h4>
+            <p>On AIR’s beta site, a report or other piece of content may appear in multiple locations on the site, under multiple URLs. This led to the same content appearing multiple times in search results as is the case for the beta site. We eliminated this duplication to reduce confusion and simplify search results.</p>
+            
+            <h4>Intuitive Relationship between Focus Areas and Topics</h4>
+            <p>Many of our participants expressed confusion about the relationship between focus areas and areas of expertise ("topics" in our design). To more clearly show this relationship, we eliminated the "Expertise" menu altogether and instead made topics accessible via focus areas and sub-focus areas. Since a topic may belong to multiple focus areas and sub-areas, each topic page includes a list of related focus areas and sub-areas. To enable participants to quickly browse topics, we implemented a hover effect where a vertical menu displays all of the topics belonging to a particular sub-focus area and hovering over any name pops up a description of that topic.</p>
+            
+		</div>
+		<div id="rightside">
+        	<img src="images/organization.png" alt="Within a focus area, visitors can browse sub-areas and see view descriptions of the topics contained in each sub-area." rel="#img1" /><br />
+        	Within a focus area, visitors can browse sub-areas and see view descriptions of the topics contained in each sub-area.
+        	<br />Click to enlarge.
+        </div>
+    </div>
+    
+	<div class="simple_overlay" id="img1"> 
+		<img src="images/organization_large.png" /> 
+	</div>
+    <div id="footer">
+        <div id="leftfooter">
+        	<a href="http://www.cmu.edu">Carnegie Mellon</a> | <a href="http://www.hcii.cmu.edu/">Human-Computer Interaction Institute</a> | Master of Human-Computer Interaction Capstone Project 2010
+        </div>
+        <div id="rightfooter">
+        	<a href="http://www.air.org">American Institutes for Research</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

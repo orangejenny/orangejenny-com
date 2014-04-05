@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>Soiree: Shopping List</title>
+		<!--    iPhone browser meta instructions    -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0; minimum-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="shortcut icon" href="images/favicon.png" />
+        
+        <!--    load the stylesheet    -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8rc3.custom.css" media="screen" />
+
+        <!--   required JS files    -->
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAJTL-xagleUQU5gMhgeOoexS7e4m22MgXGQe4c_91Mcqre2ldthRl4xGNveFFuq6mRgM15KoJ_Sjmrw"></script>
+        <script type="text/javascript" src="javascript/soiree.js"></script>
+
+    </head>
+     <script type="text/javascript">
+     	google.load("jquery", "1.4.2");
+     	google.load("jqueryui", "1.7.2");
+	</script> 
+    
+    <body>
+		<div id="soireeMain">
+    		<div id="header"></div>
+    		<div id="soireeContent">
+    					<div id="soireeSummary"></div>
+    			<div id="preparation">
+    			<div id="shoppingListOptions" style="float:right;">
+							<div class="shoppingButtonWrapper">
+								<a class="soireeBTN" href="#">Print List</a> <a class="soireeBTN" href="#">Mobile List</a>
+							</div>
+							<br />
+							<div style="font-style:italic;font-size:11px;color:#a1a1a1;">
+								items you likely have on hand are marked in grey
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					<div id="shoppingList">
+						
+						<div id="shoppingListInner">
+							<table>
+								<tr>
+									<td class="prepHeader">
+										Produce
+									</td>
+									<td class="prepHeader">
+										Canned Goods
+									</td>
+									<td class="prepHeader">
+										Pantry
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table>
+											<tr><td class="dot">carrots</td><td class="measurement">3/4 lb</td></tr>
+											<tr><td class="dot">garlic</td><td class="measurement">20 cloves</td></tr>
+											<tr><td class="dot">mushrooms</td><td class="measurement">1 1/4 lb</td></tr>
+											<tr><td class="dot">onions, boiling</td><td class="measurement">1 1/4 lb</td></tr>
+											<tr><td class="dot">onions, yellow, small</td><td class="measurement">2</td></tr>
+											<tr><td class="dot">onions, red or yellow, large</td><td class="measurement">6</td></tr>
+											<tr><td class="dot">potatoes, russet</td><td class="measurement">3 lb</td></tr>
+											<tr><td class="dot">tomatoes, plum</td><td class="measurement">2</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot">tomato paste</td><td class="measurement">1 tbl +<br />1/2 tsp</td></tr>
+											<tr><td class="dot">white beans</td><td class="measurement">1 lb</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot grey">canola oil</td><td class="measurement grey"></td></tr>
+											<tr><td class="dot grey">flour</td><td class="measurement grey">1/3 cup</td></tr>
+											<tr><td class="dot grey">olive oil</td><td class="measurement grey"></td></tr>
+											<tr><td class="dot grey">sugar, dark brown</td><td class="measurement grey">1 tbl</td></tr>
+											<tr><td class="dot">sugar, white</td><td class="measurement grey">1/4 tsp</td></tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="prepHeader">Spices</td>
+									<td class="prepHeader">Dairy</td>
+									<td class="prepHeader">Meat</td>
+								</tr>
+								<tr>
+									<td>
+										<table>
+											<tr><td class="dot">bay leaves</td><td class="measurement">2</td></tr>
+											<tr><td class="dot">chives</td><td class="measurement"></td></tr>
+											<tr><td class="dot">parsley</td><td class="measurement">1 tbl</td></tr>
+											<tr><td class="dot grey">pepper, black</td><td class="measurement grey"></td></tr>
+											<tr><td class="dot grey">salt</td><td class="measurement grey"></td></tr>
+											<tr><td class="dot">sage</td><td class="measurement">1 tsp</td></tr>
+											<tr><td class="dot grey">thyme, dry</td><td class="measurement grey">1/4 tsp</td></tr>
+											<tr><td class="dot">thyme, fresh</td><td class="measurement">5-6 sprigs +<br />1 1/2 tsp +<br />1/3 cup</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot grey">butter</td><td class="measurement grey">10 tbl</td></tr>
+											<tr><td class="dot">cream, heavy</td><td class="measurement">1 cup</td></tr>
+											<tr><td class="dot">Parmesan cheese, grated</td><td class="measurement"></td></tr>
+											<tr><td class="dot">Swiss Gruyere, grated</td><td class="measurement">1 1/2 cups</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot">bacon</td><td class="measurement">8 oz</td></tr>
+											<tr><td class="dot">chuck roast, 7-bone</td><td class="measurement"></td></tr>
+											<tr><td class="dot">duck, whole</td><td class="measurement">6 lb</td></tr>
+											<tr><td class="dot">duck fat</td><td class="measurement">4 1/2 tbl</td></tr>
+											<tr><td class="dot">pork belly</td><td class="measurement">1/2 lb</td></tr>
+											<tr><td class="dot">pork sausage</td><td class="measurement">1/2 lb</td></tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="prepHeader">Bread</td>
+									<td class="prepHeader">Alcohol</td>
+									<td class="prepHeader">Other</td>
+								</tr>
+								<tr>
+									<td>
+										<table>
+											<tr><td class="dot">French bread</td><td class="measurement">8 slices</td></tr>
+											<tr><td class="dot">bread crumbs</td><td class="measurement">1 1/2 cups</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot">cognac or brandy</td><td class="measurement">1/2 cup</td></tr>
+											<tr><td class="dot">red Burgandy wine</td><td class="measurement">1 1/2 L</td></tr>
+											<tr><td class="dot">vermouth or white wine</td><td class="measurement">1/2 cup</td></tr>
+											<tr><td class="dot">white wine</td><td class="measurement">1/4 cup</td></tr>
+										</table>
+									</td>
+									<td>
+										<table>
+											<tr><td class="dot">beef stock</td><td class="measurement">11 cups</td></tr>
+											<tr><td class="dot grey">chicken stock</td><td class="measurement grey">7-8 cups</td></tr>
+											<tr><td class="dot">veal demi glace</td><td class="measurement">1/2 cup</td></tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							
+							
+						</div>
+						<div id="shoppingLoader"></div>
+					</div>
+					<div id="shoppingListOptions">
+						<div class="shoppingButtonWrapper">
+							<a class="soireeBTN" href="#">Print List</a> <a class="soireeBTN" href="#">Mobile List</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+    			</div>	
+    			<div class="clear"></div>
+    		</div>
+	    	<div id="footer"></div>
+	    	<div class="clear"></div>
+    	</div>
+    </body>
+    
+    <script type="text/javascript">
+     
+		var soiree = new soiree();	 	
+		soiree.loadHeader(2);
+		soiree.loadFooter();
+		soiree.loadSummary('addDishes','step2');
+		soiree.convertFractions('#shoppingListInner table td.measurement');
+				
+		$(".dot").each(function() {
+			var newHTML = $(this).html();
+			newHTML = "<input type='checkbox' style='margin-right:8px;display:none;' />" + newHTML;
+			newHTML += " <a href='#' class='ellipsis' style='text-decoration:none;'>[+]</a>";
+			newHTML += "<div class='annForm' style='padding-left:20px;display:none;'>";
+			newHTML += "<textarea wrap='virtual' cols='20' rows='4' style='margin-bottom:5px;'></textarea>";
+			newHTML += "<br />";
+			newHTML += "<a class='soireeBTN cancelBTN' href='#'>Cancel</a> <a class='soireeBTN saveBTN' href='#'>Save</a>";
+			newHTML += "</div>";
+			newHTML += "<div class='annText' style='padding-left:0px;'></div>";
+			$(this).html(newHTML);
+		});
+		
+		$("#shoppingListInner tr:eq(11) td.dot .annText").html("navy or great northern, get extra pound");
+		$(".cancelBTN").click(function() {
+			$(this).parent(".annForm").hide();
+		});
+		$(".saveBTN").click(function() {
+			var text = $(this).parent(".annForm").children(":first").val();
+			$(this).parent(".annForm").nextAll(".annText").html(text);
+			$(this).parent(".annForm").hide();
+		});
+		
+		$(".dot .ellipsis").click(function() {
+			if ($(this).nextAll(".annForm:visible").length == 0) {
+				$(this).nextAll(".annForm").children(":first").val($(this).nextAll(".annText").html());
+				$(this).nextAll(".annText").html("");
+				$(this).nextAll(".annForm").show();
+			}
+		});
+		
+		$(".dot input").click(function() {
+			if ($(this).is(":checked")) {
+				$(this).parent(".dot").css("text-decoration", "line-through");
+				$(this).parent(".dot").css("color", "#a1a1a1");
+			}
+			else {
+				$(this).parent(".dot").css("text-decoration", "none");
+				$(this).parent(".dot").css("color", "");
+			}
+		});
+		
+		$(".dot").hover(function() {
+			$(this).children("input").show();
+			$(this).css("padding-left", "0px");
+			$(this).children("div").css("padding-left", "20px");
+		}, function() {
+			$(this).children("input").hide();
+			$(this).css("padding-left", "20px");
+			$(this).children("div").css("padding-left", "0px");
+		});
+			
+    </script>
+ </html>

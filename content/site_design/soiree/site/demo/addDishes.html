@@ -1,0 +1,837 @@
+<html>
+    <head>
+        <title>Soiree: Add Recipes</title>
+		<!--    iPhone browser meta instructions    -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0; minimum-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="shortcut icon" href="images/favicon.png" />
+        
+        <!--    load the stylesheet    -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8rc3.custom.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        
+
+        <!--   required JS files    -->
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAJTL-xagleUQU5gMhgeOoexS7e4m22MgXGQe4c_91Mcqre2ldthRl4xGNveFFuq6mRgM15KoJ_Sjmrw"></script>
+        <script type="text/javascript" src="javascript/soiree.js"></script>
+
+    </head>
+     <script type="text/javascript">
+     	google.load("jquery", "1.4.2");
+     	google.load("jqueryui", "1.7.2");
+     	
+	</script> 
+    
+    <body>
+		<div id="soireeMain">
+    		<div id="header"></div>
+    		<div id="soireeContent">
+    			<div id="soireeSummary"></div>
+    			<div id="addDishes">
+    				<div id="addDishesTabs">
+	    				<ul>
+							<li><a href="#search">Recipe Search</a></li>
+							<li><a href="#browse">Browse Recipes</a></li>
+							<li><a href="#MyRecipes">My Recipes</a></li>
+							<li><a href="#UploadRecipes">Upload Recipe</a></li>
+						</ul>
+						<div id="search">
+							<div class="ieCenterFix">
+								<div id="recipeSearchBox">
+									<div id="recipeSearchBoxInner">
+									<input type="text" class="searchBox" /> <a class="soireeBTN" href="results.html">Search</a>
+									</div>
+								</div>	
+							</div>
+							<div class="recipeSearchAdvanced advborder">
+							<h4>advanced search</h4>
+								<table>
+									<tr>
+										<td class="tBold">
+											Meal:
+										</td>
+										<td class="tBold">
+											Occasion:
+										</td>
+										<td class="tBold">
+											Difficulty
+										</td>
+									</tr>
+									<tr>
+										<td>
+										<select name="N" id="Course"><option value="">All courses</option>
+											<option value="Appetizers">Appetizers</option>
+											<option value="Beverages">Beverages</option>
+											<option value="Beverages">Beverages, Alcoholic</option>
+											<option value="Beverages">Beverages, Nonalcoholic</option>
+											<option value="Breads">Breads</option>
+											<option value="Breakfast">Breakfast/Brunch</option>
+											<option value="Cakes">Cakes/Frostings</option>
+											<option value="Candy">Candy</option>
+											<option value="Casseroles">Casseroles</option>
+											<option value="Cookies">Cookies</option>
+											<option value="Desserts">Desserts</option>
+											<option value="Dips">Dips/Spreads</option>
+											<option value="Hors">Hors d'Oeuvres</option>
+											<option value="Ice">Ice Cream/Sherbet</option>
+											<option value="Main">Main Dishes</option>
+											<option value="Pies">Pies/Pastries</option>
+											<option value="Puddings">Puddings/Custards</option>
+											<option value="Salad">Salad Dressings</option>
+											<option value="Salads">Salads</option>
+											<option value="Sandwiches">Sandwiches</option>
+											<option value="Sauces">Sauces/Condiments</option>
+											<option value="Side">Side Dishes/Vegetables</option>
+											<option value="Snacks">Snacks</option>
+											<option value="Soups">Soups/Stews</option>
+										</select>
+										</td>
+										<td>
+										<select name="N" id="Occasion"><option value="">All occasions</option>
+											<option value="Autumn">Autumn</option>
+											<option value="Birthdays">Birthdays/Anniversaries</option>
+											<option value="Chinese">Chinese New Year</option>
+											<option value="Christmas">Christmas</option>
+											<option value="Cinco">Cinco de Mayo</option>
+											<option value="Easter">Easter</option>
+											<option value="Father's">Father's Day</option>
+											<option value="Halloween">Halloween</option>
+											<option value="Hanukkah">Hanukkah</option>
+											<option value="July">July 4th</option>
+											<option value="Kwanzaa">Kwanzaa</option>
+											<option value="Labor">Labor Day</option>
+											<option value="Mardi">Mardi Gras</option>
+											<option value="Memorial">Memorial Day</option>
+											<option value="Mother's">Mother's Day</option>
+											<option value="New">New Year's</option>
+											<option value="Passover">Passover</option>
+											<option value="Rosh">Rosh Hashanah</option>
+											<option value="Spring">Spring</option>
+											<option value="Patrick's">St. Patrick's Day</option>
+											<option value="Summer">Summer</option>
+											<option value="Super">Super Bowl</option>
+											<option value="Thanksgiving">Thanksgiving</option>
+											<option value="Valentines">Valentine's Day</option>
+											<option value="Weddings">Weddings</option>
+											<option value="Winter">Winter</option>
+											<option value="Yom">Yom Kippur</option>
+										</select>
+										</td>
+										<td>
+											<select id="difficulty">
+												<option> All Recipes</option>
+												<option> Easy Recipes</option>
+												<option> Moderate Recipes</option>
+												<option> Intermediate Recipes</option>
+												<option> Difficult Recipes</option>
+												<!--option> All Pro</option-->
+											</select>
+										</td>
+									</tr>
+								</table>
+							
+							</div>
+							<div class="recipeSearchAdvanced">
+								<div class="searchSectionHeader"> Cuisine Type</div>
+								<div class="qualify">
+								Restrict to:
+								</div>
+								
+								<ul class="checklist">
+										<li><input type="checkbox" class="chkBox" value="African" name="N"/>African</li>
+										<li><input type="checkbox" class="chkBox" value="American" name="N"/>American</li>
+										<li><input type="checkbox" class="chkBox" value="America" name="N"/>American</li>
+										<li><input type="checkbox" class="chkBox" value="Asian" name="N"/>Asian</li>
+										<li><input type="checkbox" class="chkBox" value="Austrian" name="N"/>Austrian</li>
+										<li><input type="checkbox" class="chkBox" value="Authentic" name="N"/>Authentic</li>
+										<li><input type="checkbox" class="chkBox" value="British" name="N"/>British/ Irish</li>
+										<li><input type="checkbox" class="chkBox" value="Cajun" name="N"/>Cajun/ Creole</li>
+										<li><input type="checkbox" class="chkBox" value="California" name="N"/>California</li>
+										<li><input type="checkbox" class="chkBox" value="Caribbean" name="N"/>Caribbean</li>
+										<li><input type="checkbox" class="chkBox" value="Central" name="N"/>South American</li>
+										<li><input type="checkbox" class="chkBox" value="Chinese" name="N"/>Chinese</li>
+										<li><input type="checkbox" class="chkBox" value="Cuban" name="N"/>Cuban</li>
+										<li><input type="checkbox" class="chkBox" value="Eastern" name="N"/>Eastern European</li>
+										<li><input type="checkbox" class="chkBox" value="French" name="N"/>French</li>
+										<li><input type="checkbox" class="chkBox" value="4294966482" name="N"/>German</li>
+										<li><input type="checkbox" class="chkBox" value="German" name="N"/>Greek</li>
+										<li><input type="checkbox" class="chkBox" value="Hungarian" name="N"/>Hungarian</li>
+										<li><input type="checkbox" class="chkBox" value="Indian" name="N"/>Indian</li>
+										<li><input type="checkbox" class="chkBox" value="Italian" name="N"/>Italian</li>
+										<li><input type="checkbox" class="chkBox" value="Japanese" name="N"/>Japanese</li>
+										<li><input type="checkbox" class="chkBox" value="Jewish" name="N"/>Jewish</li>
+										<li><input type="checkbox" class="chkBox" value="Korean" name="N"/>Korean</li>
+										<li><input type="checkbox" class="chkBox" value="Mediterranean" name="N"/>Mediterranean</li>
+										<li><input type="checkbox" class="chkBox" value="Mexican" name="N"/>Mexican</li>
+										<li><input type="checkbox" class="chkBox" value="Middle" name="N"/>Middle Eastern</li>
+										<li><input type="checkbox" class="chkBox" value="Moroccan" name="N"/>Moroccan</li>
+										<li><input type="checkbox" class="chkBox" value="Native" name="N"/>Native American</li>
+										<li><input type="checkbox" class="chkBox" value="4294967160" name="N"/>New American</li>
+										<li><input type="checkbox" class="chkBox" value="4294966923" name="N"/>New England</li>
+										<li><input type="checkbox" class="chkBox" value="Pacific" name="N"/>Pacific Northwest</li>
+										<li><input type="checkbox" class="chkBox" value="Rim" name="N"/>Pacific Rim</li>
+										<li><input type="checkbox" class="chkBox" value="Scandinavian" name="N"/>Scandinavian</li>
+										<li><input type="checkbox" class="chkBox" value="Southern" name="N"/>Southern</li>
+										<li><input type="checkbox" class="chkBox" value="Southwest" name="N"/>Southwest</li>
+										<li><input type="checkbox" class="chkBox" value="Spanish" name="N"/>Spanish</li>
+										<li><input type="checkbox" class="chkBox" value="Swiss" name="N"/>Swiss</li>
+										<li><input type="checkbox" class="chkBox" value="Thai" name="N"/>Thai</li>
+										<li><input type="checkbox" class="chkBox" value="Vietnamese" name="N"/>Vietnamese</li>
+									</ul>
+								<div class="clear"></div>
+							</div>
+							<div class="recipeSearchAdvanced">
+								<div class="searchSectionHeader">Health Considerations</div>
+		                            <ul>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Dairy-Free</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Diabetic-Friendly</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">High-Fiber</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Low-Calorie</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Low-Carbohydrate</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Low-Fat</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Low-Sodium</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Vegan</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Vegetarian</label></span><br/></li>
+			                            <li><span class="threepxfix"><input type="checkbox" name="" id=""/><label for="">Wheat/Gluten-Free</label></span><br/></li>
+		                            </ul>
+							</div>
+							
+							
+						</div>
+						<div id="browse">
+							<div id="popularDishes">
+			    				<h4>we think you'll like...</h4>
+			    				<div class="clear"></div>
+                                <div class="searchResultsElem">
+                                    <div class="searchResultsImgWrapper">
+                                        <img src="images/food/caprese.jpg" />
+                                        <div class="addRecipeBtn" id="CapreseSalad">
+                                                <a href="#" class="soireeBTN" onClick="soiree.addRecipe('CapreseSalad', 'CapreseSalad')">+ Add Dish</a>
+                                            </div>
+                                    </div>
+                                    <div class="searchResultsMeta">
+                                        <div class="serpHeader">
+                                            <div class="fl">
+                                                    <a href="recipeDetails.html">Caprese Salad</a>
+                                            </div>
+                                            <div class="recipeRating stars4">    						 	
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="serpDesc">
+                                            This is a great appetizer for a casual event. It is a simple yet sophisticated recipe.
+            
+                                        </div>
+                                        <div class="serpMeta">
+                                            <div class="fl">
+                                                <span class="key">Tags:</span>
+                                                <span class="keyLinks">
+                                                    <a href="#">Appetizer</a>
+                                                    <a href="#">Tomato</a>
+                                                    <a href="#">Mozzerella</a>
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Difficulty:</span>
+                                                <span class="keyLinks">
+                                                    Easy
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Cook Time:</span>
+                                                <span class="keyLinks">
+                                                    10 minutes
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="searchResultsElem">
+                                    <div class="searchResultsImgWrapper">
+                                        <img src="images/food/fruit_salad.jpg" />
+                                        <div class="addRecipeBtn" id="FruitSaladwithHoney-LimeDressing">
+                                                <a href="#" class="soireeBTN" onClick="soiree.addRecipe('FruitSaladwithHoney-LimeDressing', 'FruitSaladwithHoney-LimeDressing')">+ Add Dish</a>
+                                            </div>
+                                    </div>
+                                    <div class="searchResultsMeta">
+                                        <div class="serpHeader">
+                                            <div class="fl">
+                                                    <a href="recipeDetails.html">Fruit Salad with Honey-Lime Dressing</a>
+                                            </div>
+                                            <div class="recipeRating stars3">    						 	
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="serpDesc">
+                                            Fruit tarts are a traditional French dessert. This dish is great in the summer when these fruits are in season, but is a nice addition to your meal any season of the year.
+            
+                                        </div>
+                                        <div class="serpMeta">
+                                            <div class="fl">
+                                                <span class="key">Tags:</span>
+                                                <span class="keyLinks">
+                                                    <a href="#">Blueberries</a>
+                                                    <a href="#">Dessert</a>
+                                                    <a href="#">French</a>
+                                                    <a href="#">Kiwi</a>
+                                                    <a href="#">Pineapple</a>
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Difficulty:</span>
+                                                <span class="keyLinks">
+                                                    Medium
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Cook Time:</span>
+                                                <span class="keyLinks">
+                                                    1 hour 30 minutes
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+			 					
+                                <div class="searchResultsElem">
+                                    <div class="searchResultsImgWrapper">
+                                        <img src="images/food/asparagus.jpg" />
+                                        <div class="addRecipeBtn" id="SpicyAsparagus">
+                                                <a href="#" class="soireeBTN" onClick="soiree.addRecipe('SpicyAsparagus', 'SpicyAsparagus')">+ Add Dish</a>
+                                            </div>
+                                    </div>
+                                    <div class="searchResultsMeta">
+                                        <div class="serpHeader">
+                                            <div class="fl">
+                                                    <a href="recipeDetails.html">Spicy Asparagus</a>
+                                            </div>
+                                            <div class="recipeRating stars5">    						 	
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="serpDesc">
+                                            Asparagus provides a lot of great nutritional value. This twist will soon become a family favorite.
+            
+                                        </div>
+                                        <div class="serpMeta">
+                                            <div class="fl">
+                                                <span class="key">Tags:</span>
+                                                <span class="keyLinks">
+                                                    <a href="#">Asparagus</a>
+                                                    <a href="#">Side Dish</a>
+                                                    <a href="#">Spicy</a>
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Difficulty:</span>
+                                                <span class="keyLinks">
+                                                    Medium
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Cook Time:</span>
+                                                <span class="keyLinks">
+                                                    45 minutes
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="searchResultsElem">
+                                    <div class="searchResultsImgWrapper">
+                                        <img src="images/food/tiramisu.jpg" />
+                                        <div class="addRecipeBtn" id="Tiramisu">
+                                                <a href="#" class="soireeBTN" onClick="soiree.addRecipe('Tiramisu', 'Tiramisu')">+ Add Dish</a>
+                                            </div>
+                                    </div>
+                                    <div class="searchResultsMeta">
+                                        <div class="serpHeader">
+                                            <div class="fl">
+                                                    <a href="recipeDetails.html">Tiramisu</a>
+                                            </div>
+                                            <div class="recipeRating stars3">    						 	
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="serpDesc">
+                                            Tiramisu is a traditional Italian cake. It is made with lady finger biscuits and flavored with coffee.
+            
+                                        </div>
+                                        <div class="serpMeta">
+                                            <div class="fl">
+                                                <span class="key">Tags:</span>
+                                                <span class="keyLinks">
+                                                    <a href="#">Cake</a>
+                                                    <a href="#">Coffee</a>
+                                                    <a href="#">Dessert</a>
+                                                    <a href="#">Italian</a>
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Difficulty:</span>
+                                                <span class="keyLinks">
+                                                    Medium
+                                                </span>
+                                                &nbsp;|&nbsp;
+                                                <span class="key">Cook Time:</span>
+                                                <span class="keyLinks">
+                                                    2 hours
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+			 
+			    			</div>
+						</div>
+						<div id="MyRecipes">
+							<h4>my saved recipes</h4>
+							<div class="searchResultsElem">
+                                <div class="searchResultsImgWrapper">
+                                    <img src="images/food/pork_mushroom.jpg" />
+                                    <div class="addRecipeBtn" id="PorkAndMushrooms">
+                                            <a href="#" class="soireeBTN" onClick="soiree.addRecipe('PorkAndMushrooms', 'PorkAndMushrooms')">+ Add Dish</a>
+                                        </div>
+                                </div>
+                                <div class="searchResultsMeta">
+                                    <div class="serpHeader">
+                                        <div class="fl">
+                                                <a href="recipeDetails.html">Pork and Mushrooms</a>
+                                        </div>
+                                        <div class="recipeRating stars4">    						 	
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="serpDesc">
+                                        This recipe came from Auntie Alice. It's a traditional recipe for pork chops and a family favorite.
+        
+                                    </div>
+                                    <div class="serpMeta">
+                                        <div class="fl">
+                                            <span class="key">Tags:</span>
+                                            <span class="keyLinks">
+                                                <a href="#">Dinner</a>
+                                                <a href="#">Entree</a>
+                                                <a href="#">Mushrooms</a>
+                                                <a href="#">Pork</a>
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Difficulty:</span>
+                                            <span class="keyLinks">
+                                                Easy
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Cook Time:</span>
+                                            <span class="keyLinks">
+                                                1 hour
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>     
+                            </div>
+                            
+                            <div class="searchResultsElem">
+                                <div class="searchResultsImgWrapper">
+                                    <img src="images/food/bulgogi.jpg" />
+                                    <div class="addRecipeBtn" id="Bulgogi">
+                                            <a href="#" class="soireeBTN" onClick="soiree.addRecipe('Bulgogi', 'Bulgogi')">+ Add Dish</a>
+                                        </div>
+                                </div>
+                                <div class="searchResultsMeta">
+                                    <div class="serpHeader">
+                                        <div class="fl">
+                                                <a href="recipeDetails.html">Bulgogi</a>
+                                        </div>
+                                        <div class="recipeRating stars3">    						 	
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="serpDesc">
+                                        Korean dish of barbequed pork; great dish to bring to potlucks!
+        
+                                    </div>
+                                    <div class="serpMeta">
+                                        <div class="fl">
+                                            <span class="key">Tags:</span>
+                                            <span class="keyLinks">
+                                                <a href="#">Dinner</a>
+                                                <a href="#">Entree</a>
+                                                <a href="#">Korean</a>
+                                                <a href="#">Pork</a>
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Difficulty:</span>
+                                            <span class="keyLinks">
+                                                Easy
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Cook Time:</span>
+                                            <span class="keyLinks">
+                                                30 minutes
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>     
+                            </div>
+                            
+                            <div class="searchResultsElem">
+                                <div class="searchResultsImgWrapper">
+                                    <img src="images/food/egg_tomato.jpg" />
+                                    <div class="addRecipeBtn" id="EggAndTomato">
+                                            <a href="#" class="soireeBTN" onClick="soiree.addRecipe('EggAndTomato', 'EggAndTomato')">+ Add Dish</a>
+                                        </div>
+                                </div>
+                                <div class="searchResultsMeta">
+                                    <div class="serpHeader">
+                                        <div class="fl">
+                                                <a href="recipeDetails.html">Jacky's Egg and Tomato</a>
+                                        </div>
+                                        <div class="recipeRating stars3">    						 	
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="serpDesc">
+                                        This dish is Uncle Jacky's specialty. We always make this on camping trips.
+        
+                                    </div>
+                                    <div class="serpMeta">
+                                        <div class="fl">
+                                            <span class="key">Tags:</span>
+                                            <span class="keyLinks">
+                                                <a href="#">Breakfast</a>
+                                                <a href="#">Eggs</a>
+                                                <a href="#">Tomato</a>
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Difficulty:</span>
+                                            <span class="keyLinks">
+                                                Easy
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Cook Time:</span>
+                                            <span class="keyLinks">
+                                                15 minutes
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>     
+                            </div>
+                            
+                            <div class="searchResultsElem">
+                                <div class="searchResultsImgWrapper">
+                                    <img src="images/food/ceviche.jpg" />
+                                    <div class="addRecipeBtn" id="Ceviche">
+                                            <a href="#" class="soireeBTN" onClick="soiree.addRecipe('Ceviche', 'Ceviche')">+ Add Dish</a>
+                                        </div>
+                                </div>
+                                <div class="searchResultsMeta">
+                                    <div class="serpHeader">
+                                        <div class="fl">
+                                                <a href="recipeDetails.html">Ceviche</a>
+                                        </div>
+                                        <div class="recipeRating stars4">    						 	
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="serpDesc">
+                                        Ceviche is a mexican dish. I got this recipe from a family friend who lives in Tijuana.
+        
+                                    </div>
+                                    <div class="serpMeta">
+                                        <div class="fl">
+                                            <span class="key">Tags:</span>
+                                            <span class="keyLinks">
+                                                <a href="#">Entree</a>
+                                                <a href="#">Fish</a>
+                                                <a href="#">Mexican</a>
+                                                <a href="#">Tomato</a>
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Difficulty:</span>
+                                            <span class="keyLinks">
+                                                Easy
+                                            </span>
+                                            &nbsp;|&nbsp;
+                                            <span class="key">Cook Time:</span>
+                                            <span class="keyLinks">
+                                                1 day
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>     
+                            </div>
+                            
+						</div>
+						
+	    				<div id="UploadRecipes">
+							
+							
+									
+								
+								<!-- Begin: Recipe Name -->
+								<div class="formsection clearfix">
+									<div class="fieldname"><label for="recname"><span class="req">*</span>Recipe Name</label></div>
+									<div class="fieldinput"><input type="text" maxlength="65" value="" name="recipe_name" id="recname"/><br/></div>
+								</div><!-- End: Recipe Name -->
+						
+								<!-- Begin: Recipe Description -->
+								<div class="formsection clearfix">
+									<div class="fieldname"><label for="recdesc">Description</label></div>
+									<div class="fieldinput">
+									<textarea  wrap="virtual" cols="30" rows="5" name="description" id="recdesc"></textarea><br/>
+									
+									</div>
+								</div>
+								<!-- End: Recipe Description -->
+						
+								<!-- Begin: Recipe Ingredients -->
+								<div class="formsection clearfix">
+									<div class="fieldname"><label for="recingred"><span class="req">*</span>Ingredients</label></div>
+									
+									
+									<!-- Begin: Itemized Amount -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="ingredient_amount">Amount/Unit</label></div>
+										<div class="fieldinput">
+											<input type="text" maxlength="10" value="" size="3" name="ingredient_amount" id="ingredient_amount"/>
+											<select name="ingredient_unit" id="ingredient_unit">
+											<option value=""/>
+											
+												<option value=" "> </option>
+											
+												<option value="bag(s)">bag(s)</option>
+											
+												<option value="bar(s)">bar(s)</option>
+											
+												<option value="block(s)">block(s)</option>
+											
+												<option value="bottle(s)">bottle(s)</option>
+											
+												<option value="box(es)">box(es)</option>
+											
+												<option value="bulb(s)">bulb(s)</option>
+											
+												<option value="bunch(es)">bunch(es)</option>
+											
+												<option value="can(s)">can(s)</option>
+											
+												<option value="carton(s)">carton(s)</option>
+											
+												<option value="clove(s)">clove(s)</option>
+											
+												<option value="container(s)">container(s)</option>
+											
+												<option value="cube(s)">cube(s)</option>
+											
+												<option value="cup(s)">cup(s)</option>
+											
+												<option value="dash(es)">dash(es)</option>
+											
+												<option value="drop(s)">drop(s)</option>
+											
+												<option value="ear(s)">ear(s)</option>
+											
+												<option value="envelope(s)">envelope(s)</option>
+											
+												<option value="gallon(s)">gallon(s)</option>
+											
+												<option value="head(s)">head(s)</option>
+											
+												<option value="jar(s)">jar(s)</option>
+											
+												<option value="loaf(s)">loaf(s)</option>
+											
+												<option value="log(s)">log(s)</option>
+											
+												<option value="ounce(s)">ounce(s)</option>
+											
+												<option value="package(s)">package(s)</option>
+											
+												<option value="piece(s)">piece(s)</option>
+											
+												<option value="pinch(s)">pinch(s)</option>
+											
+												<option value="pint(s)">pint(s)</option>
+											
+												<option value="pound(s)">pound(s)</option>
+											
+												<option value="quart(s)">quart(s)</option>
+											
+												<option value="rack(s)">rack(s)</option>
+											
+												<option value="slice(s)">slice(s)</option>
+											
+												<option value="spear(s)">spear(s)</option>
+											
+												<option value="sprig(s)">sprig(s)</option>
+											
+												<option value="stalk(s)">stalk(s)</option>
+											
+												<option value="stick(s)">stick(s)</option>
+											
+												<option value="strip(s)">strip(s)</option>
+											
+												<option value="tablespoon(s)">tablespoon(s)</option>
+											
+												<option value="teaspoon(s)">teaspoon(s)</option>
+											
+												<option value="tub(s)">tub(s)</option>
+											
+												<option value="wheel(s)">wheel(s)</option>
+											
+												<option value="whole(s)">whole(s)</option>
+											
+											</select>
+										</div>
+									</div>
+									<!-- End: Itemized Amount -->
+						
+									<!-- Begin: Itemized Ingredient -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="ingredient_description">Ingredient</label></div>
+										<div class="fieldinput">
+											<input type="text" maxlength="100" value="" name="ingredient_description" id="ingredient_description"/> <span class="btnadd"><a href="#" class="soireeBTN">add</a></span>
+										</div>
+									</div>
+									<!-- End: Itemized Ingredient -->
+											
+									
+								</div>
+								<!-- End: Recipe Ingredients -->
+						
+								<!-- Begin: Recipe Instructions -->
+								<div class="formsection clearfix">
+									<div class="fieldname"><label for="recinstruct"><span class="req">*</span>Instructions</label></div>
+									<div class="fieldinput"><textarea wrap="virtual" cols="30" rows="5" name="directions" id="recinstruct"></textarea><br/></div>
+								</div>
+								<!-- End: Recipe Instructions -->
+						
+						
+								<!-- Begin: Recipe Time and Yield -->
+								<div class="formsection clearfix">
+									<div class="fieldname clearfix">Time and Yield</div>
+						
+									<!-- Begin: Recipe Prep Time -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="recpreptime">Prep Time</label></div>
+										<div class="fieldinput">
+											<input type="text" maxlength="3" value="" size="3" name="prep_time" id="recpreptime"/>
+											<select name="prep_time_units" id="recprepunit">
+												 <option value="minutes">minutes</option>
+												 <option value="hours">hours</option>
+											</select>
+										</div>
+									</div>
+									<!-- End: Recipe Prep Time -->
+						
+									<!-- Begin: Recipe Cook Time -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="reccooktime">Cook Time</label></div>
+										<div class="fieldinput">
+											<input type="text" maxlength="3" value="" size="3" name="cook_time" id="reccooktime"/>
+											<select name="cook_time_units" id="reccookunit">
+												 <option value="minutes">minutes</option>
+												 <option value="hours">hours</option>
+											</select>
+										</div>
+									</div>
+									<!-- End: Recipe Cook Time -->
+						
+									<!-- Begin: Recipe Other Time -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="recothertime">Other</label></div>
+										<div class="fieldinput">
+											<input type="text" maxlength="20" value="" size="20" name="other_time_value" id="recothervalue"/> (e.g. chill)<br/>
+											
+											<input type="text" maxlength="3" value="" size="3" name="other_time" id="recothertime"/>
+											<select name="other_time_units" id="recotherunit">
+												 <option value="minutes">minutes</option>
+												 <option value="hours">hours</option>
+											</select>
+										</div>
+									</div>
+									<!-- End: Recipe Other Time -->
+									
+									<!-- Begin: Recipe Yield -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="recyieldamt">Number of Servings</label></div>
+										<div class="fieldinput">
+											<select name="servings" id="recyieldamt">
+						
+												 <option value="">Select Number</option>
+												 	
+												 	<option value="1">1</option>
+												 
+												 	<option value="2">2</option>
+												 
+												 	<option value="3">3</option>
+												 
+												 	<option value="4">4</option>
+												 
+												 	<option value="5">5</option>
+												 
+												 	<option value="6">6</option>
+												 
+												 	<option value="7">7</option>
+												 
+												 	<option value="8">8</option>
+												 
+												 	<option value="9">9</option>
+												 
+												 	<option value="10">10</option>
+												 
+												 	<option value="11">11</option>
+												 
+												 	<option value="12">12</option>
+												 
+											</select>
+										</div>
+									</div>
+									<!-- End: Recipe Yield -->
+						
+									<!-- Begin: Recipe Yield -->
+									<div class="subsection clearfix">
+										<div class="fieldname"><label for="recyieldtype">Serving Units</label></div>
+						
+										<div class="fieldinput">
+											<input type="text" maxlength="30" value="" size="30" name="serving_size" id="recyieldtype"/> <span class="small_body">(Bowls, Servings, etc)</span>
+										</div>
+									</div>
+									<!-- End: Recipe Yield -->
+									
+								</div>
+								<!-- End: Recipe Time and Yield -->
+						
+								<!-- Begin: Action Buttons -->
+							<a class="soireeBTN" href="cookMeal.html">Add Recipe</a>
+								<!-- End: Action Buttons -->
+							
+						</div>
+    				</div>
+    			</div>
+    		</div>
+	    	<div id="footer"></div>
+	    	<div class="clear"></div>
+    	</div>
+    </body>
+    
+    <script type="text/javascript">
+     
+		var soiree = new soiree();	 	
+		soiree.loadHeader(1);
+		soiree.loadFooter();
+		soiree.loadSummary('dashboard', 'step1');
+		soiree.makeTabs();
+						
+    </script>
+ </html>

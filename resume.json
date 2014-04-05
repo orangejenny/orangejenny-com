@@ -1,0 +1,108 @@
+{
+	"skillsets": {
+		"I build software": [
+			"Perl",
+			"PHP",
+			"SQL",
+			"Python",
+			"Java",
+			"Rails",
+			"ActionScript",
+			"Processing"
+		],
+		"Often for the web": [
+			"JavaScript",
+			"jQuery",
+			"Backbone",
+			"Mustache",
+			"CSS",
+			"LESS/Sass"
+		],
+		"Always with an eye on design": [
+			"usability testing",
+			"interaction design",
+			"contextual design",
+			"Adobe Creative Suite"
+		]
+	},
+	"experiences": [
+		{
+			"heading": "Senior Software Engineer",
+			"subheaders": [
+				"athenahealth",
+				"Watertown, MA",
+				"2010 to present"
+			],
+			"bullets": [
+				"Working on redesign of core clinical experience",
+				"Developed UI enhancements and workflows to facilitate physician productivity and support athena's guarantee that all clients achieve federal Meaningful Use compliance"
+			]
+		},
+		{
+			"heading": "Software Developer",
+			"subheaders": [
+				"Carnegie Mellon University", 
+				"Pittsburgh, PA",
+				"2009 to 2010 (part-time)"
+			],
+			"bullets": [
+				"Developed features for StepGreen.org, a website that encourages sustainable living"
+			]
+		},
+		{
+			"degree": 1,
+			"heading": "Master of Human-Computer Interaction",
+			"subheaders": [
+				"Carnegie Mellon University",
+				"Pittsburgh, PA",
+				"2009 to 2010",
+				"GPA 3.97"
+			],
+			"bullets": [
+				"Capstone project: Team redesign of website for the American Institutes for Research"
+			]
+		},
+		{
+			"heading": "Senior Software Engineer",
+			"subheaders": [
+				"eBay, Inc.",
+				"San Jose, CA",
+				"2006 to 2009"
+			],
+			"bullets": [
+				"Developed and maintained components of eBay’s core ad optimization platform, which manages $250 million annually in marketing spend",
+				"Architected system to move intensive web-based processes offline and distribute over pool of worker machines, drastically reducing load times and browser crashes",
+				"Led UI efforts for 10-person application development team",
+				"Contributed to streamlining development and release cycle, on team that previously used no formal release process and no version control",
+				"Twice recognized as a top performer within 200-person department"
+			]
+		},
+		{
+			"heading": "Software Engineering Intern",
+			"subheaders": [
+				"eBay, Inc.",
+				"San Jose, CA",
+				"Summer 2006"
+			],
+			"bullets": [
+				"Mined click data of millions of users, correlating these logs with known behavioral profiles"
+			]
+		},
+		{
+			"degree": 1,
+			"heading": "Bachelor of Science, Computer Science",
+			"subheaders": [
+				"Worcester Polytechnic Institute", 
+				"Worcester, MA",
+				"2002 to 2006",
+				"GPA 3.99"
+			],
+			"bullets": [
+				"Minors in philosophy and computer engineering",
+				"Granted Trustees Scholarship, a four-year, full-tuition scholarship for academic performance",
+				"Awarded Salisbury Prize, given to one outstanding senior in each department",
+				"Awarded fellowship for undergraduate research with database systems research group"
+			]
+		}
+	]
+}

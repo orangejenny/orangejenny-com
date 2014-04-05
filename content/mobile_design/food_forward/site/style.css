@@ -1,0 +1,131 @@
+* {
+margin:0;
+padding:0;
+font-size:14px;
+font-family: Verdana, "Trebuchet MS", Courier;
+line-height:1.5em;
+}
+#container {
+width:900px;
+height:400px;
+margin:auto;
+}
+h2 {
+font-size:1.8em;
+margin-top:-10px;
+color:#000000;
+font-weight: normal;
+}
+h3 {
+font-size:1.2em;
+color:#D44E4E;
+font-weight: normal;
+margin-top:-5px;
+}
+h4 {
+font-size:1em;
+font-weight:bold;
+color:#000000;
+margin-top:10px;
+}
+#navbar {
+margin-top:20px;
+width:100%;
+}
+.navitem {
+float:left;
+width:140px;
+color:#999;
+font-size:.9em;
+border-right:1px solid #cccccc;
+padding-left:2px;
+}
+#banner {
+background-color:#DCFF96;
+height:80px;
+width:100%;
+clear:both;
+}
+#logo {
+background-color:#758E43;	
+height:80px;
+width:580px;
+margin-left:230px;
+}
+#mainright {
+min-height:200px;
+background-color:#ffffff;
+float:right;
+width:90px;
+}
+#mainleft {
+min-height:200px;
+width:230px;	
+background-color:#FFFFFF;
+float:left;
+font-size:5em;
+}
+#maincenter {
+width:630px;	
+background-color:#ffffff;
+float:left;
+padding:20px 20px 20px 20px;
+min-height:200px;
+}
+#maincenter ul {
+margin-left:30px;	
+}
+p {
+margin:10px 0 10px 0;	
+}
+#main {
+clear:both;	
+width:900px;
+margin:0;
+}
+#maincenter li{
+margin-left:35px;
+}
+#bottompad1 {
+background-color:#758E43;
+height:20px;
+width:100%;
+clear:both;
+margin:0;
+}
+#bottompad2 {
+background-color:#DCFF96;	
+height:10px;
+width:100%;
+clear:both;
+margin:0;
+}
+#footer {
+clear:both;	
+font-size:.8em;
+color:#999;
+}
+.credits {
+color: #808080; 
+font-size:.8em;
+text-align: left;
+}
+#leftlist {
+text-align:right;
+margin:40px 20px 0 0;
+}
+#leftlist li {
+list-style-type:none;
+}
+#leftlist ul {
+list-style-type:none;
+}
+a:link  { color: #808080; text-decoration: none }
+a:visited { color: #808080; text-decoration: none }
+a:active { color: #808080; text-decoration: none }
+a:hover { color: #d4914e; text-decoration: none }
+body.summary #navbar #summary, body.summary #navbar #summary a,
+body.research #navbar #research, body.research #navbar #research a, 
+body.synthesis #navbar #synthesis, body.synthesis #navbar #synthesis a,
+body.design #navbar #design, body.design #navbar #design a,
+body.solution #navbar #solution, body.solution #navbar #solution a{text-decoration:none; font-weight:bold;}

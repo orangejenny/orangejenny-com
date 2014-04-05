@@ -1,0 +1,1054 @@
+<html>
+    <head>
+        <title>Soiree: Start Cooking</title>
+		<!--    iPhone browser meta instructions    -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0; minimum-scale=1.0; maximum-scale=1.0;">
+        
+        <link rel="shortcut icon" href="images/favicon.png" />
+        
+        <!--    load the stylesheet    -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8rc3.custom.css" media="screen" />
+
+        <!--   required JS files    -->
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAJTL-xagleUQU5gMhgeOoexS7e4m22MgXGQe4c_91Mcqre2ldthRl4xGNveFFuq6mRgM15KoJ_Sjmrw"></script>
+        <script type="text/javascript" src="javascript/soiree.js"></script>
+        <script type="text/javascript" src="javascript/clockCounter.js"></script>
+<!--        <script type="text/javascript" src="javascript/jqueryColors.js"></script>-->
+<!--        <script type="text/javascript" src="javascript/animateToClass.js"></script>-->
+
+
+    </head>
+     <script type="text/javascript">
+     	google.load("jquery", "1.4.2");
+     	google.load("jqueryui", "1.7.2");
+	</script> 
+    
+    <body>
+		<div id="soireeMain">
+    		<div id="header"></div>
+    		<div id="soireeContent">
+    			<div id="cookMealHeader">
+    				<div class="fl" id="cookMealTitle">
+    					French Dinner Party
+    				</div>
+    				<div id="clockCounter">
+    					<span class="dinTime">Dinner Time:</span>
+    					<span id="clockDiv">
+    					</span>
+    				</div>
+    				<div class="clear"></div>
+    			</div>
+    			<div id="cookMeal">
+    			<div id="stepHeader">
+ 							<div class="fl">
+ 								Step List:
+ 							</div>
+ 							<div style='float:right;margin-right:25px;margin-left:5px;'>
+ 								<a href="#" class="soireeBTN">Print</a>
+ 							</div>
+ 							<div id="printButtonWrapper">
+ 								<a href="#" id="nextStepBTN" class="soireeBTN" onClick="soiree.goToNextStep()">Next Step &raquo;</a>
+ 							</div>
+ 							<div class="clear"></div>
+ 						</div>
+    				<div id="stepviewWrappers">
+    				<div id="stepView">
+						<div class="stepViewWrapper" id="stepGroup1">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Slice 1 lb fresh mushrooms
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>				
+						</div>
+	
+						<div class="stepViewWrapper" id="stepGroup2">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Cube 2 lbs roast beef chuck
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+						<div class="stepViewWrapper" id="stepGroup3">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Cube 1/4 lb bacon
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+						
+						<div class="stepViewWrapper" id="stepGroup4">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Crush 2 garlic cloves
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+
+						
+						</div>
+						<div class="stepViewWrapper" id="stepGroup5">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Chop 5 carrots
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+						<div class="stepViewWrapper" id="stepGroup6">
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Thinly slice 2 onions
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								 <div class="stepViewLeft">
+									Chop 2 onions
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+						<div class="stepViewWrapper" id="stepGroup7">
+							<div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Combine wine, cognac, onions, carrots, parsley, bay leaf, garlic, peppercorns, salt and beef in a bowl
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+						<div class="stepViewWrapper" id="stepGroup8">
+							<div class="stepViewElem marinate" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Marinate meat for 1 hour
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+                        <div class="stepViewWrapper" id="stepGroup9">
+							<div class="stepViewElem strain" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Strain the meat from the vegetables and marinade; reserve marinade
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>					
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup10">
+							<div class="stepViewElem" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Dry meat with paper towels
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>					
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup11">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Heat 2 tablespoons of the oil in a large skillet over medium high heat. Add the meat and saut&#233; for 10 minutes, or until browned on all sides
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup12">
+							<div class="stepViewElem" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Transfer meat to a separate bowl and set aside
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>					
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup13">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Saut&#233;e bacon until lightly browned. Transfer the bacon to the meat bowl
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>		
+                            <div class="stepViewElem" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Pour cream in bowl; season with 1 teaspoon salt and 1/2 teaspoon pepper
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>			
+						</div>
+                        
+                         <div class="stepViewWrapper" id="stepGroup14">
+							<div class="stepViewElem strain" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Drain the skillet and return it to the heat. Pour marinade into skillet to deglaze; scraping bottom to loosen up all the little bits. Return this liquid to the reserved marinade
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>                         
+                            <div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Peel and trim potatoes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                         <div class="stepViewWrapper" id="stepGroup15">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Heat oil in skillet; add onion and carrot from the marinade, along with the additional onion; saut&#233; for 5 minutes, or until tender
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>                          
+                            <div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Using a mandoline, slice potatoes lengthwise into bowl of cream
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup16">
+							<div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Transfer this mixture to the bowl with the meat and bacon
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						                            
+                            <div class="stepViewElem pan" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Brush a loaf pan with butter. Line pan with parchment paper. Sprinkle with salt and pepper
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+						
+                        <div class="stepViewWrapper" id="stepGroup17">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Return skillet to heat. Add flour skillet; combine with oil and stir until well mixed and brown, about 2 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						                          
+                            <div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Trim slices an even layer into pan. Dot cubes of butter; season with salt and pepper
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup18">
+							<div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Add the tomato paste, garlic, beef broth, reserved marinade and salt and pepper to taste. Bring to a boil and whisk to remove any flour lumps. Add this to the meat and vegetable mixture. 
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>                            
+                            <div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Preheat oven 2 to 375&#176; F. Cover pan tightly with aluminum foil.
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup19">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Preheat oven to 300&#176; F. Place entire mixture into a 9x13 baking dish 
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>                            
+                            <div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Lyle: Bake until potatoes are completely tender
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>						
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup20">
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+                                	Bake for 3 hours; stirring occassionally and adding water as needed. Seasoning with salt and pepper to taste.
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>					
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup21">						
+							<div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Seperate sliced onion
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>				
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup22">						
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									In a medium pan, saut&#233;e onions in butter until soft; approximately 20 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>				
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup23">						
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Saut&#233;e carrots, celery, onion and garlic
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>			
+                            <div class="stepViewElem stir" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Stir in flour and gradually add broth and water. Bring to a boil and simmer for 20 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>		
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup24">						
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Brown sausage
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>			
+                            <div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Toast french bread
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>		
+						</div>
+                        
+                        <div class="stepViewWrapper" id="stepGroup25">						
+							<div class="stepViewElem heat" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Melt butter in the skillet over medium high heat. Add the mushrooms and saut&#233;e for 5 to 10 minutes, or until lightly brown
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>			
+                            <div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Add beans, tomatoes, bay leaves, thyme, salt, and pepper. Reduce heat to low. Simmer for 10 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+                            <div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Place toasted bread into soup bowls. Pour soup mixture over bread and sprinkle with parmesan and swiss cheese
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>		
+                            <div class="stepViewElem timer" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Remove dish from oven and let cool for 15 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>	
+						</div>
+                        
+                         <div class="stepViewWrapper" id="stepGroup26">						
+							<div class="stepViewElem stir" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									When meat is done, add the mushrooms to the meat mixture; stir well and let sit for about 15 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>			
+                            <div class="stepViewElem mix" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Remove bay leaves and discard. Sprinkle parsley on top and serve
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+                            <div class="stepViewElem timer" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Bake for 10 minutes
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>		
+                            <div class="stepViewElem chop" onMouseOver="soiree.showCheckBox(this);" onMouseOut="soiree.hideCheckBox(this);">
+								<div class="stepViewLeft">
+									Trim sides of pave and cut into 12 equal pieces
+								</div>
+								<div class="stepCheck">
+									<input type="checkbox" onClick="soiree.strikeThrough(this)"/>
+								</div>
+								<div class="clear"></div>
+							</div>	
+						</div>
+						
+						<div class="tright">
+<!--							<a href="#" class="soireeBTN">Print</a>-->
+							<div class="clear"></div>
+ 						</div>
+    				</div>
+    				</div>
+    				<div id="overView">
+    					<div id="stepInfo">
+    						<div class="stepTitle">
+    							<div class="fl" id="arrowWrapper">
+	    							<span>
+	    								<img id="cookArrow" src="images/arrow.png" onClick="soiree.toggleStepWrapper()"/>
+	    							</span>
+    							</div>
+    							<div class="fl">
+    							Current Step Details
+    							<span class="stepInfo">
+    							</span>
+    							</div>
+    							<div class="clear"></div>
+    							
+    						</div>
+    						<div class="currentStepWrapper" id="currentStepWrapperDiv">
+    							<div class="currentStepElem stepBorder">
+    								<div class="stepTitleElem"> Steps:
+                                    	<div class="stepInfo">Pour a cup of marinade into the skillet to remove remaining residue; scrape the bottom to loosen up all of the little bits. Return this liquid to the reserved marinade
+                                         </div> 
+                                         <div>
+                                         	Note: This is known as "deglazing" the skillet, or pan
+                                         </div>
+                                         <div>
+	                                         <img src="images/deglazing.jpg" />
+                                         </div>
+                                    </div>
+    							
+    							</div>
+    							<div class="currentStepElem">
+    								<div class="stepTitleElem"> Required Equipment:</div>
+                                    	<div class="stepInfo">Pan
+                                         </div> 
+                                         <div>
+                                         	Note: A "skillet" is a certain type of pan. See image below.
+                                         </div>
+                                         <div>
+	                                         <img src="images/skillet.jpg" />
+                                         </div>
+    							
+    							</div>
+    							<div class="clear"></div>
+    						</div>
+    						
+    						
+    					</div>
+    					<div id="gnattWrapper">
+    						<table id="gnattTable">
+    							<tr>
+    							<td rowspan="50" style="padding:0px;">
+    								<table id="timeTable">
+                                        <tr>
+    										<td>
+    										2:00 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										2:15 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										2:30 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										2:45 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										3:00 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										3:15 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										3:30 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										3:45 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										4:00 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										4:15 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										4:30 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										4:45 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										5:00 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										5:15 pm
+    										</td>
+    									</tr>
+                                        <tr>
+    										<td>
+    										5:30 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    										5:45 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    										6:00 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    										6:15 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    										6:30 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    										6:45 pm
+    										</td>
+    									</tr>
+    									<tr>
+    										<td>
+    											Dinner!
+    										</td>
+    									</tr>
+    									
+    								</table>
+    							
+    							</td>
+    								<td class="mealHeader">
+    								 	Beef Bourguignon
+    								</td>
+    								<td class="mealHeader">
+    									Cassoulet
+    								</td>
+    								<td class="mealHeader">
+    									French Onion Soup
+    								</td>
+    								<td class="mealHeader">
+    									Potato Pave
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Slice mushrooms
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Cube beef
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Cube bacon
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Crush garlic
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                 <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Chop carrots
+    								</td>
+                                    <td class="tdCol prep1">
+                                    	Chop carrots
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Thinly slice onions
+    								</td>
+                                    <td class="tdCol prep1">
+                                    	Chop onions
+    								</td>
+                                    <td class="tdCol prep1">
+                                    	Thinly slice onions
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Combine wine, cognac, onions, carrots, parsley, bay leaf, garlic, peppercorns, salt and beef
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Marinate for 1 hour
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Strain the meat from the vegetables and marinade
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Dry meat
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									Saut&#233; meat for 10 minutes, or until browned on all sides.
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+                                <tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Transfer meat to a separate bowl and set aside
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									Saut&#233; bacon until lightly browned. Transfer the bacon to meat bowl 
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol">
+    								</td>
+                                    <td class="tdCol prep1">
+    									Lyle: Pour cream in large bowl;
+    									season with 1 teaspoon salt and 1/2 teaspoon pepper
+    								</td>
+    							</tr>
+								<tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									 Drain skillet and return it to the heat. Deglaze skillet with marinade and return this liquid to the reserved marinade
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Peel and trim potatoes
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									Saut&#233; onions and carrots 
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Slice potatoes lengthwise into thin slices in cream
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									Transfer this mixture to the bowl with the meat and bacon 
+    								</td>
+    								<td class="tdCol">
+    									
+    								</td>
+    								<td class="tdCol ">
+    									
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Brush a loaf pan with butter. Line pan with parchment paper
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									Return skillet to the heat and combining flour with oil in skillet
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol">
+    									
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Trim slices an even layer the pan. Dot cubes of butter; season with salt and pepper
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol prep1">
+    								Add the tomato paste, garlic, beef broth, reserved marinade and salt and pepper to taste. Bring to a boil and whisk to remove any flour lumps. Add this to the meat and vegetable mixture. 
+    								</td>
+    								<td class="tdCol">
+    								
+    								</td>
+    								<td class="tdCol">
+    									
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Preheat oven 2 to 375&#176; F. Cover pan tightly with aluminum foil
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol prep1">
+	                                    Preheat oven to 300&#176; F. Place entire mixture into a 9x13 baking dish
+    								</td>
+    								<td class="tdCol">
+    								
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol cook1">
+                                    	Bake
+    									<div> (oven 2)</div>
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+                                    	Bake
+    									<div> (oven)</div>
+    								</td>
+    								<td class="tdCol">
+    							
+    								</td>
+    								<td class="tdCol">
+    									
+    								</td>
+    								<td class="tdCol cook1">
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    								
+    								</td>
+    								<td class="tdCol prep1">
+    									
+    								</td>
+    								<td class="tdCol prep1">
+    									Lyle: Separate sliced onion into single rings
+    								</td>
+    								<td class="tdCol cook1">
+    								
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+
+    								</td>
+    								<td class="tdCol">
+    								</td>
+    								<td class="tdCol cook1">
+    									In a medium sauce pan saut&#233;e onions in butter until soft, approximately 20 minutes
+    									<div>(stove top -- medium high)</div>
+    								</td>
+    								<td class="tdCol cook1">
+    									
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    								</td>
+    								<td class="tdCol cook1">
+    									Saut&#233;e carrots, celery, onion, and garlic
+                                     	<div>(stove top -- medium high)</div>
+    								</td>
+                                    <td class="tdCol cook1">
+    									Stir in flour and gradually add broth and water. Bring to a boil and simmer for 20 minutes
+    									<div>(stove top -- medium)</div>
+    								</td>
+    								<td class="tdCol cook1">
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									
+    								</td>
+    								<td class="tdCol cook1">
+    									Brown sausage
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+    								<td class="tdCol cook1">
+    							    	Toast French bread slices 
+                                    <div>(toaster)</div>
+    								</td>
+    								<td class="tdCol cook1">
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol cook1">
+    									Saut&#233;e mushrooms until lightly browned
+                                        <div>(stove top -- medium high)</div>
+    								</td>
+    								<td class="tdCol cook1">
+    									Add beans, tomatoes, bay leaves, theyme, salt, and pepper. Reduce heat to low. Simmer for 10 minutes.
+                                        <div>(stove top -- low)</div>
+    								</td>
+                                    <td class="tdCol prep1">
+    							    	Place toasted bread into soup bowls. Pour soup mixture over bread and sprinkle with cheese
+    								</td>
+                                    <td class="tdCol prep1">
+    									Remove from oven and let cool for 15 minutes
+    								</td>
+    							</tr>
+    							<tr class="hoverRow">
+    								<td class="tdCol prep1">
+    									When meat is done, add the mushrooms to the meat mixture, stir well and let sit for about 15 minutes
+    								</td>
+                                    <td class="tdCol prep1">
+                                    	Remove bay leaves. Sprinkle parsley over the top and serve.
+    								</td>
+                                    <td class="tdCol cook1">
+                                    	Bake for 10 minutes (oven)
+    								</td>
+                                    <td class="tdCol prep1">
+    									Trim sides of pave and cut into 12 equal pieces
+    								</td>
+    							</tr>
+    						</table>
+    					
+    					</div>
+    				
+    				</div>
+    				<div class="clear"></div>
+    			</div>
+    			<div class="clear"></div>
+    		</div>
+	    	<div id="footer"></div>
+	    	<div class="clear"></div>
+    	</div>
+    </body>
+    
+    <script type="text/javascript">
+     
+		var soiree = new soiree();	 	
+		soiree.loadHeader(3);
+		soiree.loadFooter();
+		soiree.loadGnatt();
+		//soiree.createSteps('preparation', 'step3');
+		
+
+		var clockCounter = new clockCounter();
+
+		
+
+						
+    </script>
+ </html>

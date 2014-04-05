@@ -1,0 +1,32 @@
+* Premise: run a race, get back home
+* World
+	* Grid...perhaps large
+	* 90 deg
+	* Location
+		* Coordinate
+		* N, S, E, W: defined (as street id) or not
+		* Has food or not
+	* Home: coordinate
+	* Streets
+		* Name & likelihood of danger
+		* Or calculate danger based on street length?
+* Race
+	* Route: list of coordinates
+	* You're told which direction, and what street you're on
+	* Mechanic...
+* Recovery
+	* Health
+		* Decrements every second - maybe not
+		* Decrements with every move
+		* Determines how much health a move costs
+	* Know how far you are from home, & what general direction home is
+	* Smell food when within certain distance, weakly or strongly
+
+
+TODO
+	Complications
+		Food: mark locations, then notify when close enough to smell (weak/strong), add health if you reach one
+
+
+slide on move
+rotate on turn: -webkit-transform(45deg)
