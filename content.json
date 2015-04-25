@@ -51,26 +51,12 @@
 					"image": "workouts.png",
 					"folder": "workouts",
 					"detail": "A project to track my running, rowing, and other activities. Gave me a reason to brush up on Rails and play with Flot."
-				},
-				{
-					"name": "You Win...Now What?",
-					"brief": "Web game",
-					"skills": "JavaScript,HTML/CSS",
-					"image": "game.png",
-					"folder": "purplemonkeygamejam-feb-2014",
-					"detail": "A  JavaScript-based game I put together in a weekend at the <a href='http://purplemonkeygamejam.com/'>Purple Monkey Game Jame</a>.",
-					"links": [
-						{
-							"name": "demo",
-							"url": "game.html"
-						}
-					]
 				}
 			]
 		},
 		{
 			"title": "Past Projects",
-			"detail": "Before joining <a href='http://www.athenahealth.com'>athena</a>, I studied information and interaction design at <a href='http://www.cmu.edu'>Carnegie Mellon University</a>, earning a master's degree in human-computer interaction. Prior to this, I worked as a software engineer at <a href='http://www.ebay.com'>eBay</a>. I also hold a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>.",
+			"detail": "Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>. I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>.",
 			"elements": [
 				{
 					"name": "Flex Keyboard",
@@ -120,6 +106,20 @@
 									"url": "http://www.orangejenny.com/content/processing/poster_sources.html"
 								}
 							]
+						}
+					]
+				},
+				{
+					"name": "You Win...Now What?",
+					"brief": "Web game",
+					"skills": "JavaScript,HTML/CSS",
+					"image": "game.png",
+					"folder": "purplemonkeygamejam-feb-2014",
+					"detail": "A  JavaScript-based game I put together in a weekend at the <a href='http://purplemonkeygamejam.com/'>Purple Monkey Game Jame</a>.",
+					"links": [
+						{
+							"name": "demo",
+							"url": "game.html"
 						}
 					]
 				},
