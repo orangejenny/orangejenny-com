@@ -2,12 +2,12 @@
 	"skillsets": {
 		"I build software": [
 			"Perl",
-			"PHP",
-			"SQL",
 			"Python",
+			"Android",
+			"SQL",
+			"PHP",
 			"Java",
 			"Rails",
-			"ActionScript",
 			"Processing"
 		],
 		"Often for the web": [
@@ -27,15 +27,27 @@
 	},
 	"experiences": [
 		{
+			"heading": "Senior Engineer",
+			"subheaders": [
+				"Dimagi, Inc.",
+				"Cambridge, MA",
+				"2014 to present"
+			],
+			"bullets": [
+				"Added data visualization capabilities to mobile tool for community health workers",
+				"Built and field tested applications in Delhi and Johannesburg"
+			]
+		},
+		{
 			"heading": "Senior Software Engineer",
 			"subheaders": [
 				"athenahealth",
 				"Watertown, MA",
-				"2010 to present"
+				"2010 to 2014"
 			],
 			"bullets": [
-				"Working on redesign of core clinical experience",
-				"Developed UI enhancements and workflows to facilitate physician productivity and support athena's guarantee that all clients achieve federal Meaningful Use compliance"
+				"Worked on redesign and re-implementation of core clinical experience",
+				"Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards"
 			]
 		},
 		{
@@ -71,9 +83,7 @@
 			],
 			"bullets": [
 				"Developed and maintained components of eBay’s core ad optimization platform, which manages $250 million annually in marketing spend",
-				"Architected system to move intensive web-based processes offline and distribute over pool of worker machines, drastically reducing load times and browser crashes",
-				"Led UI efforts for 10-person application development team",
-				"Contributed to streamlining development and release cycle, on team that previously used no formal release process and no version control",
+				"Architected system to move long-running processes offline, drastically reducing load times and browser crashes",
 				"Twice recognized as a top performer within 200-person department"
 			]
 		},
