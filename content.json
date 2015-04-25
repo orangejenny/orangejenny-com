@@ -7,7 +7,7 @@
 	"sections": [
 		{	
 			"title": "Recent Projects",
-			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Outside of work, lately it's been web applications based in Perl and Node.js.",
+			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.<br><br>Outside of work, lately it's been web applications based in Perl and Node.js.",
 			"elements": [
 				{
 					"name": "athenahealth",
@@ -56,7 +56,7 @@
 		},
 		{
 			"title": "Past Projects",
-			"detail": "Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>. I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>.",
+			"detail": "Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>. I experimented with being a designer but missed debugging too much and came back to software development.<br><br>I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>.",
 			"elements": [
 				{
 					"name": "Flex Keyboard",
