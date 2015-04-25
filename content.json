@@ -7,7 +7,7 @@
 	"sections": [
 		{	
 			"title": "Recent Projects",
-			"detail": "I currently work at <a href='http://www.athenahealth.com'>athenahealth</a>, doing feature development for <a href='http://www.athenahealth.com/our-services/athenaClinicals.php'>athenaClinicals</a>. Outside of work, lately it's been web applications based in Perl and Rails.",
+			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Outside of work, lately it's been web applications based in Perl and Node.js.",
 			"elements": [
 				{
 					"name": "athenahealth",
@@ -15,7 +15,7 @@
 					"skills": "Perl,SQL,JavaScript,HTML/CSS",
 					"image": "athenahealth.png",
 					"folder": "athena",
-					"detail": "I currently work as a senior software engineer at athenahealth, which uses software as a service to make health care better: electronic health records (EHRs), practice management, and patient communication.<br><br>My mission has been to improve <a href='http://www.athenahealth.com/our-services/athenaClinicals.php'>athenaClinicals</a>, our EHR, most frequently from a user experience perspective: redesigning core workflows; improving provider productivity; and supporting Meaningful Use. Due to the proprietary nature of this work, unfortunately, I cannot provide significant detail."
+					"detail": "I spent several years at athenahealth, which uses software as a service to make health care better: electronic health records (EHRs), practice management, and patient communication.<br><br>My mission was to improve <a href='http://www.athenahealth.com/our-services/athenaClinicals.php'>athenaClinicals</a>, our EHR, most frequently from a user experience perspective: redesigning core workflows; improving provider productivity; and supporting Meaningful Use. Due to the proprietary nature of this work, however, I cannot provide significant detail."
 				},
 				{
 					"name": "Flavors",
