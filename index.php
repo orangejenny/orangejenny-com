@@ -153,7 +153,7 @@
 				for ($i = 0; $i < count($content); $i++) {
 					for ($j = 0; $j < count($content[$i]->elements); $j++) {
 			?>
-console.log("fetch.php?section=<?php echo $i; ?>&element=<?php echo $j; if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>");
+			//console.log("fetch.php?section=<?php echo $i; ?>&element=<?php echo $j; if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>");
 						$.ajax({
 							type: "POST",
 							url: "fetch.php",

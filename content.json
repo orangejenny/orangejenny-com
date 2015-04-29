@@ -10,6 +10,14 @@
 			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.<br><br>Outside of work, lately it's been web applications based in Perl and Node.js.",
 			"elements": [
 				{
+					"name": "Graphing in CommCare",
+					"brief": "Implementing data visualizations for frontline workers",
+					"skills": "Android",
+					"image": "growth_charts.png",
+					"folder": "graphing",
+					"detail": "I implemented graphing functionality in <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a>, an Android app used by frontline workers to manage their clients. One common use case was to support growth charts, enabling clinicians to more easily track patients' growth and monitor infants and toddlers for failure to thrive."
+				},
+				{
 					"name": "athenahealth",
 					"brief": "Making health care work better",
 					"skills": "Perl,SQL,JavaScript,HTML/CSS",
