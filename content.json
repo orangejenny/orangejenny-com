@@ -10,6 +10,33 @@
 			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.<br><br>Outside of work, lately it's been web applications based in Perl and Node.js.",
 			"elements": [
 				{
+					"name": "mLabour",
+					"brief": "A mobile app for managing patient care in labor wards",
+					"skills": "Android,sceniario testing",
+					"folder": "mlabour",
+					"detail": "mLabour is an Android app for managing patient data during childbirth. The app includes a digitized version of the <a href='http://mnhtech.org/technology/technology-briefs/partograph/'>partograph</a>, a paper tool for tracking the mother's and baby's vitals. Beyond the electronic partograph, the app notifies staff when patients are overdue for an exam or have shown signs of being at risk for prolonged or obstructed labor.",
+					"gallery": [
+						{
+							"name": "Case List",
+							"image": "case_list.png",
+							"width": 266,
+							"detail": "The app summarizes each patient's demographics, historical risk likelihood, actual labor progression, and last examination time. It prioritizes patients based on these factors."
+						},
+						{
+							"name": "Case Detail",
+							"image": "case_detail.png",
+							"width": 266,
+							"detail": "Measurements recorded during labor, such as dilation, fetal heart rate, and contraction frequency and duration, are tracked on a digital partograph"
+						},
+						{
+							"name": "Field Testing",
+							"image": "field.jpg",
+							"height": 319,
+							"detail": "mLabour was built to facilitate a study of labor management at a hospital in Delhi. During the course of the project, I conducted scenario testing with hospital staff in classrooms using an early prototype and then field testing in the labor ward using the final version of the app."
+						}
+					]
+				},
+				{
 					"name": "Graphing in CommCare",
 					"brief": "Implementing data visualizations for frontline workers",
 					"skills": "Android",
