@@ -1,9 +1,17 @@
 {
 	"paragraphs": [
-		"<h3>Well, hello.</h3><p>I'm Jenny. I work as a full-stack software engineer with user experience research and design skills. I live in Cambridge (the American one) and work at <a href='http://www.dimagi.com'>Dimagi</a>, building technology for underserved communities.</p><h3>My skills</h3><p>At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. I'm most fluent in Perl and Python; I've also worked with Java, PHP, and other technologies. I'm quite comfortable with SQL and am getting to know NoSQL.</p><p>On the presentation side of things, I'm proficient from the basics of HTML to CSS to JavaScript, including LESS, Backbone, and Mustache. My technical work is informed by experience with interaction design, visual design, and user experience research.</p><h3>Why 'orange'?</h3><p><a href='http://en.wikipedia.org/wiki/Shades_of_orange'>Tangerines, pumpkins, and apricots</a> - what's not to love?</p>",
-		"<img src='juicy.png' id='juicy'><div class='icon_download'><a href='JSchweers_Resume.pdf'>Resume</a></div><div class='icon_blank' style='padding-left: 2px;'><img src='images/icons/github.png' alt='GitHub Account' style='margin-right: 6px;' ><a href='https://github.com/orangejenny'>GitHub</a></div>",
-		"I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.",
-		"Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>. I experimented with being a designer but missed debugging too much and came back to software development.<br><br>I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>."
+		{
+			"header": "Well, hello.",
+			"p": "I'm Jenny. I work as a full-stack software engineer with user experience research and design skills. I live in Cambridge (the American one) and work at <a href='http://www.dimagi.com'>Dimagi</a>, building technology for underserved communities."
+		},
+		{
+			"header": "My skills",
+			"p": "At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>. I experimented with being a designer but missed debugging too much and came back to software development.<br><br>I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>."
+		},
+		{
+			"header": "Why 'orange'?",
+			"p": "<a href='http://en.wikipedia.org/wiki/Shades_of_orange'>Tangerines, pumpkins, and apricots</a> - what's not to love?"
+		}
 	],
 	"projects": [
 		{

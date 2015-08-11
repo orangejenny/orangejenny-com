@@ -146,9 +146,18 @@
 	</div>
 	<div id="main-wrapper">
 		<div id="main">
+			<div id="juicy">
+				<img src='juicy.png'>
+				<div class='icon_download'><a href='JSchweers_Resume.pdf'>Resume</a></div>
+				<br />
+				<div class='icon_blank' style='padding-left: 2px;'>
+					<img src='images/icons/github.png' alt='GitHub' style='margin-right: 6px;' ><a href='https://github.com/orangejenny'>GitHub</a>
+				</div>
+			</div>
 			<?php
 				foreach ($content->paragraphs as $p) {
-					echo "<p>" . $p . "</p>";
+					echo "<h3>" . $p->header . "</h3>";
+					echo "<p>" . $p->p . "</p>";
 				}
 			?>
 		</div>
