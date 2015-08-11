@@ -1,9 +1,18 @@
+@white: #ffffff;
+@orange: #f7931e;
+@blueLight: #6be;
+@blueLighter: #7cf;
+
+@fontSizeDefault: 12px;
+@mainWidth: 770px;
+@cornerRadius: 12px;
+
 body {
-	background-color:#F7931E;
+	background-color:@orange;
 	background-repeat:repeat-x;
 	background-position:0 110px;
-	font-family: "xTrebuchet MS", Arial, Sans-serif;
-	font-size:12px;
+	font-family: Arial, Sans-serif;
+	font-size: @fontSizeDefault;
 	line-height:1.5;
 }
 
@@ -13,8 +22,8 @@ h3 {
 
 #loading {
 	display:none;
-	background-color:#ffffff;
-	border:5px solid #F7931E;
+	background-color: @white;
+	border:5px solid @orange;
 	position:absolute;
 	top:50px;
 	left:50%;
@@ -31,7 +40,7 @@ h3 {
 #main, #header {
 	margin-left:auto;
 	margin-right:auto;
-	width:770px;
+	width: @mainWidth;
 }
 
 #main-wrapper {
@@ -45,9 +54,9 @@ h3 {
 	padding: 10px;
 	position: relative;
 	background-color: white;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
+	-webkit-border-radius: @cornerRadius;
+	-moz-border-radius: @cornerRadius;
+	border-radius: @cornerRadius;
 }
 
 #main h3 {
@@ -61,13 +70,13 @@ h3 {
 }
 
 #main a:link, #main a:visited {
-	color: #6be;
+	color: @blueLight;
 	font-weight: bold;
 	text-decoration:none;
 }
 
 #main a:hover, #main a:active {
-	color: #7cf;
+	color: @blueLighter;
 	font-weight: bold;
 	text-decoration:none;
 }
@@ -89,7 +98,7 @@ h3 {
 }
 
 #email {
-	font-size:12px;
+	font-size: @fontSizeDefault;
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -188,9 +197,9 @@ h3 {
 	padding:3px 15px;
 	text-align:right;
 
-	-moz-border-radius: 12px;
-	-webkit-border-radius: 12px;
-	border-radius: 12px;
+	-moz-border-radius: @cornerRadius;
+	-webkit-border-radius: @cornerRadius;
+	border-radius: @cornerRadius;
 }
 
 #menu .menu_unselected {
