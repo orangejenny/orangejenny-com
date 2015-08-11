@@ -1,4 +1,5 @@
-log.html
 content-*
 google*
-core
+node_modules
+.DS_Store
+.project
