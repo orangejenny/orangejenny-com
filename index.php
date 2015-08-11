@@ -8,9 +8,7 @@
 	else {
 		$json_file = "content.json";
 	}
-	$json = json_decode(file_get_contents($json_file));
-	$intro = $json->intro;
-	$content = $json->sections;
+	$content = json_decode(file_get_contents($json_file));
 ?>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
@@ -30,20 +28,15 @@
 
 	<script type="text/javascript">
 	<!--
-		var section_detail = new Array(3);
-		section_detail["<?php echo $intro->title; ?>"] = "<?php echo $intro->detail; ?>";
 		var project_brief = new Array();
 		<?php
 			$numProjects = 0;
-			foreach ($content as $section) {
-				echo "section_detail[\"$section->title\"] = \"$section->detail\";\n";
-				foreach ($section->elements as $i => $element) {
-					$numProjects++;
-					if (isset($element->brief)) {
-						$text = $element->brief;
-					}
-					echo "project_brief[\"$element->name\"] = \"$text\";\n";
+			foreach ($content->projects as $i => $project) {
+				$numProjects++;
+				if (isset($project->brief)) {
+					$text = $project->brief;
 				}
+				echo "project_brief[\"$project->name\"] = \"$text\";\n";
 			}
 		?>
 
@@ -117,28 +110,21 @@
 			}).load();
 		
 			// load content
-			<?php
-				for ($i = 0; $i < count($content); $i++) {
-					for ($j = 0; $j < count($content[$i]->elements); $j++) {
-			?>
-			//console.log("fetch.php?section=<?php echo $i; ?>&element=<?php echo $j; if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>");
-						$.ajax({
-							type: "POST",
-							url: "fetch.php",
-							data: "section=<?php echo $i; ?>&element=<?php echo $j; if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>",
-							success: function(data) {
-								$("#content").append(data);
-								updateLoading();
-							},
-							error: function(data) {
-								$(".thumb[rel='#thumb<?php echo $i + 1; ?>_<?php echo $j; ?>']").remove();
-								updateLoading();
-							}
-						});
-			<?php
+			<?php for ($i = 0; $i < count($content->projects); $i++) { ?>
+				$.ajax({
+					type: "POST",
+					url: "fetch.php",
+					data: "index=<?php echo $i; ?><?php if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>",
+					success: function(data) {
+						$("#content").append(data);
+						updateLoading();
+					},
+					error: function(data) {
+						$(".thumb[rel='#thumb<?php echo $i; ?>']").remove();
+						updateLoading();
 					}
-				}
-			?>
+				});
+			<?php } ?>
 
 		});
 	//-->
@@ -160,30 +146,25 @@
 	</div>
 	<div id="main-wrapper">
 		<div id="main">
-			<div id="section_detail">
-				<noscript>
-				<?php echo $intro->detail; ?>
-					<div class='icon_blank'>To see my portfolio, please enable JavaScript and reload this page.</div>
-				</noscript>
-				<div id="section_detail_text"></div>
-			</div>
+			<?php
+				foreach ($content->paragraphs as $p) {
+					echo "<p>" . $p . "</p>";
+				}
+			?>
 		</div>
 	</div>
 	<div id="thumbs">
 		<?php
 			$divs = array();
-			foreach ($content as $s => $section) {
-				$s++;
-				foreach ($section->elements as $i => $element) {
-					if (!isset($divs[$i])) {
-						$divs[$i] = array();
-					}
-					$style = "background-image:url(content/$element->folder/thumb.png);";
-					$div_html = "<div class='thumb s$s' rel='#thumb${s}_${i}' style='$style'>";
-					$div_html .= "<div class='thumb_label'>$element->name</div>";
-					$div_html .= "</div>";
-					echo $div_html . "\n";
+			foreach ($content->projects as $i => $project) {
+				if (!isset($divs[$i])) {
+					$divs[$i] = array();
 				}
+				$style = "background-image:url(content/$project->folder/thumb.png);";
+				$div_html = "<div class='thumb' rel='#thumb_${i}' style='$style'>";
+				$div_html .= "<div class='thumb_label'>$project->name</div>";
+				$div_html .= "</div>";
+				echo $div_html . "\n";
 			}
 		?>
 	</div>
