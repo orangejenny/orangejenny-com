@@ -1,9 +1,17 @@
 @white: #ffffff;
+@black: #000;
 @orange: #f7931e;
 @blueLight: #6be;
 @blueLighter: #7cf;
+@greyDark: #333;
+@grey: #999;
+@greyLight: #ccc;
 
+@fontSizeSmall: 10px;
 @fontSizeDefault: 12px;
+@fontSizeLarge: 15px;
+@fontSizeExtraLarge: 24px;
+
 @mainWidth: 770px;
 @cornerRadius: 12px;
 
@@ -22,10 +30,11 @@ body {
 	font-family: Arial, Sans-serif;
 	font-size: @fontSizeDefault;
 	line-height: 1.5;
+	color: @greyDark;
 }
 
 h3 {
-	font-size: 15px;
+	font-size: @fontSizeLarge;
 }
 
 .icon_blank, .icon_download, .icon_link, .icon_skills, .icon_individual, .icon_team {
@@ -66,7 +75,7 @@ h3 {
 	left: 50%;
 	margin-left: -135px;
 	padding: 20px;
-	font-size: 18px;
+	font-size: @fontSizeLarge;
 	width: 250px;
 	.border-radius(@cornerRadius);
 }
@@ -83,7 +92,7 @@ h3 {
 
 	#name {
 		color: @white;
-		font-size: 24px;
+		font-size: @fontSizeExtraLarge;
 		position: relative;
 		top: 54px;
 		left: 54px;
@@ -108,23 +117,23 @@ h3 {
 			.border-radius(@cornerRadius);
 
 			&.menu_unselected {
-				background-color: #fff;
+				background-color: @white;
 				cursor: pointer;
-				color: #555;
+				color: @greyDark;
 
 				&:hover {
-					background-color: #6be;
-					color: #fff;
-					border: 3px solid #fff;
+					background-color: @blueLight;
+					color: @white;
+					border: 3px solid @white;
 					padding: 0px 12px;
 				}
 			}
 
 			&.menu_selected {
 				padding: 0px 12px;
-				background-color: #6be;
-				border: 3px solid #fff;
-				color: #fff;
+				background-color: @blueLight;
+				border: 3px solid @white;
+				color: @white;
 				cursor: auto;
 			}
 		}
@@ -200,9 +209,9 @@ h3 {
 				width: @size;
 				height: @size;
 				cursor: pointer;
-				border: 1px solid #999;
+				border: 1px solid @grey;
 				.border-radius(@size / 2);
-				box-shadow: 2px 2px 2px #ccc;
+				box-shadow: 2px 2px 2px @greyLight;
 
 				.thumb_label {
 					background-image: url(../images/label_bg.png);
@@ -211,14 +220,14 @@ h3 {
 					top: 90px;
 					left: 0px;
 					width: 98px;
-					font-size: 90%;
+					font-size: @fontSizeSmall;
 					font-weight: bold;
-					color: #ccc;
+					color: @greyLight;
 					padding: 2px 5px;
 					display: none;
 
 					a {
-						color: #ccc;
+						color: @greyLight;
 						text-decoration: none;
 					}
 				}
@@ -236,14 +245,12 @@ h3 {
 #project_brief {
 	display: none;
 	width: 200px;
-	background-color: #ffffff;
-	border: 1px #000000 solid;
+	background-color: @white;
+	border: 1px @black solid;
 	padding: 3px;
 	position: absolute;
 	z-index: 100;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	.border-radius(6px);
 }
 
 .gallery_menu {
@@ -257,7 +264,7 @@ h3 {
 		.border-radius(27px);
 
 		&.gallery_selected {
-			border: 2px #ccc solid;
+			border: 2px @greyLight solid;
 			cursor: auto;
 			margin: 0px 2px 8px 2px;
 		}
