@@ -116,38 +116,6 @@
 				}
 			}).load();
 		
-			// Menu
-			$(".menu_unselected").click(function() {
-				var old_index = $("#menu div").index($(".menu_selected:first"));
-				var new_index = $("#menu div").index($(this));
-				if (old_index == new_index) {
-					return;
-				}
-				
-				$(".menu_selected").addClass("menu_unselected");
-				$(".menu_selected").removeClass("menu_selected");
-				$(this).addClass("menu_selected");
-				$(this).removeClass("menu_unselected");
-				var title_html = $(this).html();
-				var detail_html = section_detail[$(this).html()];
-				$("#section_detail_text").fadeOut("fast", function() {
-					$("#section_detail").attr("data-section-index", new_index);
-					$("#section_detail_text").html(detail_html);
-					$("#section_detail_text").fadeIn("fast");
-				});
-				if (old_index >= 0) {
-					$(".s" + old_index).fadeOut("fast", function() {
-						$(".s" + new_index).fadeIn("fast");
-					});
-				}
-				else {
-					$(".s" + new_index).fadeIn("fast");
-				}
-				$("#project_brief").fadeOut("fast");
-			});
-			$("#menu").show();
-			$("#menu div:first").click();
-						
 			// load content
 			<?php
 				for ($i = 0; $i < count($content); $i++) {
@@ -182,14 +150,6 @@
 		<div id="loading_text">0/0 projects loaded</div>
 	</div>
 	<div id="header">
-		<div id="menu" style="display:none;">
-			<div class="menu_unselected"><?php echo $intro->title; ?></div>
-			<?php
-				foreach ($content as $section) {
-					echo "<div class='menu_unselected'>" . $section->title . "</div>";
-				}
-			?>
-		</div>
 		<span id="name">
 			Jennifer Schweers
 			<span id="email">orange.jenny {at} gmail</span>
