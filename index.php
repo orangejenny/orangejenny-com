@@ -198,36 +198,35 @@
 			<div style='height:80px;'>&nbsp;</div>
 		</noscript>
 	</div>
-<div id="main-wrapper">
-	<div id="main">
-		<div id="section_detail">
-			<noscript>
+	<div id="main-wrapper">
+		<div id="main">
+			<div id="section_detail">
+				<noscript>
 				<?php echo $intro->detail; ?>
-				<div class='icon_blank'>To see my portfolio, please enable JavaScript and reload this page.</div>
-			</noscript>
-			<div id="section_detail_text"></div>
-		</div>
-		<div id="thumbs">
-			<div id='intro' class='s0' style='display:block;'><?php echo $intro->elements; ?></div>
-			<?php
-				$divs = array();
-				foreach ($content as $s => $section) {
-					$s++;
-					foreach ($section->elements as $i => $element) {
-						if (!isset($divs[$i])) {
-							$divs[$i] = array();
-						}
-						$style = "background-image:url(content/$element->folder/thumb.png);";
-						$div_html = "<div class='thumb s$s' rel='#thumb${s}_${i}' style='$style'>";
-						$div_html .= "<div class='thumb_label'>$element->name</div>";
-						$div_html .= "</div>";
-						echo $div_html . "\n";
-					}
-				}
-			?>
+					<div class='icon_blank'>To see my portfolio, please enable JavaScript and reload this page.</div>
+				</noscript>
+				<div id="section_detail_text"></div>
+			</div>
 		</div>
 	</div>
-</div>
+	<div id="thumbs">
+		<?php
+			$divs = array();
+			foreach ($content as $s => $section) {
+				$s++;
+				foreach ($section->elements as $i => $element) {
+					if (!isset($divs[$i])) {
+						$divs[$i] = array();
+					}
+					$style = "background-image:url(content/$element->folder/thumb.png);";
+					$div_html = "<div class='thumb s$s' rel='#thumb${s}_${i}' style='$style'>";
+					$div_html .= "<div class='thumb_label'>$element->name</div>";
+					$div_html .= "</div>";
+					echo $div_html . "\n";
+				}
+			}
+		?>
+	</div>
 
 	<div id="content"></div>
 
@@ -235,3 +234,5 @@
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 	</script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 	"sections": [
 		{	
 			"title": "Recent Projects",
-			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.<br><br>Outside of work, lately it's been web applications based in Perl and Node.js.",
+			"detail": "I currently work at <a href='http://www.dimagi.com'>Dimagi</a>, doing mobile development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and server development for <a href='http://www.commcarehq.org/'>CommCare HQ</a>.",
 			"elements": [
 				{
 					"name": "mLabour",

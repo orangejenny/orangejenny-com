@@ -12,10 +12,11 @@
 @fontSizeLarge: 15px;
 @fontSizeExtraLarge: 24px;
 
-@mainWidth: 770px;
 @cornerRadius: 12px;
+@spacingNormal: 10px;
 
 @headerHeight: 110px;
+@mainWidth: 870px;
 
 .border-radius(@radius) {
 	-moz-border-radius: @radius;
@@ -31,6 +32,7 @@ body {
 	font-size: @fontSizeDefault;
 	line-height: 1.5;
 	color: @greyDark;
+	margin: 0;
 }
 
 h3 {
@@ -80,7 +82,7 @@ h3 {
 	.border-radius(@cornerRadius);
 }
 
-#header, #main {
+#header, #main, #thumbs {
 	margin-left: auto;
 	margin-right: auto;
 	width: @mainWidth;
@@ -142,7 +144,6 @@ h3 {
 
 #main-wrapper {
 	background-color: white;
-	position: fixed;
 	width: 100%;
 	left: 0;
 
@@ -189,55 +190,49 @@ h3 {
 			}
 		}
 
-		#thumbs {
-			position: absolute;
-			top: 0px;
-			left: 275px;
-			padding: 17px 0px 17px 10px;
-			width: 450px;
-			height: 350px;
-
-			.thumb, #intro {	// individual thumbnail div
-				margin: 0 0 10px 10px;
-				background-repeat: no-repeat;
-				display: none;
-				float: left;
-			}
-
-			.thumb {
-				@size: 100px;
-				width: @size;
-				height: @size;
-				cursor: pointer;
-				border: 1px solid @grey;
-				.border-radius(@size / 2);
-				box-shadow: 2px 2px 2px @greyLight;
-
-				.thumb_label {
-					background-image: url(../images/label_bg.png);
-					background-repeat: repeat;
-					position: relative;
-					top: 90px;
-					left: 0px;
-					width: 98px;
-					font-size: @fontSizeSmall;
-					font-weight: bold;
-					color: @greyLight;
-					padding: 2px 5px;
-					display: none;
-
-					a {
-						color: @greyLight;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-
 		#juicy {
 			width: 220px;
 			position: relative;
 			top: -20px;
+		}
+	}
+}
+
+#thumbs {
+	position: relative;
+	margin-top: @spacingNormal;
+
+	.thumb {	// individual thumbnail div
+		margin: 0 0 10px 10px;
+		background-repeat: no-repeat;
+		float: left;
+	}
+
+	.thumb {
+		@size: 100px;
+		width: @size;
+		height: @size;
+		cursor: pointer;
+		border: 1px solid @grey;
+		.border-radius(@size / 2);
+
+		.thumb_label {
+			background-image: url(../images/label_bg.png);
+			background-repeat: repeat;
+			position: relative;
+			top: 90px;
+			left: 0px;
+			width: 98px;
+			font-size: @fontSizeSmall;
+			font-weight: bold;
+			color: @greyLight;
+			padding: 2px 5px;
+			display: none;
+
+			a {
+				color: @greyLight;
+				text-decoration: none;
+			}
 		}
 	}
 }
