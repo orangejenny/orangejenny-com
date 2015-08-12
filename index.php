@@ -63,21 +63,30 @@
 					}
 				});
 
-				$('#thumbs').mousemove(function(event) {
-						$('#project_brief').css('left', event.pageX + 5);
-						$('#project_brief').css('top', event.pageY + 8);
-				});
+				var moveTooltip = function(event) {
+					$('#tooltip').css('left', event.pageX + 5);
+					$('#tooltip').css('top', event.pageY + 8);
+				};
+				var showTooltip = function(title, description) {
+					$("#tooltip").html("<div style='font-weight:bold;'>" + title + "</div>" + description);
+					$("#tooltip").show();
+				};
+				var hideTooltip = function() {
+					$("#tooltip").hide();
+				};
 
+				$('#thumbs, #juicy img').mousemove(function(event) {
+					moveTooltip(event);
+				});
 				$("div[rel]").hover(function() {
 					var label = $(this).find(".thumb_label").text();
-					$("#project_brief").html("<div style='font-weight:bold;'>" + label + "</div>" + project_brief[label]);
-					$("#project_brief").show();
-				}, function() {
-					$("#project_brief").hide();
-				});
+					showTooltip(label, project_brief[label]);
+				}, hideTooltip);
+				$("#juicy img").hover(function() {
+					showTooltip("Why \"orange\"?", "Tangerines, pumpkins, and apricots - what's not to love?");
+				}, hideTooltip);
 			
-				$('<div id="project_brief"></div>').appendTo('body');
-				// initialize scrollable gallery
+				// Initialize scrollable gallery
 				$("div.scrollable").scrollable({
 					size: 1,
 					clickable: false,
@@ -193,5 +202,6 @@
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 	</script>
+	<div id="tooltip"></div>
 </body>
 </html>
