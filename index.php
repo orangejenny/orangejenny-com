@@ -135,31 +135,38 @@
 	<div id="loading">
 		<div id="loading_text">0/0 projects loaded</div>
 	</div>
-	<div id="header">
-		<span id="name">
-			Jennifer Schweers
-			<span id="email">orange.jenny {at} gmail</span>
-		</span>
-		<noscript>
-			<div style='height:80px;'>&nbsp;</div>
-		</noscript>
-	</div>
 	<div id="main-wrapper">
 		<div id="main">
 			<div id="juicy">
 				<img src='juicy.png'>
-				<div class='icon_download'><a href='JSchweers_Resume.pdf'>Resume</a></div>
-				<br />
-				<div class='icon_blank' style='padding-left: 2px;'>
-					<img src='images/icons/github.png' alt='GitHub' style='margin-right: 6px;' ><a href='https://github.com/orangejenny'>GitHub</a>
+			</div>
+			<div id="not-juicy">
+				<div id="header">
+					<span id="name">Jennifer Schweers</span>
+					<span id="contact">
+						orange.jenny {at} gmail
+						/
+						<a href='JSchweers_Resume.pdf'>resume</a>
+						/
+						<a href='https://github.com/orangejenny'>github</a>
+					</span>
+				</div>
+				<h3>Well, hello.</h3>
+				<?php
+					foreach ($content->paragraphs as $p) {
+						echo "<div class='column'>" . $p . "</div>";
+					}
+				?>
+				<div class="column-footer">
+					<h3>Why "orange"?</h3>
+					<div>
+						<a href="http://en.wikipedia.org/wiki/Shades_of_orange">
+							Tangerines, pumpkins, and apricots
+						</a> - what's not to love?
+					</div>
 				</div>
 			</div>
-			<?php
-				foreach ($content->paragraphs as $p) {
-					echo "<h3>" . $p->header . "</h3>";
-					echo "<p>" . $p->p . "</p>";
-				}
-			?>
+			<div style="clear: both;"></div>
 		</div>
 	</div>
 	<div id="thumbs">
