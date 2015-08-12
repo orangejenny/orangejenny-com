@@ -54,9 +54,8 @@
 			
 				// Set up overlays
 				$("div[rel]").overlay({
-					effect:'apple',
+					//effect:'apple',
 					expose:{
-						//color:'#F7931E',
 						color: '#ffffff',
 						opacity:0.75,
 						loadSpeed:'fast',
@@ -157,14 +156,14 @@
 						echo "<div class='column'>" . $p . "</div>";
 					}
 				?>
-				<div class="column-footer">
+				<!--div class="column-footer">
 					<h3>Why "orange"?</h3>
 					<div>
 						<a href="http://en.wikipedia.org/wiki/Shades_of_orange">
 							Tangerines, pumpkins, and apricots
 						</a> - what's not to love?
 					</div>
-				</div>
+				</div-->
 			</div>
 			<div style="clear: both;"></div>
 		</div>
@@ -172,12 +171,15 @@
 	<div id="thumbs">
 		<?php
 			$divs = array();
-			foreach ($content->projects as $i => $project) {
+			$total = count($content->projects);
+			foreach (array_reverse($content->projects) as $i => $project) {
 				if (!isset($divs[$i])) {
 					$divs[$i] = array();
 				}
-				$style = "background-image:url(content/$project->folder/thumb.png);";
+				$right = $i * 900 / ($total + 1);
+				$style = "background-image:url(content/$project->folder/thumb.png); right: ${right}px;";
 				$div_html = "<div class='thumb' rel='#thumb_${i}' style='$style'>";
+				$div_html .= "<div class='thumb_veil'></div>";
 				$div_html .= "<div class='thumb_label'>$project->name</div>";
 				$div_html .= "</div>";
 				echo $div_html . "\n";

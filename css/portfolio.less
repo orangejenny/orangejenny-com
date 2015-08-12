@@ -93,6 +93,7 @@ h3 {
 #main-wrapper {
 	width: 100%;
 	left: 0;
+	margin-bottom: @spacingNormal;
 
 	#main {
 		background-color: @white;
@@ -195,22 +196,36 @@ h3 {
 }
 
 #thumbs {
+	@thumbSize: 100px;
+
 	position: relative;
 	margin-top: @spacingNormal;
+	height: @thumbSize + @spacingNormal * 2;
 
 	.thumb {	// individual thumbnail div
-		margin: 0 0 10px 10px;
+		position: absolute;
+		top: @spacingNormal;
 		background-repeat: no-repeat;
-		float: left;
-	}
-
-	.thumb {
-		@size: 100px;
-		width: @size;
-		height: @size;
+		width: @thumbSize;
+		height: @thumbSize;
 		cursor: pointer;
 		border: 1px solid @grey;
-		.border-radius(@size / 2);
+		.border-radius(@thumbSize / 2);
+
+		&:hover {
+			z-index: 3;
+			.thumb_veil {
+				display: none;
+			}
+		}
+
+		.thumb_veil {
+			width: @thumbSize - 2;
+			height: @thumbSize - 2;
+			.border-radius(@thumbSize / 2);
+			background-color: @white;
+			opacity: 0.5;
+		}
 
 		.thumb_label {
 			background-image: url(../images/label_bg.png);
