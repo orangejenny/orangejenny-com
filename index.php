@@ -179,14 +179,11 @@
 	</div>
 	<div id="thumbs">
 		<?php
-			$divs = array();
 			$total = count($content->projects);
 			foreach (array_reverse($content->projects) as $i => $project) {
-				if (!isset($divs[$i])) {
-					$divs[$i] = array();
-				}
-				$right = $i * 900 / ($total + 1);
-				$style = "background-image:url(content/$project->folder/thumb.png); right: ${right}px;";
+				$i = $total - $i - 1;
+				$left = $i * 900 / ($total + 1);
+				$style = "background-image:url(content/$project->folder/thumb.png); left: ${left}px;";
 				$div_html = "<div class='thumb' rel='#thumb_${i}' style='$style'>";
 				$div_html .= "<div class='thumb_veil'></div>";
 				$div_html .= "<div class='thumb_label'>$project->name</div>";
