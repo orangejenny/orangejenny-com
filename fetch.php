@@ -14,7 +14,7 @@
 	if (isset($element->folder)) {
 		$path .= "/$element->folder";
 	}
-	echo "<div class='apple_overlay black' id='thumb_${index}'>";
+	echo "<div class='project' id='thumb_${index}'>";
 	echo "<div class='detail'>";
 
 	echo "<h3>$element->name</h3>";

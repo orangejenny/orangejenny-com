@@ -15,15 +15,12 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<title>Jennifer Schweers</title>
 
-	<link rel="stylesheet" type="text/css" href="css/apple-overlay.css" />
 	<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 	<link rel="stylesheet" type="text/css" href="css/scrollable.css" />
 
 	<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
 	<script type="text/javascript" src="js/tools.scrollable-1.1.2.js"></script>
 	<script type="text/javascript" src="js/tools.scrollable.navigator-1.0.2.js"></script>
-	<script type="text/javascript" src="js/tools.overlay-1.1.2.js"></script>
-	<script type="text/javascript" src="js/tools.overlay.apple-1.0.1.js"></script>
 	<script type="text/javascript" src="js/tools.expose-1.0.5.js"></script>
 
 	<script type="text/javascript">
@@ -52,8 +49,8 @@
 					$("#loading").hide();
 				}
 			
-				// Set up overlays
-				$("div[rel]").overlay({
+				// Set up content display
+				/*$("div[rel]").overlay({
 					//effect:'apple',
 					expose:{
 						color: '#ffffff',
@@ -61,7 +58,7 @@
 						loadSpeed:'fast',
 						closeSpeed:'fast'
 					}
-				});
+				});*/
 
 				var moveTooltip = function(event) {
 					$('#tooltip').css('left', event.pageX + 5);
@@ -91,7 +88,7 @@
 					size: 1,
 					clickable: false,
 					onStart: function() { 
-						var detail = this.getRoot().parents(".apple_overlay").children(".detail");
+						var detail = this.getRoot().parents(".project").children(".detail");
 						var index = this.getPageIndex() + 1;
 						$(".gallery_detail > div:visible").fadeOut("fast", function() {
 							detail.children(".gallery_detail").children("div:nth-child(" + index + ")").fadeIn("fast");
@@ -177,6 +174,7 @@
 			<div style="clear: both;"></div>
 		</div>
 	</div>
+
 	<div id="thumbs">
 		<?php
 			$total = count($content->projects);

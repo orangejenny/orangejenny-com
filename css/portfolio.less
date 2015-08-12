@@ -84,7 +84,7 @@ h3 {
 	.border-radius(@cornerRadius);
 }
 
-#main, #thumbs {
+#main, #thumbs, #content {
 	margin-left: auto;
 	margin-right: auto;
 	width: @mainWidth;
@@ -97,7 +97,7 @@ h3 {
 
 	#main {
 		background-color: @white;
-		.border-radius(@cornerRadius);
+		.border-radius(0 0 @cornerRadius @cornerRadius);
 
 		#header {
 			font-size: @fontSizeExtraLarge;
@@ -132,22 +132,6 @@ h3 {
 
 			&:hover, &:active {
 				color: @blueLighter;
-			}
-		}
-
-		#section_detail {
-			position: relative;
-			top: 10px;
-			left: 10px;
-			width: 200px;
-			height: 370px;
-
-			&[data-section-index="0"] {
-				text-align: center;
-
-				.icon_download {
-					display: inline-block;
-				}
 			}
 		}
 
@@ -200,6 +184,7 @@ h3 {
 
 	position: relative;
 	margin-top: @spacingNormal;
+	margin-bottom: @spacingNormal;
 	height: @thumbSize + @spacingNormal * 2;
 
 	.thumb {	// individual thumbnail div
@@ -246,6 +231,30 @@ h3 {
 			}
 		}
 	}
+}
+
+#content {
+	background-color: @white;
+	.border-radius(@cornerRadius);
+	padding: @spacingNormal;
+	margin-bottom: @spacingNormal * 2;
+
+		.section_detail {
+			position: relative;
+			top: 10px;
+			left: 10px;
+			width: 200px;
+			height: 370px;
+
+			&[data-section-index="0"] {
+				text-align: center;
+
+				.icon_download {
+					display: inline-block;
+				}
+			}
+		}
+
 }
 
 #tooltip {
