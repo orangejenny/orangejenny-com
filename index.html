@@ -1,15 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<?php
-	if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) {
-		$json_file = "content-new.json";
-	}
-	else {
-		$json_file = "content.json";
-	}
-	$content = json_decode(file_get_contents($json_file));
-?>
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
@@ -110,21 +101,7 @@
 		</div>
 	</div>
 
-	<div id="thumbs">
-		<?php
-			$total = count($content->projects);
-			foreach (array() as $i => $project) {#array_reverse($content->projects) as $i => $project) {
-				$i = $total - $i - 1;
-				$left = $i * 900 / ($total + 1);
-				$style = "background-image:url(content/$project->folder/thumb.png); left: ${left}px;";
-				$div_html = "<div class='thumb' rel='#thumb_${i}' style='$style'>";
-				$div_html .= "<div class='thumb_veil'></div>";
-				$div_html .= "<div class='thumb_label'>$project->name</div>";
-				$div_html .= "</div>";
-				echo $div_html . "\n";
-			}
-		?>
-	</div>
+	<div id="thumbs"></div>
 
 	<div id="content"></div>
 
