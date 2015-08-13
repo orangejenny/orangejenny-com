@@ -18,57 +18,37 @@
 	<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 
 	<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
-	<script type="text/javascript" src="js/tools.expose-1.0.5.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
 
 	<script type="text/javascript">
 	<!--
-		var project_brief = new Array();
-		<?php
-			$numProjects = 0;
-			foreach ($content->projects as $i => $project) {
-				$numProjects++;
-				if (isset($project->brief)) {
-					$text = $project->brief;
-				}
-				echo "project_brief[\"$project->name\"] = \"$text\";\n";
-			}
-		?>
+		var moveTooltip = function(event) {
+			$('#tooltip').css('left', event.pageX + 5);
+			$('#tooltip').css('top', event.pageY + 8);
+		};
+		var showTooltip = function(title, description) {
+			$("#tooltip").html("<div style='font-weight:bold;'>" + title + "</div>" + description);
+			$("#tooltip").show();
+		};
+		var hideTooltip = function() {
+			$("#tooltip").hide();
+		};
 
-		var loading_expose = null;
-		var projects_loaded = 0;
-		function updateLoading() {
-			projects_loaded++;
-			$("#loading_text").html(projects_loaded + "/<?php echo $numProjects; ?> projects loaded");
-			
-			if (projects_loaded == <?php echo $numProjects; ?>) {
-				if (loading_expose) {
-					loading_expose.close();
-					$("#loading").hide();
-				}
-			
-				// Set up content display
-				/*$("div[rel]").overlay({
-					//effect:'apple',
-					expose:{
-						color: '#ffffff',
-						opacity:0.75,
-						loadSpeed:'fast',
-						closeSpeed:'fast'
-					}
-				});*/
+		$(document).ready(function() {
+			var project_brief = [];
+			$.getJSON("content.json", function(data) {
+				_.each(data.paragraphs, function(p) {
+					var $p = jQuery("<div>");
+					$p.addClass("column").html(p);
+					jQuery(".columns").append($p);
+				});
+				_.each(data.projects, function(project) {
+					project_brief[project.name] = project.brief;
 
-				var moveTooltip = function(event) {
-					$('#tooltip').css('left', event.pageX + 5);
-					$('#tooltip').css('top', event.pageY + 8);
-				};
-				var showTooltip = function(title, description) {
-					$("#tooltip").html("<div style='font-weight:bold;'>" + title + "</div>" + description);
-					$("#tooltip").show();
-				};
-				var hideTooltip = function() {
-					$("#tooltip").hide();
-				};
+					// TODO: display thumbs
+				});
 
+				// Tooltip events
 				$('#thumbs, #juicy img').mousemove(function(event) {
 					moveTooltip(event);
 				});
@@ -79,64 +59,15 @@
 				$("#juicy img").hover(function() {
 					showTooltip("Why \"orange\"?", "Tangerines, pumpkins, and apricots - what's not to love?");
 				}, hideTooltip);
-			
-				// Initialize scrollable gallery
-				$("div.scrollable").scrollable({
-					size: 1,
-					clickable: false,
-					onStart: function() { 
-						var detail = this.getRoot().parents(".project").children(".detail");
-						var index = this.getPageIndex() + 1;
-						$(".gallery_detail > div:visible").fadeOut("fast", function() {
-							detail.children(".gallery_detail").children("div:nth-child(" + index + ")").fadeIn("fast");
-						});
-					}
-				}).navigator({
-					navi: ".gallery_menu", 
-					naviItem: "img", 
-					activeClass: 'gallery_selected'
-				});
-			}
-		}
 
-		$(document).ready(function() {
-			// Loading div
-			$("#loading").show();
-			loading_expose = $("#loading").expose({
-				api: true,
-				loadSpeed: 0,
-				closeSpeed: 'slow',
-				onBeforeClose: function() {
-					$("#loading").hide();
-				}
-			}).load();
-		
-			// load content
-			<?php for ($i = 0; $i < count($content->projects); $i++) { ?>
-				$.ajax({
-					type: "POST",
-					url: "fetch.php",
-					data: "index=<?php echo $i; ?><?php if (isset($_REQUEST["new"]) && $_REQUEST["new"] == 1) { echo "&new=1"; } ?>",
-					success: function(data) {
-						$("#content").append(data);
-						updateLoading();
-					},
-					error: function(data) {
-						$(".thumb[rel='#thumb<?php echo $i; ?>']").remove();
-						updateLoading();
-					}
-				});
-			<?php } ?>
-
+				// TODO: event for clicking on project (grab data & stuff in template)
+			});
 		});
 	//-->
 	</script>
 </head>
 
 <body>
-	<div id="loading">
-		<div id="loading_text">0/0 projects loaded</div>
-	</div>
 	<div id="main-wrapper">
 		<div id="main">
 			<div id="juicy">
@@ -154,13 +85,8 @@
 					</span>
 				</div>
 				<h3>Well, hello.</h3>
-				<?php
-					foreach ($content->paragraphs as $p) {
-						echo "<div class='column'>" . $p . "</div>";
-					}
-				?>
+				<div class='columns'></div>
 			</div>
-			<div style="clear: both;"></div>
 		</div>
 	</div>
 
