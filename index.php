@@ -16,11 +16,8 @@
 	<title>Jennifer Schweers</title>
 
 	<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
-	<link rel="stylesheet" type="text/css" href="css/scrollable.css" />
 
 	<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
-	<script type="text/javascript" src="js/tools.scrollable-1.1.2.js"></script>
-	<script type="text/javascript" src="js/tools.scrollable.navigator-1.0.2.js"></script>
 	<script type="text/javascript" src="js/tools.expose-1.0.5.js"></script>
 
 	<script type="text/javascript">
@@ -162,14 +159,6 @@
 						echo "<div class='column'>" . $p . "</div>";
 					}
 				?>
-				<!--div class="column-footer">
-					<h3>Why "orange"?</h3>
-					<div>
-						<a href="http://en.wikipedia.org/wiki/Shades_of_orange">
-							Tangerines, pumpkins, and apricots
-						</a> - what's not to love?
-					</div>
-				</div-->
 			</div>
 			<div style="clear: both;"></div>
 		</div>

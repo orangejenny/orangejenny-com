@@ -14,89 +14,48 @@
 	if (isset($element->folder)) {
 		$path .= "/$element->folder";
 	}
-	echo "<div class='project' id='thumb_${index}'>";
-	echo "<div class='detail'>";
+	echo "<div class='detail' id='thumb_${index}'>";
 
 	echo "<h3>$element->name</h3>";
+
+	echo "<div class='column'>";
 	if ($element->detail) {
 		echo $element->detail;
 	}
 	else {
 		echo  $element->brief;
 	}
-	echo getProjectDetails($element, $path);
-		
-	echo "<div class='gallery_detail' style='margin-top:20px;'>";
-	$style = "";
+	echo "</div>";
+
+	echo projectLinks($element, $path);
+
 	if (isset($element->gallery)) {
 		foreach ($element->gallery as $index => $g) {
-			echo "<div$style>";
-			echo "<h3>$g->name</h3>";
-			echo $g->detail;
-			echo getProjectDetails($g, $path);
-			echo "</div>";
-			$style = " style='display:none;'";
+			echo projectLinks($g, $path);
 		}
 	}
-	echo "</div>";
-
-	echo "</div>";
-
-	echo "<div class='rdetail'>";
+		
 	if (isset($element->image)) {
-		$lr_margin = 0;
-		$tb_margin = 0;
-		if (isset($element->width)) {
-			$lr_margin = (500 - $element->width) / 2;
-		}
-		if (isset($element->height)) {
-			$tb_margin = (500 - $element->height) / 2;
-		}
-		echo "	<img src='$path/$element->image' alt=\"$element->name\" style='margin:${tb_margin}px ${lr_margin}px;' 	/>";
+		echo "<img src='$path/$element->image' alt=\"$element->name\" class='single-image'/>";
 	}
 	elseif (isset($element->gallery)) {
-		$prev_offset = 500 / 2 - 55 * count($element->gallery) / 2 - 5 - 20;
-		$next_offset = 500 / 2 + 55 * count($element->gallery) / 2 + 5;
-			
-		echo "<div class='gallery_menu'>";
-		#echo "<a class='prevPage browse left' style='left:${prev_offset}px;'></a>";
-		foreach ($element->gallery as $g) {
-			$thumbfile = preg_replace('/\.[A-Za-z]{3}/', '.png', $g->image);
-			if (preg_match("/\//", $thumbfile)) {
-				$thumbfile = preg_replace("/\//", "/thumb_", $thumbfile);
-			}
-			else {
-				$thumbfile = "thumb_" . $thumbfile;
-			}
-			echo "<img src='$path/$thumbfile' alt=\"thumbnail for $g->name\" />";
-		}
-		#echo "<a class='nextPage browse right' style='left:${next_offset}px;'></a>";
-		echo "</div>";
-
-   				echo "<div class='scrollable' style='vertical-align:middle;'>";
-  				echo "<div class='items'>";
-		foreach ($element->gallery as $g) {
-			$lr_margin = 50;
+		foreach ($element->gallery as $index => $g) {
+			$width = 500;
 			if (isset($g->width)) {
-				$lr_margin += (425 - $g->width) / 2;
+				$width = $g->width;
 			}
-			$tb_margin = 0;
-			if (isset($g->height)) {
-				$tb_margin += (425 - $g->height) / 2;
-			}
-			echo "<img src='$path/$g->image' alt=\"$g->name\" style='max-width:425px;max-height:425px;margin:${tb_margin}px ${lr_margin}px;'/>";
+			echo "<div class='captioned-image' style='width: ${width}px;'>";
+			echo "<span>" . $g->detail . "</span>";
+			echo "<img src='$path/$g->image' alt=\"$g->detail\"/>";
+			echo "</div>";
 		}
-		echo "</div>";
-		echo "</div>";
 	}
-	echo "</div>";			// close rdetail
-	echo "</div>";			// close apple_overlay black
+
+	echo "</div>";
 
 
-function getProjectDetails($element, $path) {
-	$rv = "<br /><br />";
-		
-	// Links/downloads
+function projectLinks($element, $path) {
+	$links = array();
 	if (isset($element->links)) {
 		foreach ($element->links as $link) {
 			$extra = "";
@@ -138,10 +97,13 @@ function getProjectDetails($element, $path) {
 					$text = "UNKNOWN FILETYPE ($link->url)";
 				}
 			}
-			$rv .= "<div class='$class'><a href='$href'$extra>$text</a>$extra_text</div>";
+			array_push($links, "<div class='$class'><a href='$href'$extra>$text</a>$extra_text</div>");
 		}
 	}
-	return $rv;
+	if (count($links)) {
+		return "<div class='links'>" . implode($links) . "</div>";
+	}
+	return "";
 }
 
 ?>

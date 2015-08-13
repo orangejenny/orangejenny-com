@@ -24,6 +24,19 @@
 	border-radius: @radius;
 }
 
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -239,22 +252,52 @@ h3 {
 	padding: @spacingNormal;
 	margin-bottom: @spacingNormal * 2;
 
-		.section_detail {
-			position: relative;
-			top: 10px;
-			left: 10px;
-			width: 200px;
-			height: 370px;
+	.detail {
+		border: 3px solid blue;
+		.clearfix();
 
-			&[data-section-index="0"] {
-				text-align: center;
+		h3 {
+			margin-top: 0;
+		}
 
-				.icon_download {
-					display: inline-block;
-				}
+		img {
+			border: 1px solid @greyDark;
+		}
+
+		.single-image {
+			float: left;
+		}
+
+		.captioned-image {
+			display: inline-block;
+			img {
+				max-width: 500px;
 			}
 		}
 
+		.column {
+			float: left;
+			width: @columnWidth;
+			padding: 0 @spacingNormal;
+		}
+
+		.gallery_menu {
+			img {
+				@size: 50px;
+				width: @size;
+				height: @size;
+				cursor: pointer;
+				margin: 0 2px 10px 2px;
+				.border-radius(@size / 2 + 2);
+
+				&.gallery_selected {
+					border: 2px @greyLight solid;
+					cursor: auto;
+					margin: 0px 2px 8px 2px;
+				}
+			}
+		}
+	} 
 }
 
 #tooltip {
@@ -266,22 +309,4 @@ h3 {
 	position: absolute;
 	z-index: 100;
 	.border-radius(6px);
-}
-
-.gallery_menu {
-	text-align: center;
-
-	img {
-		width: 50px;
-		height: 50px;
-		cursor: pointer;
-		margin: 0 2px 10px 2px;
-		.border-radius(27px);
-
-		&.gallery_selected {
-			border: 2px @greyLight solid;
-			cursor: auto;
-			margin: 0px 2px 8px 2px;
-		}
-	}
 } 
