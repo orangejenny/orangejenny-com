@@ -197,7 +197,7 @@ h3 {
 		border: 1px solid @grey;
 		.border-radius(@thumbSize / 2);
 
-		&:hover {
+		&:hover, &.active {
 			z-index: 3;
 			.thumb_veil {
 				display: none;
@@ -209,7 +209,7 @@ h3 {
 			height: @thumbSize - 2;
 			.border-radius(@thumbSize / 2);
 			background-color: @white;
-			opacity: 0.5;
+			opacity: 0.3;
 		}
 
 		.thumb_label {
@@ -234,6 +234,7 @@ h3 {
 }
 
 #content {
+	display: none;
 	background-color: @white;
 	.border-radius(@cornerRadius);
 	padding: @spacingNormal;

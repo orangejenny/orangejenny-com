@@ -26,7 +26,7 @@
 		};
 
 		$(document).ready(function() {
-			var project_brief = [];
+			var project_data = [];
 			var templates = {};
 			_.each(jQuery("script[type='text/template']"), function(template) {
 				var $template = jQuery(template);
@@ -43,7 +43,7 @@
 
 				// Project content
 				_.each(data.projects, function(project, index) {
-					project_brief[project.name] = project.brief;
+					project_data.push(project);
 
 					jQuery("#thumbs").append(templates.thumb(_.extend({}, project, {
 						left: index * 900 / (data.projects.length + 1),
@@ -55,14 +55,21 @@
 					moveTooltip(event);
 				});
 				$(".thumb").hover(function() {
-					var label = $(this).find(".thumb_label").text();
-					showTooltip(label, project_brief[label]);
+					var data = project_data[$("#thumbs .thumb").index(this)];
+					showTooltip(data.name, data.brief);
 				}, hideTooltip);
 				$("#juicy img").hover(function() {
 					showTooltip("Why \"orange\"?", "Tangerines, pumpkins, and apricots - what's not to love?");
 				}, hideTooltip);
 
-				// TODO: event for clicking on project (grab data & stuff in template)
+				// Show project content on thumb click
+				$(".thumb").click(function() {
+					$(".thumb.active").removeClass("active");
+					$(this).addClass("active");
+					var project = project_data[$("#thumbs .thumb").index(this)];
+					$("#content").html(templates.project(project));
+					$("#content").show();
+				});
 			});
 		});
 	//-->
@@ -75,6 +82,9 @@
 			<div class='thumb_veil'></div>
 			<div class='thumb_label'><%= name %></div>
 		</div>
+	</script>
+	<script type="text/template" name="project">
+		this is a project: <%= name %>
 	</script>
 </head>
 
