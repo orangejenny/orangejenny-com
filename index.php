@@ -36,23 +36,34 @@
 
 		$(document).ready(function() {
 			var project_brief = [];
+			var templates = {};
+			_.each(jQuery("script[type='text/template']"), function(template) {
+				var $template = jQuery(template);
+				templates[$template.attr("name")] = _.template($template.html());
+			});
+
 			$.getJSON("content.json", function(data) {
+				// Intro content
 				_.each(data.paragraphs, function(p) {
-					var $p = jQuery("<div>");
-					$p.addClass("column").html(p);
-					jQuery(".columns").append($p);
+					jQuery(".columns").append(templates.paragraph({
+						text: p,
+					}));
 				});
-				_.each(data.projects, function(project) {
+
+				// Project content
+				_.each(data.projects, function(project, index) {
 					project_brief[project.name] = project.brief;
 
-					// TODO: display thumbs
+					jQuery("#thumbs").append(templates.thumb(_.extend({}, project, {
+						left: index * 900 / (data.projects.length + 1),
+					})));
 				});
 
 				// Tooltip events
 				$('#thumbs, #juicy img').mousemove(function(event) {
 					moveTooltip(event);
 				});
-				$("div[rel]").hover(function() {
+				$(".thumb").hover(function() {
 					var label = $(this).find(".thumb_label").text();
 					showTooltip(label, project_brief[label]);
 				}, hideTooltip);
@@ -64,6 +75,15 @@
 			});
 		});
 	//-->
+	</script>
+	<script type="text/template" name="paragraph">
+		<div class="column"><%= text %></div>
+	</script>
+	<script type="text/template" name="thumb">
+		<div class='thumb' style='left: <%= left %>px; background-image: url(content/<%= folder %>/thumb.png)'>
+			<div class='thumb_veil'></div>
+			<div class='thumb_label'><%= name %></div>
+		</div>
 	</script>
 </head>
 
@@ -93,7 +113,7 @@
 	<div id="thumbs">
 		<?php
 			$total = count($content->projects);
-			foreach (array_reverse($content->projects) as $i => $project) {
+			foreach (array() as $i => $project) {#array_reverse($content->projects) as $i => $project) {
 				$i = $total - $i - 1;
 				$left = $i * 900 / ($total + 1);
 				$style = "background-image:url(content/$project->folder/thumb.png); left: ${left}px;";
