@@ -14,6 +14,7 @@
 	<script type="text/javascript">
 	<!--
 		var moveTooltip = function(event) {
+					$("body").scrollTop($("#juicy").height() - 10);
 			$('#tooltip').css('left', event.pageX + 5);
 			$('#tooltip').css('top', event.pageY + 8);
 		};
@@ -28,25 +29,25 @@
 		$(document).ready(function() {
 			var project_data = [];
 			var templates = {};
-			_.each(jQuery("script[type='text/template']"), function(template) {
-				var $template = jQuery(template);
+			_.each($("script[type='text/template']"), function(template) {
+				var $template = $(template);
 				templates[$template.attr("name")] = _.template($template.html());
 			});
 
 			$.getJSON("content.json", function(data) {
 				// Intro content
 				_.each(data.paragraphs, function(p) {
-					jQuery(".columns").append(templates.paragraph({
+					$(".columns").append(templates.paragraph({
 						text: p,
 					}));
 				});
 
 				// Project content
-				_.each(data.projects, function(project, index) {
+				_.each(data.projects.reverse(), function(project, index) {
 					project_data.push(project);
 
-					jQuery("#thumbs").append(templates.thumb(_.extend({}, project, {
-						left: index * 900 / (data.projects.length + 1),
+					$("#thumbs").append(templates.thumb(_.extend({}, project, {
+						right: index * 900 / (data.projects.length + 0.5),
 					})));
 				});
 
@@ -83,7 +84,7 @@
 		<div class="column"><%= text %></div>
 	</script>
 	<script type="text/template" name="thumb">
-		<div class='thumb' style='left: <%= left %>px; background-image: url(content/<%= folder %>/thumb.png)'>
+		<div class='thumb' style='right: <%= right %>px; background-image: url(content/<%= folder %>/thumb.png)'>
 			<div class='thumb_veil'></div>
 			<div class='thumb_label'><%= name %></div>
 		</div>
