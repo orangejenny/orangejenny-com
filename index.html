@@ -67,7 +67,12 @@
 					$(".thumb.active").removeClass("active");
 					$(this).addClass("active");
 					var project = project_data[$("#thumbs .thumb").index(this)];
-					$("#content").html(templates.project(project));
+					$("#content").html(templates.project(_.extend({
+						image: "",
+						links: [],
+						skills: [],
+						gallery: [],
+					}, project)));
 					$("#content").show();
 				});
 			});
@@ -84,7 +89,34 @@
 		</div>
 	</script>
 	<script type="text/template" name="project">
-		this is a project: <%= name %>
+		<h3><%= name %></h3>
+		<div class="column">
+			<%= detail %>
+			<ul>
+				<% _.each(skills, function(skill) { %>
+					<li><%= skill %></li>
+				<% }) %>
+			</ul>
+			<ul>
+				<% _.each(links, function(link) { %>
+					<li><%= link %></li>
+				<% }) %>
+			</ul>
+		</div>
+		<div class='gallery'>
+		<% if (image) { %>
+			<img src='content/<%= folder %>/<%= image %>' />
+		<% } %>
+		<% if (gallery) { %>
+			<% _.each(gallery, function(piece) { %>
+				<div class='captioned-image' style='width:<%= piece.width + 10 %>px;'>
+					<div class='caption'><%= piece.detail %></div>
+					<img src='content/<%= folder %>/<%= piece.image %>' style='width:<%= piece.width %>px;' alt='<%= piece.detail %>' />
+				</div>
+			<% }) %>
+		<% } %>
+		</div>
+		</div>
 	</script>
 </head>
 
