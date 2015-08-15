@@ -52,6 +52,19 @@ body {
 	margin: 0;
 }
 
+a {
+	font-weight: bold;
+	text-decoration: none;
+
+	&:link, &:visited {
+		color: @blueLight;
+	}
+
+	&:hover, &:active {
+		color: @blueLighter;
+	}
+}
+
 h3 {
 	font-size: @fontSizeLarge;
 }
@@ -121,19 +134,6 @@ h3 {
 
 			p {
 				margin: 5px 15px 15px 0;
-			}
-		}
-
-		a {
-			font-weight: bold;
-			text-decoration: none;
-
-			&:link, &:visited {
-				color: @blueLight;
-			}
-
-			&:hover, &:active {
-				color: @blueLighter;
 			}
 		}
 
@@ -251,6 +251,12 @@ h3 {
 	.column {
 		float: left;
 		width: @columnWidth;
+
+		ul {
+			list-style-type: none;
+			margin: @spacingNormal 0 0 0;
+			padding: 0;
+		}
 	}
 
 	.gallery {
@@ -258,9 +264,7 @@ h3 {
 		left: @columnWidth + @spacingNormal;
 		width: @mainWidth - @columnWidth - @spacingWide * 2 - 2;	// not ideal
 		text-align: center;
-	}
 
-	.gallery {
 		.captioned-image {
 			vertical-align: top;
 			display: inline-block;

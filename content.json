@@ -115,30 +115,28 @@
 					"image": "applet.png",
 					"height": 220,
 					"width": 425,
-					"detail": "A visualization of the 2009 Boston Marathon, illustrating how the pack of runners ebbed and flowed over the course of the race. Users can insert themselves into the race, seeing where they would have finished.",
-					"links": [
-						{
-							"name": "Try applet",
-							"url": "http://orangejenny.com/content/processing/applet/index.html"
-						}
-					]
+					"detail": "A simulation of the 2009 Boston Marathon, illustrating how the pack of runners ebbed and flowed over the course of the race. Users can insert themselves into the race, seeing where they would have finished."
 				},
 				{
 					"name": "Marathon Poster",
 					"image": "poster.png",
 					"height": 316,
 					"width": 425,
-					"detail": "A poster to motivate runners training for the San Francisco Marathon<span style='font-size:smaller;vertical-align:super;'>TM</span>. It displays a training plan, a sketch of the course, and sights along the way. A graph keeps track of total mileage run throughout the season, putting each week's long run in perspective.",
-					"links": [
-						{
-							"name": "poster",
-							"url": "SFMPoster.pdf"
-						},
-						{
-							"name": "Sources of photographs",
-							"url": "http://www.orangejenny.com/content/processing/poster_sources.html"
-						}
-					]
+					"detail": "A poster to motivate runners training for the <a href='http://www.thesfmarathon.com/'>San Francisco Marathon</a>. It displays a training plan, a sketch of the course, and sights along the way. A graph keeps track of total mileage run throughout the season, putting each week's long run in perspective."
+				}
+			],
+			"links": [
+				{
+					"name": "Try marathon simulation applet",
+					"url": "http://orangejenny.com/content/processing/applet/index.html"
+				},
+				{
+					"name": "training poster",
+					"url": "SFMPoster.pdf"
+				},
+				{
+					"name": "Sources of photographs used in training poster",
+					"url": "http://www.orangejenny.com/content/processing/poster_sources.html"
 				}
 			]
 		},
@@ -168,7 +166,7 @@
 					"image": "workflow.png",
 					"width": 425,
 					"height": 425,
-					"detail": "The \"workflow system\", which I created to move intensive web-initiated tasks offline. Each workflow is broken into small, reusable steps. Email notifications keep users up to date on the status of their workflows. Initially, tasks were executed sequentially by a batch job; later, the back-end was integrated with another tool in order to run jobs in parallel. I was responsible for every aspect of this system, which dramatically reduced page load times and browser crashes."
+					"detail": "The workflow system I created to move intensive web-initiated tasks offline. Each workflow is broken into small, reusable steps. Email notifications keep users up to date on the status of their workflows. Initially, tasks were executed sequentially by a batch job; later, the back-end was integrated with another tool in order to run jobs in parallel. I was responsible for every aspect of this system, which dramatically reduced page load times and browser crashes."
 				},
 				{
 					"name": "Queue Manager: System Status",
@@ -198,14 +196,14 @@
 					"image": "legal_portal.png",
 					"height": 337,
 					"width": 500,
-					"detail": "The \"legal portal\", a tool to tailor an internet marketing application to the needs of the corporate legal team. It enables the legal team to track sensitive keywords and remove them from the live keyword portfolios if necessary, overriding the usual business processes and queueing mechanisms."
+					"detail": "The legal portal, a tool to tailor an internet marketing application to the needs of the corporate legal team. It enables the legal team to track sensitive keywords and remove them from the live keyword portfolios if necessary, overriding the usual business processes and queueing mechanisms."
 				},
 				{
 					"name": "Keyword Dashboard",
 					"image": "dashboard.png",
 					"width": 500,
 					"height": 500,
-					"detail": "The \"keyword dashbaord\", an interface for internet marketing analysts to investigate interesting keywords. Thousands of keywords are marked as 'interesting' each day by a static query; the dashboard lets users sift through those keywords in a variety of ways and then take action on individual keywords. I designed and implemented the interface, while another team member wrote the scripts to choose and store relevant keywords."
+					"detail": "The keyword dashbaord, an interface for internet marketing analysts to investigate interesting keywords. Thousands of keywords are marked as 'interesting' each day by a static query; the dashboard lets users sift through those keywords in a variety of ways and then take action on individual keywords. I designed and implemented the interface, while another team member wrote the scripts to choose and store relevant keywords."
 				}
 			]
 		},
@@ -221,24 +219,22 @@
 					"image": "tiramisu/screen05.png",
 					"height": 343,
 					"width": 425,
-					"detail": "Tiramisu, a mobile application that acts as a citizen-powered automatic vehicle location system. I worked on one of several teams designing the interaction for different variations of this system. The application has since been released for the iPhone. The default view displays the user's current location and nearby bus stops. Once a user gets on a bus, the app asks how full the bus is, so it can warn waiting users if they might be passed by an overly full bus. After boarding the bus and providing fullness information, the user can leave the app on and allow it to periodically transmit their location to the central server. To encourage users to keep it open, the app contains an alarm that will notify the user just before arrival.",
-					"links": [
-						{
-							"name": "Tiramisu: the real-time bus tracker",
-							"url": "http://www.tiramisutransit.com"
-						}
-					]
+					"detail": "Tiramisu, a mobile application that acts as a citizen-powered automatic vehicle location system. I worked on one of several teams designing the interaction for different variations of this system. The application has since been released for the iPhone. The default view displays the user's current location and nearby bus stops. Once a user gets on a bus, the app asks how full the bus is, so it can warn waiting users if they might be passed by an overly full bus. After boarding the bus and providing fullness information, the user can leave the app on and allow it to periodically transmit their location to the central server. To encourage users to keep it open, the app contains an alarm that will notify the user just before arrival."
 				},
 				{
 					"name": "FoodForward: Wireframes",
 					"detail": "FoodForward, a mobile app to facilitate healthy food choices and strengthen family connections. FoodForward helps users select foods, accounting for nutrition, individual health conditions, environmental concerns, and personal preference. Design was driven in part by the creation of a persona and relevant scenarios of her day. Early wireframes of the main screens.",
-					"image": "food_forward/wireframes.png",
-					"links": [
-						{
-							"name": "Process website",
-							"url": "http://orangejenny.com/content/mobile_design/food_forward/site/index.php"
-						}
-					]
+					"image": "food_forward/wireframes.png"
+				}
+			],
+			"links": [
+				{
+					"name": "Tiramisu: the real-time bus tracker",
+					"url": "http://www.tiramisutransit.com"
+				},
+				{
+					"name": "FoodForward project site",
+					"url": "http://orangejenny.com/content/mobile_design/food_forward/site/index.php"
 				}
 			]
 		},
@@ -246,7 +242,7 @@
 			"name": "Site design",
 			"skills": ["Python", "SQL", "CSS", "JavaScript", "Illustrator", "Interaction design", "Contextual design", "Usability testing"],
 			"brief": "Research and design for desktop-based sites.",
-			"detail": "Projects completed as part of my master's in human-computer interaction. These focused on user research, information architecture, and wireframing, although one also included building a Python-run, MySQL-backed prototype.",
+			"detail": "Projects completed as part of my master's in human-computer interaction. These focused on user research, information architecture, and wireframing, although one also included building a Python-based, MySQL-backed prototype.",
 			"folder": "site_design",
 			"gallery": [
 				{
@@ -254,33 +250,31 @@
 					"image": "air/homepage.png",
 					"height": 417,
 					"width": 363,
-					"detail": "A seven-month project to redesign the website of the American Institutes for Research (AIR), with a semester of user research followed by a semester of design and prototyping. This was a team of four, with me acting as technical lead. Our new information architecture simplified the site's structure, moving from two main navigation menus to one and eliminating duplicate content that plagued the original site. The homepage of our final design centers on a tabbed pane introducing AIR's five focus areas. It also features recent content and a rotating employee.",
-					"links" : [
-						{
-							"name" : "Process Website",
-							"url" : "http://www.orangejenny.com/content/site_design/air/site"
-						}
-					]
+					"detail": "A seven-month project to redesign the website of the <a href='http://www.air.org/'>American Institutes for Research</a> (AIR), with a semester of user research followed by a semester of design and prototyping. This was a team of four, with me acting as technical lead. Our new information architecture simplified the site's structure, moving from two main navigation menus to one and eliminating duplicate content that plagued the original site. The homepage of our final design centers on a tabbed pane introducing AIR's five focus areas. It also features recent content and a rotating employee."
 				},
 				{
 					"name": "Soir&eactue;e: Cooking",
 					"image": "soiree/screen03.png",
 					"height": 379,
 					"width": 425,
-					"detail": "Soir&eacute;e is a design for an online meal preparation tool to help chefs at any experience level execute a complex event. The front page of Soir&eacute;e outlines the 3-step process&mdash;select, prepare, and cook&mdash;and displays a few mouthwatering recipe ideas. To support the actual cooking, Soir&eacute;e generates a Gantt-style chart outlining which steps to take when, accounting for the available equipment, the user's skills, and the final meal time.",
-					"links": [
-						{
-							"name": "Process site",
-							"url": "http://www.orangejenny.com/content/site_design/soiree/site"
-						}
-					]
+					"detail": "Soir&eacute;e is a design for an online meal preparation tool to help chefs at any experience level execute a complex event. The front page of Soir&eacute;e outlines the 3-step process&mdash;select, prepare, and cook&mdash;and displays a few mouthwatering recipe ideas. To support the actual cooking, Soir&eacute;e generates a Gantt-style chart outlining which steps to take when, accounting for the available equipment, the user's skills, and the final meal time."
+				}
+			],
+			"links" : [
+				{
+					"name" : "AIR project site",
+					"url" : "http://www.orangejenny.com/content/site_design/air/site"
+				},
+				{
+					"name": "Soiree project site",
+					"url": "http://www.orangejenny.com/content/site_design/soiree/site"
 				}
 			]
 		},
 		{
 			"name": "Print Design",
 			"brief": "Assorted print design pieces",
-			"detail": "Assorted print design pieces",
+			"detail": "Assorted print design pieces, created with Illutrator, InDesign, and Photoshop.",
 			"skills": ["Illustrator", "InDesign", "PhotoShop"],
 			"folder": "info_design",
 			"gallery": [
@@ -311,7 +305,7 @@
 			"name": "Front Loader Bed",
 			"brief": "A foray into woodworking",
 			"skills": ["Carpentry"],
-			"detail": "Building a bed shaped like a front loader.",
+			"detail": "I dabbled in carpentry for a time, building a bed shaped like a front loader. I began with a set of blueprints intended for a child's bed, and adjusted them to raise the roof so that I would be able to sit up in bed, while minimizing the required materials.",
 			"folder": "bed",
 			"links": [
 				{
@@ -325,7 +319,7 @@
 					"image": "model.jpg",
 					"height": 180,
 					"width": 213,
-					"detail": "A scale model of the final bed. The blueprints, acquired from Plans4Wood, were intended for a child's bed, with little space between the mattress and the roof. I redesigned the blueprints, adjusting them to raise the roof so that I would be able to sit up in bed."
+					"detail": "A model of the bed after re-scaling for an adult."
 				},
 				{
 					"name": "Supplies",

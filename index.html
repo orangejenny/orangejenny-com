@@ -14,7 +14,6 @@
 	<script type="text/javascript">
 	<!--
 		var moveTooltip = function(event) {
-					$("body").scrollTop($("#juicy").height() - 10);
 			$('#tooltip').css('left', event.pageX + 5);
 			$('#tooltip').css('top', event.pageY + 8);
 		};
@@ -70,10 +69,28 @@
 					var project = project_data[$("#thumbs .thumb").index(this)];
 					$("#content").html(templates.project(_.extend({
 						image: "",
-						links: [],
 						skills: [],
 						gallery: [],
-					}, project)));
+					}, project, {
+						links: _.map(project.links || [],  function(link) {
+							var info = {};
+							if (link.url.indexOf("http") === 0) {
+								info.href = link.url;
+								info.text = link.name;
+							}
+							else {
+								info.href = "content/" + project.folder + "/" + link.url;
+								var extension = link.url.match(/\w+\.(\w+)/)[1];
+								if (_.contains(["pdf", "dv", "mov"], extension)) {
+									info.text = "Download " + link.name;
+								}
+								else if (_.contains(["swf", "html"], extension)) {
+									info.text = "Try " + link.name;
+								}
+							}
+							return info;
+						}),
+					})));
 					$("#content").show();
 				});
 			});
@@ -93,14 +110,18 @@
 		<h3><%= name %></h3>
 		<div class="column">
 			<%= detail %>
-			<ul>
+			<!--ul>
 				<% _.each(skills, function(skill) { %>
 					<li><%= skill %></li>
 				<% }) %>
-			</ul>
+			</ul-->
 			<ul>
 				<% _.each(links, function(link) { %>
-					<li><%= link %></li>
+					<li>
+						<div class='icon_link'>
+							<a href='<%= link.href %>' target='_blank'><%= link.text %></a>
+						</div>
+					</li>
 				<% }) %>
 			</ul>
 		</div>
@@ -112,7 +133,7 @@
 			<% _.each(gallery, function(piece) { %>
 				<div class='captioned-image' style='width:<%= piece.width + 10 %>px;'>
 					<div class='caption'><%= piece.detail %></div>
-					<img src='content/<%= folder %>/<%= piece.image %>' style='width:<%= piece.width %>px;' alt='<%= piece.detail %>' />
+					<img src='content/<%= folder %>/<%= piece.image %>' style='width:<%= piece.width %>px;' />
 				</div>
 			<% }) %>
 		<% } %>
