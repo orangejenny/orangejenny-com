@@ -14,6 +14,7 @@
 			"JavaScript",
 			"jQuery",
 			"Backbone",
+			"D3",
 			"Mustache",
 			"CSS",
 			"LESS/Sass"
@@ -35,7 +36,9 @@
 			],
 			"bullets": [
 				"Added data visualization capabilities to mobile tool for community health workers",
-				"Built and field tested applications in Delhi and Johannesburg"
+				"Contributing to multiple technology stacks: Django, Node, Android, and J2ME",
+				"Built and field tested applications in Delhi and Johannesburg",
+				"Secondary author on paper presented at 13th International Conference on Social Implications of Computers in Developing Countries: \"Designing a Mobile Partograph for Real­time Decision Support for Safer Deliveries in India\""
 			]
 		},
 		{

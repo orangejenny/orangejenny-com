@@ -41,10 +41,10 @@
 		<!--h3>I have the following <span class="emphasize">experience</span></h3-->
 		<?php $degree = 0 ?>
 		<?php foreach ($experiences as $experience) { ?>
-			<?php if (!$degree && $experience->degree) { ?>
+			<?php if (!$degree && isset($experience->degree)) { ?>
 			 	<!--h3>And have been <span class="emphasize">well-educated</span></h3-->
 			<?php } ?>
-			<?php $degree = $experience->degree ?>
+			<?php $degree = isset($experience->degree) ?>
 			<h4><?php echo $experience->heading ?></h4>
 			<ul class="horizontal">
 				<?php foreach ($experience->subheaders as $subheader) { ?>
