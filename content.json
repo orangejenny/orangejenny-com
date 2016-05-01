@@ -74,6 +74,14 @@
 			]
 		},
 		{
+			"name": "Miles",
+			"brief": "Yet again, tracking daily exercise",
+			"skills": ["JavaScript", "D3", "Perl"],
+			"image": "miles.png",
+			"folder": "miles",
+			"detail": "Revamped my workout-tracking application with D3, otherwise-vanilla JavaScript, and a little bit of Perl."
+		},
+		{
 			"name": "Workouts",
 			"brief": "Tracking daily exercise",
 			"skills": ["Ruby on Rails", "JavaScript", "CSS"],
