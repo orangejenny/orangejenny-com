@@ -1,7 +1,7 @@
 {
 	"paragraphs": [
 		"I'm Jenny. I work as a full-stack software engineer with user experience research and design skills. I live in Cambridge (the American one) and work at <a href='http://www.dimagi.com'>Dimagi</a>, building technology for underserved communities.",
-		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
+		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
 		"I experimented with being a designer but missed debugging too much and came back to software development. I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>."
 	],
 	"projects": [
@@ -41,7 +41,7 @@
 			"skills": ["Android"],
 			"image": "growth_charts.png",
 			"folder": "graphing",
-			"detail": "I implemented graphing functionality in <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a>, an Android app used by frontline workers to manage their clients. One common use case was to support growth charts, enabling clinicians to more easily track patients' growth and monitor infants and toddlers for failure to thrive."
+			"detail": "I implemented graphing functionality in <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare</a>, an Android app used by frontline workers to manage their clients. One common use case was to support growth charts, enabling clinicians to more easily track patients' growth and monitor infants and toddlers for failure to thrive."
 		},
 		{
 			"name": "Flavors",
@@ -71,6 +71,12 @@
 					"width": 500,
 					"detail": "In the lab, playlists are generated based off of songs' similarity to an initial seed song. The user configures the definition of similarity: one might bump up the importance played by a song's energy level or by the mood it elicits."
 				}
+			],
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/flavors"
+				}
 			]
 		},
 		{
@@ -79,7 +85,13 @@
 			"skills": ["JavaScript", "D3", "Perl"],
 			"image": "miles.png",
 			"folder": "miles",
-			"detail": "Revamped my workout-tracking application with D3, otherwise-vanilla JavaScript, and a little bit of Perl."
+			"detail": "Revamped my workout-tracking application with D3, otherwise-vanilla JavaScript, and a little bit of Perl.",
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/miles/"
+				}
+			]
 		},
 		{
 			"name": "Workouts",
@@ -87,7 +99,13 @@
 			"skills": ["Ruby on Rails", "JavaScript", "CSS"],
 			"image": "workouts.png",
 			"folder": "workouts",
-			"detail": "A project to track my running, rowing, and other activities. Gave me a reason to brush up on Rails and play with Flot."
+			"detail": "A project to track my running, rowing, and other activities. Gave me a reason to brush up on Rails and play with Flot.",
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/workouts"
+				}
+			]
 		},
 		{
 			"name": "Flex Keyboard",
@@ -100,6 +118,10 @@
 				{
 					"name": "demo",
 					"url": "keyboard.swf"
+				},
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/keyboard"
 				}
 			]
 		},
@@ -131,12 +153,20 @@
 					"url": "http://orangejenny.com/content/processing/applet/index.html"
 				},
 				{
+					"name": "GitHub (simulation)",
+					"url": "https://github.com/orangejenny/boston-marathon/"
+				},
+				{
 					"name": "training poster",
 					"url": "SFMPoster.pdf"
 				},
 				{
 					"name": "Sources of photographs used in training poster",
 					"url": "http://www.orangejenny.com/content/processing/poster_sources.html"
+				},
+				{
+					"name": "GitHub (poster)",
+					"url": "https://github.com/orangejenny/san-francisco-marathon"
 				}
 			]
 		},
@@ -151,6 +181,10 @@
 				{
 					"name": "demo",
 					"url": "game.html"
+				},
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/purplemonkeygamejam-feb-2014"
 				}
 			]
 		},
