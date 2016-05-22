@@ -85,7 +85,7 @@
 			"skills": ["JavaScript", "D3", "Perl"],
 			"image": "miles.png",
 			"folder": "miles",
-			"detail": "Revamped my workout-tracking application with D3, otherwise-vanilla JavaScript, and a little bit of Perl.",
+			"detail": "Revamped my workout-tracking application with D3, largely-vanilla JavaScript, and a little bit of Perl.",
 			"links": [
 				{
 					"name": "GitHub",
