@@ -13,6 +13,10 @@
 
 	<script type="text/javascript">
 	<!--
+		// Will be populated when document is ready
+		var project_data = [];
+		var templates = {};
+
 		var moveTooltip = function(event) {
 			$('#tooltip').css('left', event.pageX + 5);
 			$('#tooltip').css('top', event.pageY + 8);
@@ -24,10 +28,44 @@
 		var hideTooltip = function() {
 			$("#tooltip").hide();
 		};
+		var showContent = function(slug) {
+			if (!slug) {
+				return;
+			}
+
+			slug = slug.replace(/^#/, '');
+			var $thumb = $("a[href='#" + slug + "'] .thumb");
+			$(".thumb.active").removeClass("active");
+			$thumb.addClass("active");
+			var project = project_data[$("#thumbs .thumb").index($thumb.get(0))];
+			$("#content").html(templates.project(_.extend({
+				image: "",
+				skills: [],
+				gallery: [],
+			}, project, {
+				links: _.map(project.links || [],  function(link) {
+					var info = {};
+					if (link.url.indexOf("http") === 0) {
+						info.href = link.url;
+						info.text = link.name;
+					}
+					else {
+						info.href = "content/" + project.slug + "/" + link.url;
+						var extension = link.url.match(/\w+\.(\w+)/)[1];
+						if (_.contains(["pdf", "dv", "mov"], extension)) {
+							info.text = "Download " + link.name;
+						}
+						else if (_.contains(["swf", "html"], extension)) {
+							info.text = "Try " + link.name;
+						}
+					}
+					return info;
+				}),
+			})));
+			$("#content").show();
+		};
 
 		$(document).ready(function() {
-			var project_data = [];
-			var templates = {};
 			_.each($("script[type='text/template']"), function(template) {
 				var $template = $(template);
 				templates[$template.attr("name")] = _.template($template.html());
@@ -62,43 +100,10 @@
 					showTooltip("Why \"orange\"?", "Tangerines, pumpkins, and apricots - what's not to love?");
 				}, hideTooltip);
 
-				// Show project content on thumb click
-				$(".thumb").click(function() {
-					$(".thumb.active").removeClass("active");
-					$(this).addClass("active");
-					var project = project_data[$("#thumbs .thumb").index(this)];
-					$("#content").html(templates.project(_.extend({
-						image: "",
-						skills: [],
-						gallery: [],
-					}, project, {
-						links: _.map(project.links || [],  function(link) {
-							var info = {};
-							if (link.url.indexOf("http") === 0) {
-								info.href = link.url;
-								info.text = link.name;
-							}
-							else {
-								info.href = "content/" + project.slug + "/" + link.url;
-								var extension = link.url.match(/\w+\.(\w+)/)[1];
-								if (_.contains(["pdf", "dv", "mov"], extension)) {
-									info.text = "Download " + link.name;
-								}
-								else if (_.contains(["swf", "html"], extension)) {
-									info.text = "Try " + link.name;
-								}
-							}
-							return info;
-						}),
-					})));
-					$("#content").show();
-					
-					// Lazy URL handling
-					// TODO: support actual history
-					if (window.location.hash) {
-						$(".thumb[data-slug='" + (window.location.hash.substring(1)) + "']").click();
-					}
+				$(window).on('hashchange', function(e) {
+					showContent(location.hash);
 				});
+				showContent(location.hash);
 			});
 		});
 	//-->
@@ -107,10 +112,12 @@
 		<div class="column"><%= text %></div>
 	</script>
 	<script type="text/template" name="thumb">
-		<div class='thumb' data-slug='<%= slug %>' style='right: <%= right %>px; background-image: url(content/<%= slug %>/thumb.png)'>
-			<div class='thumb_veil'></div>
-			<div class='thumb_label'><%= name %></div>
-		</div>
+		<a href='#<%= slug %>'>
+			<div class='thumb' style='right: <%= right %>px; background-image: url(content/<%= slug %>/thumb.png)'>
+				<div class='thumb_veil'></div>
+				<div class='thumb_label'><%= name %></div>
+			</div>
+		</a>
 	</script>
 	<script type="text/template" name="project">
 		<h3><%= name %></h3>
