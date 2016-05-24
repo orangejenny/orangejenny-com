@@ -11,8 +11,8 @@
 	$element = $json->projects[$index];
 
 	$path = "content";
-	if (isset($element->folder)) {
-		$path .= "/$element->folder";
+	if (isset($element->slug)) {
+		$path .= "/$element->slug";
 	}
 	echo "<div class='detail' id='thumb_${index}'>";
 
