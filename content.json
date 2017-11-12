@@ -242,7 +242,6 @@
 			]
 		},
 		{
-<<<<<<< Updated upstream
 			"name": "Mobile design",
 			"skills": ["Interaction design", "Experience prototyping", "Illustrator"],
 			"brief": "Research and design for mobile phone apps.",
@@ -307,8 +306,6 @@
 			]
 		},
 		{
-=======
->>>>>>> Stashed changes
 			"name": "Print Design",
 			"brief": "Assorted print design pieces",
 			"detail": "Assorted print design pieces, created with Illutrator, InDesign, and Photoshop.",
