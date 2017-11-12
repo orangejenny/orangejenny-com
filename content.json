@@ -1,7 +1,7 @@
 {
 	"paragraphs": [
 		"I'm Jenny. I work as a full-stack software engineer with user experience research and design skills. I live in Cambridge (the American one) and work at <a href='http://www.dimagi.com'>Dimagi</a>, building technology for underserved communities.",
-		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
+		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining Dimagi, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
 		"I experimented with being a designer but missed debugging too much and came back to software development. I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>."
 	],
 	"projects": [
@@ -242,6 +242,7 @@
 			]
 		},
 		{
+<<<<<<< Updated upstream
 			"name": "Mobile design",
 			"skills": ["Interaction design", "Experience prototyping", "Illustrator"],
 			"brief": "Research and design for mobile phone apps.",
@@ -306,6 +307,8 @@
 			]
 		},
 		{
+=======
+>>>>>>> Stashed changes
 			"name": "Print Design",
 			"brief": "Assorted print design pieces",
 			"detail": "Assorted print design pieces, created with Illutrator, InDesign, and Photoshop.",
