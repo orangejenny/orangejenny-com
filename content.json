@@ -1,7 +1,7 @@
 {
 	"paragraphs": [
 		"I'm Jenny. I work as a full-stack software engineer with user experience research and design skills. I live in Cambridge (the American one) and work at <a href='http://www.dimagi.com'>Dimagi</a>, building technology for underserved communities.",
-		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
+		"At Dimagi, I split my time between Android development for <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare</a> and Django and JavaScript development on <a href='http://www.commcarehq.org/'>CommCare HQ</a>. Before joining <a href='http://www.dimagi.com'>Dimagi</a>, I worked as a software engineer at <a href='http://www.athenahealth.com'>athenahealth</a> and at <a href='http://www.ebay.com'>eBay</a>.",
 		"I experimented with being a designer but missed debugging too much and came back to software development. I hold a master's degree in human-computer interaction from <a href='http://www.cmu.edu'>Carnegie Mellon University</a> and a bachelor's degree in computer science from <a href='http://www.wpi.edu'>Worcester Polytechnic Institute</a>."
 	],
 	"projects": [
@@ -9,7 +9,7 @@
 			"name": "mLabour",
 			"brief": "A mobile app for managing patient care in labor wards",
 			"skills": ["Android", "sceniario testing"],
-			"folder": "mlabour",
+			"slug": "mlabour",
 			"detail": "mLabour is an Android app for managing patient data during childbirth. The app includes a digitized version of the <a href='http://mnhtech.org/technology/technology-briefs/partograph/'>partograph</a>, a paper tool for tracking the mother's and baby's vitals. Beyond the electronic partograph, the app notifies staff when patients are overdue for an exam or have shown signs of being at risk for prolonged or obstructed labor.",
 			"gallery": [
 				{
@@ -40,14 +40,14 @@
 			"brief": "Implementing data visualizations for frontline workers",
 			"skills": ["Android"],
 			"image": "growth_charts.png",
-			"folder": "graphing",
-			"detail": "I implemented graphing functionality in <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare ODK</a>, an Android app used by frontline workers to manage their clients. One common use case was to support growth charts, enabling clinicians to more easily track patients' growth and monitor infants and toddlers for failure to thrive."
+			"slug": "graphing",
+			"detail": "I implemented graphing functionality in <a href='https://play.google.com/store/apps/details?id=org.commcare.dalvik&hl=en'>CommCare</a>, an Android app used by frontline workers to manage their clients. One common use case was to support growth charts, enabling clinicians to more easily track patients' growth and monitor infants and toddlers for failure to thrive."
 		},
 		{
 			"name": "Flavors",
 			"brief": "Metadata-based music management",
 			"skills": ["Perl", "SQL", "JavaScript", "LESS"],
-			"folder": "flavors",
+			"slug": "flavors",
 			"detail": "An interface to my music collection, Flavors organizes songs and collections based on personal metadata and uses this information to generate personally meaningful playlists.",
 			"gallery": [
 				{
@@ -71,6 +71,26 @@
 					"width": 500,
 					"detail": "In the lab, playlists are generated based off of songs' similarity to an initial seed song. The user configures the definition of similarity: one might bump up the importance played by a song's energy level or by the mood it elicits."
 				}
+			],
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/flavors"
+				}
+			]
+		},
+		{
+			"name": "Miles",
+			"brief": "Yet again, tracking daily exercise",
+			"skills": ["JavaScript", "D3", "Perl"],
+			"image": "miles.png",
+			"slug": "miles",
+			"detail": "Revamped my workout-tracking application with D3, largely-vanilla JavaScript, and a little bit of Perl.",
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/miles/"
+				}
 			]
 		},
 		{
@@ -78,20 +98,30 @@
 			"brief": "Tracking daily exercise",
 			"skills": ["Ruby on Rails", "JavaScript", "CSS"],
 			"image": "workouts.png",
-			"folder": "workouts",
-			"detail": "A project to track my running, rowing, and other activities. Gave me a reason to brush up on Rails and play with Flot."
+			"slug": "workouts",
+			"detail": "A project to track my running, rowing, and other activities. Gave me a reason to brush up on Rails and play with Flot.",
+			"links": [
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/workouts"
+				}
+			]
 		},
 		{
 			"name": "Flex Keyboard",
 			"brief": "A simulated piano and sheet music editor",
 			"skills": ["ActionScript"],
 			"image": "keyboard.png",
-			"folder": "keyboard",
+			"slug": "keyboard",
 			"detail": "A simulated piano and sheet music editor. Users can play freely using either mouse or keyboard and also record their music. Once recorded, songs can be played back, and the sheet music generated can be edited.",
 			"links": [
 				{
 					"name": "demo",
 					"url": "keyboard.swf"
+				},
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/keyboard"
 				}
 			]
 		},
@@ -100,7 +130,7 @@
 			"brief": "Projects created using Processing",
 			"skills": ["Processing", "Illustrator"],
 			"detail": "Projects created using <a href='http://www.processing.org'>Processing</a>.",
-			"folder": "processing",
+			"slug": "processing",
 			"gallery": [
 				{
 					"name": "Boston Marathon Visualization",
@@ -123,12 +153,20 @@
 					"url": "http://orangejenny.com/content/processing/applet/index.html"
 				},
 				{
+					"name": "GitHub (simulation)",
+					"url": "https://github.com/orangejenny/boston-marathon/"
+				},
+				{
 					"name": "training poster",
 					"url": "SFMPoster.pdf"
 				},
 				{
 					"name": "Sources of photographs used in training poster",
 					"url": "http://www.orangejenny.com/content/processing/poster_sources.html"
+				},
+				{
+					"name": "GitHub (poster)",
+					"url": "https://github.com/orangejenny/san-francisco-marathon"
 				}
 			]
 		},
@@ -137,12 +175,16 @@
 			"brief": "Web game",
 			"skills": ["JavaScript", "CSS"],
 			"image": "game.png",
-			"folder": "purplemonkeygamejam-feb-2014",
+			"slug": "purplemonkeygamejam-feb-2014",
 			"detail": "A  JavaScript-based game I put together in a weekend at the <a href='http://purplemonkeygamejam.com/'>Purple Monkey Game Jame</a>.",
 			"links": [
 				{
 					"name": "demo",
 					"url": "game.html"
+				},
+				{
+					"name": "GitHub",
+					"url": "https://github.com/orangejenny/purplemonkeygamejam-feb-2014"
 				}
 			]
 		},
@@ -151,7 +193,7 @@
 			"brief": "Projects to improve the developer experience of my team at eBay",
 			"detail": "Projects to improve the developer experience of my team at eBay",
 			"skills": ["PHP", "SQL", "JavaScript", "CSS"],
-			"folder": "ebay_dev",
+			"slug": "ebay_dev",
 			"gallery": [
 				{
 					"name": "Workflows",
@@ -180,7 +222,7 @@
 			"name": "eBay: Product",
 			"brief": "Feature development for eBay's Internet Marketing Solutions team",
 			"skills": ["PHP", "SQL", "JavaScript", "CSS"],
-			"folder": "ebay_product",
+			"slug": "ebay_product",
 			"detail": "I worked with Internet Marketing Solutions for three years, largely on feature development for the company's ad optimization platform.",
 			"gallery": [
 				{
@@ -204,7 +246,7 @@
 			"skills": ["Interaction design", "Experience prototyping", "Illustrator"],
 			"brief": "Research and design for mobile phone apps.",
 			"detail": "Research and design for mobile phone apps.",
-			"folder": "mobile_design",
+			"slug": "mobile_design",
 			"gallery": [
 				{
 					"name": "Tiramisu: Trip Details",
@@ -235,7 +277,7 @@
 			"skills": ["Python", "SQL", "CSS", "JavaScript", "Illustrator", "Interaction design", "Contextual design", "Usability testing"],
 			"brief": "Research and design for desktop-based sites.",
 			"detail": "Projects completed as part of my master's in human-computer interaction. These focused on user research, information architecture, and wireframing, although one also included building a Python-based, MySQL-backed prototype.",
-			"folder": "site_design",
+			"slug": "site_design",
 			"gallery": [
 				{
 					"name": "AIR Homepage",
@@ -268,7 +310,7 @@
 			"brief": "Assorted print design pieces",
 			"detail": "Assorted print design pieces, created with Illutrator, InDesign, and Photoshop.",
 			"skills": ["Illustrator", "InDesign", "PhotoShop"],
-			"folder": "info_design",
+			"slug": "info_design",
 			"gallery": [
 				{
 					"name": "Invertebrate Zoology",
@@ -298,7 +340,7 @@
 			"brief": "A foray into woodworking",
 			"skills": ["Carpentry"],
 			"detail": "I dabbled in carpentry for a time, building a bed shaped like a front loader. I began with a set of blueprints intended for a child's bed, and adjusted them to raise the roof so that I would be able to sit up in bed, while minimizing the required materials.",
-			"folder": "bed",
+			"slug": "bed",
 			"links": [
 				{
 					"name": "Plans4Wood",
