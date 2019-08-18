@@ -1,21 +1,19 @@
 {
 	"skillsets": {
 		"I build software": [
-			"Perl",
 			"Python",
-			"Android",
+			"Perl",
 			"SQL",
 			"PHP",
 			"Java",
-			"Rails",
-			"Processing"
+			"Android",
+			"Rails"
 		],
 		"Often for the web": [
 			"JavaScript",
 			"jQuery",
 			"Backbone",
 			"D3",
-			"Mustache",
 			"CSS",
 			"LESS/Sass"
 		],
@@ -28,17 +26,23 @@
 	},
 	"experiences": [
 		{
-			"heading": "Senior Engineer",
+			"heading": "Senior Engineer II and Head of User Experience",
 			"subheaders": [
 				"Dimagi, Inc.",
 				"Cambridge, MA",
 				"2014 to present"
 			],
 			"bullets": [
-				"Added data visualization capabilities to mobile tool for community health workers",
-				"Contributing to multiple technology stacks: Django, Node, Android, and J2ME",
-				"Field tested applications in Delhi and Johannesburg",
-				"Secondary author on paper presented at 13th International Conference on Social Implications of Computers in Developing Countries: \"Designing a Mobile Partograph for Real-time Decision Support for Safer Deliveries in India\""
+				{"text": "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase", "bullets": []},
+				{"text": "Contributed to multiple technology stacks: Django, Node, Android, and J2ME", "bullets": []},
+				{"text": "Field tested applications in Delhi and Johannesburg", "bullets": []},
+				{
+					"text": "Conference papers and presentations",
+					"bullets": [
+						"Schweers, J. & Deflaux, G. \"Design Sprints: Inspiring big changes in digital solutions.\" Presentation at 10th ICT4D Conference, Lusaka, Zambia, 2018.",
+						"Schweers, J., Khalid, M., Underwood, H., Bishnoi, S., & Chhugani, M. \"mLabour: Design and Evaluation of a Mobile Partograph and Labour Ward Management Application.\" Paper presented at Humanitarian Technology 2016: Science, Systems, and Global Impact, Boston, MA."
+					]
+				}
 			]
 		},
 		{
@@ -49,9 +53,9 @@
 				"2010 to 2014"
 			],
 			"bullets": [
-				"Acted as tech lead for two cross-functional teams and managed three developers",
-				"Worked on redesign and re-implementation of core clinical experience",
-				"Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards"
+				{"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
+				{"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
+				{"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
 			]
 		},
 		{
@@ -62,11 +66,10 @@
 				"2009 to 2010 (part-time)"
 			],
 			"bullets": [
-				"Developed features for StepGreen.org, a website that encourages sustainable living"
+				{"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
 			]
 		},
 		{
-			"degree": 1,
 			"heading": "Master of Human-Computer Interaction",
 			"subheaders": [
 				"Carnegie Mellon University",
@@ -84,24 +87,12 @@
 				"2006 to 2009"
 			],
 			"bullets": [
-				"Developed and maintained components of eBayâ€™s core ad optimization platform, which manages $250 million annually in marketing spend",
-				"Architected system to move long-running processes offline, drastically reducing load times and browser crashes",
-				"Twice recognized as a top performer within 200-person department"
+				{"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
+				{"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
+				{"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
 			]
 		},
 		{
-			"heading": "Software Engineering Intern",
-			"subheaders": [
-				"eBay, Inc.",
-				"San Jose, CA",
-				"Summer 2006"
-			],
-			"bullets": [
-				"Mined click data of millions of users, correlating these logs with known behavioral profiles"
-			]
-		},
-		{
-			"degree": 1,
 			"heading": "Bachelor of Science, Computer Science",
 			"subheaders": [
 				"Worcester Polytechnic Institute", 
@@ -110,7 +101,7 @@
 				"GPA 3.99"
 			],
 			"bullets": [
-				"Minors in philosophy and computer engineering"
+				{"text": "Minors in philosophy and computer engineering", "bullets": []}
 			]
 		}
 	]
