@@ -1,21 +1,19 @@
 {
 	"skillsets": {
 		"I build software": [
-			"Perl",
 			"Python",
-			"Android",
+			"Perl",
 			"SQL",
 			"PHP",
 			"Java",
-			"Rails",
-			"Processing"
+			"Android",
+			"Rails"
 		],
 		"Often for the web": [
 			"JavaScript",
 			"jQuery",
 			"Backbone",
 			"D3",
-			"Mustache",
 			"CSS",
 			"LESS/Sass"
 		],
