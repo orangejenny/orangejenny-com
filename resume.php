@@ -47,7 +47,16 @@
 			</ul>
 			<ul class="vertical">
 			<?php foreach ($experience->bullets as $bullet) { ?>
-				<li><?php echo $bullet ?></li>
+				<li>
+					<?php echo $bullet->text ?>
+					<?php if ($bullet->bullets) { ?>
+						<ul>
+							<?php foreach ($bullet->bullets as $bullet) { ?>
+								<li><?php echo $bullet ?></li>
+							<?php } ?>
+						</ul>
+					<?php } ?>
+				</li>
 			<?php } ?>
 			</ul>
 		<?php } ?>
