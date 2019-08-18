@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 				},
 			files: {
 				"./css/portfolio.css": "./css/portfolio.less",
+				"./css/resume.css": "./css/resume.less",
 			}
 		}
 	},
