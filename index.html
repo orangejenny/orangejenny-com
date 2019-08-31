@@ -1,191 +1,140 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns='http://www.w3.org/1999/xhtml'>
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<title>Jennifer Schweers</title>
-
-	<link rel="stylesheet" type="text/css" href="css/portfolio.css" />
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-
-	<script type="text/javascript">
-	<!--
-		// Will be populated when document is ready
-		var project_data = [];
-		var templates = {};
-
-		var moveTooltip = function(event) {
-			$('#tooltip').css('left', event.pageX + 5);
-			$('#tooltip').css('top', event.pageY + 8);
-		};
-		var showTooltip = function(title, description) {
-			$("#tooltip").html("<div style='font-weight:bold;'>" + title + "</div>" + description);
-			$("#tooltip").show();
-		};
-		var hideTooltip = function() {
-			$("#tooltip").hide();
-		};
-		var showContent = function(slug) {
-			if (!slug) {
-				return;
-			}
-
-			slug = slug.replace(/^#/, '');
-			var $thumb = $("a[href='#" + slug + "'] .thumb");
-			$(".thumb.active").removeClass("active");
-			$thumb.addClass("active");
-			var project = project_data[$("#thumbs .thumb").index($thumb.get(0))];
-			$("#content").html(templates.project(_.extend({
-				image: "",
-				skills: [],
-				gallery: [],
-			}, project, {
-				links: _.map(project.links || [],  function(link) {
-					var info = {};
-					if (link.url.indexOf("http") === 0) {
-						info.href = link.url;
-						info.text = link.name;
-					}
-					else {
-						info.href = "content/" + project.slug + "/" + link.url;
-						var extension = link.url.match(/\w+\.(\w+)/)[1];
-						if (_.contains(["pdf", "dv", "mov"], extension)) {
-							info.text = "Download " + link.name;
-						}
-						else if (_.contains(["swf", "html"], extension)) {
-							info.text = "Try " + link.name;
-						}
-					}
-					return info;
-				}),
-			})));
-			$("#content").show();
-		};
-
-		$(document).ready(function() {
-			_.each($("script[type='text/template']"), function(template) {
-				var $template = $(template);
-				templates[$template.attr("name")] = _.template($template.html());
-			});
-
-			$.getJSON("content.json", function(data) {
-				// Intro content
-				_.each(data.paragraphs, function(p) {
-					$(".columns").append(templates.paragraph({
-						text: p,
-					}));
-				});
-
-				// Project content
-				_.each(data.projects.reverse(), function(project, index) {
-					project_data.push(project);
-
-					$("#thumbs").append(templates.thumb(_.extend({}, project, {
-						right: index * 900 / (data.projects.length + 0.5),
-					})));
-				});
-
-				// Tooltip events
-				$('#thumbs, #juicy img').mousemove(function(event) {
-					moveTooltip(event);
-				});
-				$(".thumb").hover(function() {
-					var data = project_data[$("#thumbs .thumb").index(this)];
-					showTooltip(data.name, data.brief);
-				}, hideTooltip);
-				$("#juicy img").hover(function() {
-					showTooltip("Why \"orange\"?", "Tangerines, pumpkins, and apricots - what's not to love?");
-				}, hideTooltip);
-
-				$(window).on('hashchange', function(e) {
-					showContent(location.hash);
-				});
-				showContent(location.hash);
-			});
-		});
-	//-->
-	</script>
-	<script type="text/template" name="paragraph">
-		<div class="column"><%= text %></div>
-	</script>
-	<script type="text/template" name="thumb">
-		<a href='#<%= slug %>'>
-			<div class='thumb' style='right: <%= right %>px; background-image: url(content/<%= slug %>/thumb.png)'>
-				<div class='thumb_veil'></div>
-				<div class='thumb_label'><%= name %></div>
-			</div>
-		</a>
-	</script>
-	<script type="text/template" name="project">
-		<h3><%= name %></h3>
-		<div class="column">
-			<%= detail %>
-			<!--ul>
-				<% _.each(skills, function(skill) { %>
-					<li><%= skill %></li>
-				<% }) %>
-			</ul-->
-			<ul>
-				<% _.each(links, function(link) { %>
-					<li>
-						<div class='icon_link'>
-							<a href='<%= link.href %>' target='_blank'><%= link.text %></a>
-						</div>
-					</li>
-				<% }) %>
-			</ul>
-		</div>
-		<div class='gallery'>
-		<% if (image) { %>
-			<img src='content/<%= slug %>/<%= image %>' />
-		<% } %>
-		<% if (gallery) { %>
-			<% _.each(gallery, function(piece) { %>
-				<div class='captioned-image' style='width:<%= piece.width + 10 %>px;'>
-					<div class='caption'><%= piece.detail %></div>
-					<img src='content/<%= slug %>/<%= piece.image %>' style='width:<%= piece.width %>px;' />
-				</div>
-			<% }) %>
-		<% } %>
-		</div>
-		</div>
-	</script>
-</head>
-
-<body>
-	<div id="main-wrapper">
-		<div id="main">
-			<div id="juicy">
-				<img src='juicy.png'>
-			</div>
-			<div id="not-juicy">
-				<div id="header">
-					<span id="name">Jennifer Schweers</span>
-					<span id="contact">
-						orange.jenny {at} gmail
-						/
-						<a href='resume.php'>resume</a>
-						/
-						<a href='https://github.com/orangejenny'>github</a>
-					</span>
-				</div>
-				<h3>Well, hello.</h3>
-				<div class='columns'></div>
-			</div>
-		</div>
-	</div>
-
-	<div id="thumbs"></div>
-
-	<div id="content"></div>
-
-	<script type="text/javascript">
-		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<div id="tooltip"></div>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+        <title>Jennifer Schweers</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 offset-sm-2 text-center">
+                    <img src="juicy.png" alt="An orange slice" />
+                    <ul>
+                        <li>
+                            <a target='_blank' href="resume.php">Resume</a>
+                        </li>
+                        <li>
+                            <a target='_blank' href="https://github.com/orangejenny">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3>
+                        Well, hello.
+                    </h3>
+                    <p>
+                        I'm Jenny.
+                        I work as a full-stack software engineer with user experience research and design skills.
+                        I live in Cambridge (the American one) and work at <a target='_blank' href="https://dimagi.com/">Dimagi</a>,
+                        building technology for underserved communities.
+                    </p>
+                    <p>
+                        At Dimagi, I spend most of my time on Django and JavaScript development for <a target='_blank' href="https://dimagi.com/commcare/">CommCare HQ</a>.
+                        Before joining Dimagi, I worked as a software engineer at <a target='_blank' href="http://www.athenahealth.com">athenahealth</a> and at <a target='_blank' href="http://www.ebay.com">eBay</a>.
+                    </p>
+                    <p>
+                        I experimented with being a designer but missed debugging too much and came back to software development.
+                        I hold a master's degree in human-computer interaction from <a target='_blank' href="https://hcii.cmu.edu/">Carnegie Mellon University</a>
+                        and a bachelor's degree in computer science from <a target='_blank' href="http://www.wpi.edu">Worcester Polytechnic Institute</a>.
+                    </p>
+                    <p>
+                        I have a <a href='#'>resume</a> and a <a href='#'>GitHub profile</a>, although my most interesting projects are described here.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Legacy Code</div>
+                            <div class="card-content">
+                                One of my specialties is the care and feeding of big old codebases. I've written about modernizing Javascript in such a codebase
+                                    (<a target='_blank' href='https://www.dimagi.com/blog/migrating-a-legacy-codebase-to-requirejs/'>part 1</a>,
+                                    <a target='_blank' href='https://www.dimagi.com/blog/migrating-a-legacy-codebase-to-requirejs-part-2/'>part 2</a>,
+                                    <a target='_blank' href='https://www.dimagi.com/blog/migrating-a-legacy-codebase-to-requirejs-part-3/'>part 3</a>)
+                                and about designing and maintaining
+                                <a target='_blank' href='https://www.dimagi.com/blog/graphing-on-android-an-evolution-from-java-to-javascript/'>
+                                    graphing capabilities
+                                </a> in an Android application.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">mLabour</div>
+                            <div class="card-content">
+                                The most directly impactful project I've been a part of is <a target='_blank' href='https://www.dimagi.com/blog/using-mobile-solutions-to-improve-intrapartum-care-in-tanzania/'>mLabour</a>,
+                                a mobile app for labor ward nurses to better manage patient care during delivery. I was one of the core developers and was also involved in field testing and training for a pilot study in Delhi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Flavors</div>
+                            <div class="card-content">
+                                My longest-running project is a web app for
+                                <a target='_blank' href='https://github.com/orangejenny/flavors#flavors'>curating a personal music collection</a>,
+                                which I created nearly a decade ago and continue to develop and use on a daily basis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Flex Keyboard</div>
+                            <div class="card-content">
+                                My most entertaining project is an app to
+                                <a target='_blank' href='https://github.com/orangejenny/keyboard#flex-keyboard'>simulate a piano</a> and generate sheet music.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Processing</div>
+                            <div class="card-content">
+                                I've used Processing for a few running-related projects:
+                                a <a target='_blank' href='https://github.com/orangejenny/boston-marathon#boston-marathon-visualization'>simulation</a> of the 2009 Boston marathon
+                                and a <a target='_blank' href='https://github.com/orangejenny/san-francisco-marathon#san-francisco-marathon-poster'>training poster</a> for the San Francisco Marathon.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Workouts</div>
+                            <div class="card-content">
+                                Two web apps to track daily activity:
+                                the current <a target='_blank' href='https://github.com/orangejenny/miles#miles'>JavaScript-based version</a>
+                                and an older <a target='_blank' href='https://github.com/orangejenny/workouts#workouts'>Rails version</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="card">
+                        <div class="front">
+                            <div class="card-title">Front Loader Bed</div>
+                            <div class="card-content">
+                                Tangential to my software work, I have some interest in physically building things,
+                                such as this <a target='_blank' href='https://photos.app.goo.gl/LtTCSabo6AGp2WG59'>front loader bed</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
