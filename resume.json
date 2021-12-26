@@ -2,107 +2,111 @@
 	"skillsets": {
 		"I build software": [
 			"Python",
-			"Perl",
+			"JavaScript",
 			"SQL",
-			"PHP",
 			"Java",
 			"Android",
-			"Rails"
+			"Perl"
 		],
-		"Often for the web": [
-			"JavaScript",
-			"jQuery",
-			"Backbone",
-			"D3",
-			"CSS",
-			"LESS/Sass"
-		],
-		"Always with an eye on design": [
+		"With and for people": [
 			"usability testing",
-			"interaction design",
 			"contextual design",
-			"Adobe Creative Suite"
+			"frequent mentorship",
+			"occasional management"
 		]
 	},
-	"experiences": [
-		{
-			"heading": "Senior Engineer II and Head of User Experience",
-			"subheaders": [
-				"Dimagi, Inc.",
-				"Cambridge, MA",
-				"2014 to present"
-			],
-			"bullets": [
-				{"text": "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase", "bullets": []},
-				{"text": "Contributed to multiple technology stacks: Django, Node, Android, and J2ME", "bullets": []},
-				{"text": "Field tested applications in Delhi and Johannesburg", "bullets": []},
-				{
-					"text": "Conference papers and presentations",
-					"bullets": [
-						"Schweers, J. & Deflaux, G. \"Design Sprints: Inspiring big changes in digital solutions.\" Presentation at 10th ICT4D Conference, Lusaka, Zambia, 2018.",
-						"Schweers, J., Khalid, M., Underwood, H., Bishnoi, S., & Chhugani, M. \"mLabour: Design and Evaluation of a Mobile Partograph and Labour Ward Management Application.\" Paper presented at Humanitarian Technology 2016: Science, Systems, and Global Impact, Boston, MA."
-					]
-				}
-			]
-		},
-		{
-			"heading": "Senior Software Engineer",
-			"subheaders": [
-				"athenahealth",
-				"Watertown, MA",
-				"2010 to 2014"
-			],
-			"bullets": [
-				{"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
-				{"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
-				{"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
-			]
-		},
-		{
-			"heading": "Software Developer",
-			"subheaders": [
-				"Carnegie Mellon University", 
-				"Pittsburgh, PA",
-				"2009 to 2010 (part-time)"
-			],
-			"bullets": [
-				{"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
-			]
-		},
-		{
-			"heading": "Master of Human-Computer Interaction",
-			"subheaders": [
-				"Carnegie Mellon University",
-				"Pittsburgh, PA",
-				"2009 to 2010",
-				"GPA 3.97"
-			],
-			"bullets": []
-		},
-		{
-			"heading": "Senior Software Engineer",
-			"subheaders": [
-				"eBay, Inc.",
-				"San Jose, CA",
-				"2006 to 2009"
-			],
-			"bullets": [
-				{"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
-				{"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
-				{"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
-			]
-		},
-		{
-			"heading": "Bachelor of Science, Computer Science",
-			"subheaders": [
-				"Worcester Polytechnic Institute", 
-				"Worcester, MA",
-				"2002 to 2006",
-				"GPA 3.99"
-			],
-			"bullets": [
-				{"text": "Minors in philosophy and computer engineering", "bullets": []}
-			]
-		}
-	]
+	"content": {
+		"Experience": [
+			{
+				"heading": "Senior Engineer II",
+				"subheaders": [
+					"Dimagi, Inc.",
+					"Cambridge, MA",
+					"2014 to present"
+				],
+				"bullets": [
+					{"text": "Currently engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities", "bullets": []},
+					{"text": "Previously engineering lead in Mission and Software as a Service divisions", "bullets": []},
+					{"text": "Contributor to multiple technology stacks: Django, Java server, Android, and Node", "bullets": []},
+					{"text": "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase", "bullets": []},
+					{
+						"text": "Conference papers and presentations",
+						"bullets": [
+							"Schweers, J. & Deflaux, G. \"Design Sprints: Inspiring big changes in digital solutions.\" Presentation at 10th ICT4D Conference, Lusaka, Zambia, 2018.",
+							"Schweers, J., Khalid, M., Underwood, H., Bishnoi, S., & Chhugani, M. \"mLabour: Design and Evaluation of a Mobile Partograph and Labour Ward Management Application.\" Paper presented at Humanitarian Technology 2016: Science, Systems, and Global Impact, Boston, MA."
+						]
+					}
+				]
+			},
+			{
+				"heading": "Senior Software Engineer",
+				"subheaders": [
+					"athenahealth",
+					"Watertown, MA",
+					"2010 to 2014"
+				],
+				"bullets": [
+					{"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
+					{"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
+					{"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
+				]
+			},
+			{
+				"heading": "Software Developer",
+				"subheaders": [
+					"Carnegie Mellon University", 
+					"Pittsburgh, PA",
+					"2009 to 2010 (part-time)"
+				],
+				"bullets": [
+					{"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
+				]
+			},
+			{
+				"heading": "Senior Software Engineer",
+				"subheaders": [
+					"eBay, Inc.",
+					"San Jose, CA",
+					"2006 to 2009"
+				],
+				"bullets": [
+					{"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
+					{"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
+					{"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
+				]
+			}
+		],
+		"Education": [
+			{
+				"heading": "Continuing Education",
+				"bullets": [
+					{"text": "UMass Boston, graduate course work in sociology, fall 2021"},
+					{"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
+					{"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
+				]
+			},
+			{
+				"heading": "Master of Human-Computer Interaction",
+				"subheaders": [
+					"Carnegie Mellon University",
+					"Pittsburgh, PA",
+					"2009 to 2010",
+					"GPA 3.97"
+				],
+				"bullets": []
+			},
+			{
+				"heading": "Bachelor of Science, Computer Science",
+				"subheaders": [
+					"Worcester Polytechnic Institute", 
+					"Worcester, MA",
+					"2002 to 2006",
+					"GPA 3.99"
+				],
+				"bullets": [
+					{"text": "Minors in philosophy and computer engineering", "bullets": []}
+				]
+			}
+		]
+	}
 }

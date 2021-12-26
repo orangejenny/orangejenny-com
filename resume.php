@@ -4,7 +4,7 @@
 <?php
 	$json = json_decode(file_get_contents("resume.json"));
 	$skillsets = $json->skillsets;
-	$experiences = $json->experiences;
+	$content = $json->content;
 ?>
 
 <html xmlns='http://www.w3.org/1999/xhtml'>
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-	<div class="right">
+	<div class="right" id="intro">
 		<h3>Hello, I'm <span class="emphasize">Jenny</span></h3>
 		<ul class="horizontal">
 			<li>Jennifer Schweers</li>
@@ -35,30 +35,31 @@
 	<?php } ?>
 	</div>
 
-	<hr>
-
-	<div class="left">
-		<?php foreach ($experiences as $experience) { ?>
-			<h4><?php echo $experience->heading ?></h4>
-			<ul class="horizontal">
-				<?php foreach ($experience->subheaders as $subheader) { ?>
-					<li><?php echo $subheader ?></li>
-				<?php } ?>
-			</ul>
-			<ul class="vertical">
-			<?php foreach ($experience->bullets as $bullet) { ?>
-				<li>
-					<?php echo $bullet->text ?>
-					<?php if ($bullet->bullets) { ?>
-						<ul>
-							<?php foreach ($bullet->bullets as $bullet) { ?>
-								<li><?php echo $bullet ?></li>
-							<?php } ?>
-						</ul>
+	<div class="left" id="content">
+		<?php foreach ($content as $heading => $items) { ?>
+	      <h3><?php echo $heading ?></h3>
+			<?php foreach ($items as $item) { ?>
+				<h4><?php echo $item->heading ?></h4>
+				<ul class="horizontal">
+					<?php foreach ($item->subheaders as $subheader) { ?>
+						<li><?php echo $subheader ?></li>
 					<?php } ?>
-				</li>
+				</ul>
+				<ul class="vertical">
+				<?php foreach ($item->bullets as $bullet) { ?>
+					<li>
+						<?php echo $bullet->text ?>
+						<?php if ($bullet->bullets) { ?>
+							<ul>
+								<?php foreach ($bullet->bullets as $bullet) { ?>
+									<li><?php echo $bullet ?></li>
+								<?php } ?>
+							</ul>
+						<?php } ?>
+					</li>
+				<?php } ?>
+				</ul>
 			<?php } ?>
-			</ul>
 		<?php } ?>
 	</div>
 
