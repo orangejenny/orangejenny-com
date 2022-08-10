@@ -5,6 +5,7 @@
 	$json = json_decode(file_get_contents("resume.json"));
 	$skillsets = $json->skillsets;
 	$content = $json->content;
+	$notes = $json->notes;
 ?>
 
 <html xmlns='http://www.w3.org/1999/xhtml'>
@@ -60,6 +61,12 @@
 				<?php } ?>
 				</ul>
 			<?php } ?>
+		<?php } ?>
+	</div>
+
+	<div>
+		<?php foreach ($notes as $note) { ?>
+			<div><?php echo $note ?></div>
 		<?php } ?>
 	</div>
 

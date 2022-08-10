@@ -25,10 +25,21 @@
 					"2014 to present"
 				],
 				"bullets": [
-					{"text": "Currently engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities", "bullets": []},
-					{"text": "Previously engineering lead in Mission and Software as a Service divisions", "bullets": []},
-					{"text": "Contributor to multiple technology stacks: Django, Java server, Android, and Node", "bullets": []},
-					{"text": "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase", "bullets": []},
+					{
+						"text": "Engineering leadership",
+						"bullets": [
+							"Currently engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities",
+							"Previously engineering lead in Mission and Software as a Service divisions"
+						]
+					},
+					{
+						"text": "Individual technical contributions",
+						"bullets": [
+							"The top contributor to commcare-hq, one of GitHub's 100 most valuable open source projects*",
+							"Contributor to multiple technology stacks: Django, Java server, Android, and Node",
+							"Led JavaScript modernization initiative in 10-year-old, 100K-line codebase"
+						]
+					},
 					{
 						"text": "Conference papers and presentations",
 						"bullets": [
@@ -108,5 +119,8 @@
 				]
 			}
 		]
-	}
+	},
+	"notes": [
+		"* See https://github.com/dimagi/commcare-hq/graphs/contributors and https://fossbytes.com/top-100-most-valuable-github-repositories/"
+   ]
 }
