@@ -28,7 +28,7 @@
 					{
 						"text": "Engineering leadership",
 						"bullets": [
-							"Currently engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities",
+							"Engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities",
 							"Previously engineering lead in Mission and Software as a Service divisions"
 						]
 					},
@@ -89,9 +89,17 @@
 		],
 		"Education": [
 			{
+				"heading": "Master of Arts, Applied Sociology",
+				"subheaders": [
+					"University of Massachusetts",
+					"Boston, MA",
+					"2021 to, optimistically, 2026"
+				],
+				"bullets": []
+			},
+			{
 				"heading": "Continuing Education",
 				"bullets": [
-					{"text": "UMass Boston, graduate course work in sociology, fall 2021"},
 					{"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
 					{"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
 				]
