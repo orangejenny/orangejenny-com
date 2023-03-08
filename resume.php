@@ -46,11 +46,13 @@
 						<span class="muted"><?php echo $item->heading_annotation ?></span>
 					<?php } ?>
 				</h4>
-				<ul class="horizontal">
-					<?php foreach ($item->subheaders as $subheader) { ?>
-						<li><?php echo $subheader ?></li>
-					<?php } ?>
-				</ul>
+				<?php foreach ($item->subheaders as $subheader) { ?>
+					<ul class="horizontal">
+						<?php foreach ($subheader as $subitem) { ?>
+							<li><?php echo $subitem ?></li>
+						<?php } ?>
+					</ul>
+				<?php } ?>
 				<ul class="vertical">
 				<?php foreach ($item->bullets as $bullet) { ?>
 					<li>
