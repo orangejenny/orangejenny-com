@@ -18,18 +18,18 @@
 	"content": {
 		"Experience": [
 			{
-				"heading": "Senior Engineer II",
+				"heading": "Dimagi, Inc.",
+				"heading_annotation": "Cambridge, MA",
 				"subheaders": [
-					"Dimagi, Inc.",
-					"Cambridge, MA",
-					"2014 to present"
+					["Senior Director of Product Engineering", "2022 to present"],
+					["Senior Engineer II", "2014 to 2022"]
 				],
 				"bullets": [
 					{
-						"text": "Engineering leadership",
+						"text": "Leadership",
 						"bullets": [
-							"Engineering lead in US Health Division, which supports COVID-19 contact tracing and case investigation in multiple US states and cities",
-							"Previously engineering lead in Mission and Software as a Service divisions"
+							"Oversees technical strategy and execution for US Health division, leading team of 15",
+							"Previously acted as engineering lead for US Health, Mission, and Software as a Service divisions"
 						]
 					},
 					{
@@ -50,12 +50,12 @@
 				]
 			},
 			{
-				"heading": "Senior Software Engineer",
-				"subheaders": [
-					"athenahealth",
-					"Watertown, MA",
+				"heading": "athenahealth",
+				"heading_annotation": "Watertown, MA",
+				"subheaders": [[
+					"Senior Software Engineer",
 					"2010 to 2014"
-				],
+				]],
 				"bullets": [
 					{"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
 					{"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
@@ -63,23 +63,23 @@
 				]
 			},
 			{
-				"heading": "Software Developer",
-				"subheaders": [
-					"Carnegie Mellon University", 
-					"Pittsburgh, PA",
+				"heading": "Carnegie Mellon University",
+				"heading_annotation": "Pittsburgh, PA",
+				"subheaders": [[
+					"Software Developer",
 					"2009 to 2010 (part-time)"
-				],
+				]],
 				"bullets": [
 					{"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
 				]
 			},
 			{
-				"heading": "Senior Software Engineer",
-				"subheaders": [
-					"eBay, Inc.",
-					"San Jose, CA",
+				"heading": "eBay, Inc.",
+				"heading_annotation": "San Jose, CA",
+				"subheaders": [[
+					"Senior Software Engineer",
 					"2006 to 2009"
-				],
+				]],
 				"bullets": [
 					{"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
 					{"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
@@ -90,38 +90,38 @@
 		"Education": [
 			{
 				"heading": "Master of Arts, Applied Sociology",
-				"subheaders": [
+				"subheaders": [[
 					"University of Massachusetts",
 					"Boston, MA",
 					"2021 to, optimistically, 2026"
-				],
+				]],
 				"bullets": []
 			},
 			{
 				"heading": "Continuing Education",
 				"bullets": [
 					{"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
-					{"text": "eCornell, Certificate in Plant-Based Nutrition, spring 2019"}
+					{"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
 				]
 			},
 			{
 				"heading": "Master of Human-Computer Interaction",
-				"subheaders": [
+				"subheaders": [[
 					"Carnegie Mellon University",
 					"Pittsburgh, PA",
 					"2009 to 2010",
 					"GPA 3.97"
-				],
+				]],
 				"bullets": []
 			},
 			{
 				"heading": "Bachelor of Science, Computer Science",
-				"subheaders": [
+				"subheaders": [[
 					"Worcester Polytechnic Institute", 
 					"Worcester, MA",
 					"2002 to 2006",
 					"GPA 3.99"
-				],
+				]],
 				"bullets": [
 					{"text": "Minors in philosophy and computer engineering", "bullets": []}
 				]
