@@ -5,7 +5,7 @@
 	$json = json_decode(file_get_contents("resume.json"));
 	$skillsets = $json->skillsets;
 	$content = $json->content;
-	$notes = $json->notes;
+   $notes = $json->notes;
 ?>
 
 <html xmlns='http://www.w3.org/1999/xhtml'>
@@ -40,7 +40,12 @@
 		<?php foreach ($content as $heading => $items) { ?>
 	      <h3><?php echo $heading ?></h3>
 			<?php foreach ($items as $item) { ?>
-				<h4><?php echo $item->heading ?></h4>
+				<h4>
+					<?php echo $item->heading ?>
+					<?php if ($item->heading_annotation) { ?>
+						<span class="muted"><?php echo $item->heading_annotation ?></span>
+					<?php } ?>
+				</h4>
 				<ul class="horizontal">
 					<?php foreach ($item->subheaders as $subheader) { ?>
 						<li><?php echo $subheader ?></li>

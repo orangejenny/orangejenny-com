@@ -19,9 +19,9 @@
 		"Experience": [
 			{
 				"heading": "Dimagi, Inc.",
+				"heading_annotation": "Cambridge, MA",
 				"subheaders": [
 					"Senior Engineer II",
-					"Cambridge, MA",
 					"2014 to present"
 				],
 				"bullets": [
@@ -51,9 +51,9 @@
 			},
 			{
 				"heading": "athenahealth",
+				"heading_annotation": "Watertown, MA",
 				"subheaders": [
 					"Senior Software Engineer",
-					"Watertown, MA",
 					"2010 to 2014"
 				],
 				"bullets": [
@@ -64,9 +64,9 @@
 			},
 			{
 				"heading": "Carnegie Mellon University",
+				"heading_annotation": "Pittsburgh, PA",
 				"subheaders": [
 					"Software Developer",
-					"Pittsburgh, PA",
 					"2009 to 2010 (part-time)"
 				],
 				"bullets": [
@@ -75,9 +75,9 @@
 			},
 			{
 				"heading": "eBay, Inc.",
+				"heading_annotation": "San Jose, CA",
 				"subheaders": [
 					"Senior Software Engineer",
-					"San Jose, CA",
 					"2006 to 2009"
 				],
 				"bullets": [
