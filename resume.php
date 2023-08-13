@@ -46,9 +46,9 @@
 						<span class="muted"><?php echo $item->heading_annotation ?></span>
 					<?php } ?>
 				</h4>
-				<?php foreach ($item->subheaders as $subheader) { ?>
+				<?php foreach ($item->subsections as $subsection) { ?>
 					<ul class="horizontal">
-						<?php foreach ($subheader as $subitem) { ?>
+						<?php foreach ($subsection as $subitem) { ?>
 							<li><?php echo $subitem ?></li>
 						<?php } ?>
 					</ul>

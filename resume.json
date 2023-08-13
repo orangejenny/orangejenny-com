@@ -20,7 +20,7 @@
 			{
 				"heading": "Dimagi, Inc.",
 				"heading_annotation": "Cambridge, MA",
-				"subheaders": [
+				"subsections": [
 					["Senior Director of Product Engineering", "2022 to present"],
 					["Senior Engineer II", "2014 to 2022"]
 				],
@@ -52,7 +52,7 @@
 			{
 				"heading": "athenahealth",
 				"heading_annotation": "Watertown, MA",
-				"subheaders": [[
+				"subsections": [[
 					"Senior Software Engineer",
 					"2010 to 2014"
 				]],
@@ -65,7 +65,7 @@
 			{
 				"heading": "Carnegie Mellon University",
 				"heading_annotation": "Pittsburgh, PA",
-				"subheaders": [[
+				"subsections": [[
 					"Software Developer",
 					"2009 to 2010 (part-time)"
 				]],
@@ -76,7 +76,7 @@
 			{
 				"heading": "eBay, Inc.",
 				"heading_annotation": "San Jose, CA",
-				"subheaders": [[
+				"subsections": [[
 					"Senior Software Engineer",
 					"2006 to 2009"
 				]],
@@ -90,7 +90,7 @@
 		"Education": [
 			{
 				"heading": "Master of Arts, Applied Sociology",
-				"subheaders": [[
+				"subsections": [[
 					"University of Massachusetts",
 					"Boston, MA",
 					"2021 to, optimistically, 2026"
@@ -101,6 +101,7 @@
 			},
 			{
 				"heading": "Continuing Education",
+                "subsections": [[]],
 				"bullets": [
 					{"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
 					{"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
@@ -108,7 +109,7 @@
 			},
 			{
 				"heading": "Master of Human-Computer Interaction",
-				"subheaders": [[
+				"subsections": [[
 					"Carnegie Mellon University",
 					"Pittsburgh, PA",
 					"2009 to 2010",
@@ -118,7 +119,7 @@
 			},
 			{
 				"heading": "Bachelor of Science, Computer Science",
-				"subheaders": [[
+				"subsections": [[
 					"Worcester Polytechnic Institute", 
 					"Worcester, MA",
 					"2002 to 2006",
