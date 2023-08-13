@@ -46,27 +46,27 @@
 						<span class="muted"><?php echo $item->heading_annotation ?></span>
 					<?php } ?>
 				</h4>
-				<?php foreach ($item->subheaders as $subheader) { ?>
+				<?php foreach ($item->subsections as $subsection) { ?>
 					<ul class="horizontal">
-						<?php foreach ($subheader as $subitem) { ?>
-							<li><?php echo $subitem ?></li>
+						<?php foreach ($subsection->subheadings as $subheading) { ?>
+							<li><?php echo $subheading ?></li>
+						<?php } ?>
+					</ul>
+					<ul class="vertical">
+						<?php foreach ($subsection->bullets as $bullet) { ?>
+							<li>
+								<?php echo $bullet->text ?>
+								<?php if ($bullet->bullets) { ?>
+									<ul>
+										<?php foreach ($bullet->bullets as $bullet) { ?>
+											<li><?php echo $bullet ?></li>
+										<?php } ?>
+									</ul>
+								<?php } ?>
+							</li>
 						<?php } ?>
 					</ul>
 				<?php } ?>
-				<ul class="vertical">
-				<?php foreach ($item->bullets as $bullet) { ?>
-					<li>
-						<?php echo $bullet->text ?>
-						<?php if ($bullet->bullets) { ?>
-							<ul>
-								<?php foreach ($bullet->bullets as $bullet) { ?>
-									<li><?php echo $bullet ?></li>
-								<?php } ?>
-							</ul>
-						<?php } ?>
-					</li>
-				<?php } ?>
-				</ul>
 			<?php } ?>
 		<?php } ?>
 	</div>
