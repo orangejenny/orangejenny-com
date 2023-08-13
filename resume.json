@@ -22,7 +22,10 @@
                 "heading_annotation": "Cambridge, MA",
                 "subsections": [
                     {
-                        "subheadings": ["Senior Director of Product Engineering", "2022 to present"]
+                        "subheadings": ["Senior Director of Product Engineering", "2022 to present"],
+                        "bullets": [
+                            {"text": "Oversees technical strategy and execution for US Health division, leading team of 15"}
+                        ]
                     },
                     {
                         "subheadings": ["Senior Engineer II", "2014 to 2022"],
@@ -30,8 +33,7 @@
                             {
                                 "text": "Leadership",
                                 "bullets": [
-                                    "Oversees technical strategy and execution for US Health division, leading team of 15",
-                                    "Previously acted as engineering lead for US Health, Mission, and Software as a Service divisions"
+                                    "Acted as engineering lead for US Health, Mission, and Software as a Service divisions"
                                 ]
                             },
                             {
