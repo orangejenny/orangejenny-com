@@ -21,8 +21,8 @@
 				"heading": "Dimagi, Inc.",
 				"heading_annotation": "Cambridge, MA",
 				"subsections": [
-					["Senior Director of Product Engineering", "2022 to present"],
-					["Senior Engineer II", "2014 to 2022"]
+					{"subheadings": ["Senior Director of Product Engineering", "2022 to present"]},
+					{"subheadings": ["Senior Engineer II", "2014 to 2022"]}
 				],
 				"bullets": [
 					{
@@ -52,10 +52,9 @@
 			{
 				"heading": "athenahealth",
 				"heading_annotation": "Watertown, MA",
-				"subsections": [[
-					"Senior Software Engineer",
-					"2010 to 2014"
-				]],
+				"subsections": [
+					{"subheadings": ["Senior Software Engineer", "2010 to 2014"]}
+				],
 				"bullets": [
 					{"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
 					{"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
@@ -65,10 +64,9 @@
 			{
 				"heading": "Carnegie Mellon University",
 				"heading_annotation": "Pittsburgh, PA",
-				"subsections": [[
-					"Software Developer",
-					"2009 to 2010 (part-time)"
-				]],
+				"subsections": [
+					{"subheadings": ["Software Developer", "2009 to 2010 (part-time)"]}
+				],
 				"bullets": [
 					{"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
 				]
@@ -76,10 +74,9 @@
 			{
 				"heading": "eBay, Inc.",
 				"heading_annotation": "San Jose, CA",
-				"subsections": [[
-					"Senior Software Engineer",
-					"2006 to 2009"
-				]],
+				"subsections": [
+					{"subheadings": ["Senior Software Engineer", "2006 to 2009"]}
+				],
 				"bullets": [
 					{"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
 					{"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
@@ -90,18 +87,16 @@
 		"Education": [
 			{
 				"heading": "Master of Arts, Applied Sociology",
-				"subsections": [[
-					"University of Massachusetts",
-					"Boston, MA",
-					"2021 to, optimistically, 2026"
-				]],
+				"subsections": [
+					{"subheadings": ["University of Massachusetts", "Boston, MA", "2021 to, optimistically, 2026"]}
+				],
 				"bullets": [
 					{"text": "Schweers, Jennifer. \"The Next Step: Current Sexual Lifestyles and Future Intentions.\" Socius, 9. https://doi.org/10.1177/23780231231188335"}
 				]
 			},
 			{
 				"heading": "Continuing Education",
-                "subsections": [[]],
+                "subsections": [{}],
 				"bullets": [
 					{"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
 					{"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
@@ -109,22 +104,16 @@
 			},
 			{
 				"heading": "Master of Human-Computer Interaction",
-				"subsections": [[
-					"Carnegie Mellon University",
-					"Pittsburgh, PA",
-					"2009 to 2010",
-					"GPA 3.97"
-				]],
+				"subsections": [
+					{"subheadings": ["Carnegie Mellon University", "Pittsburgh, PA", "2009 to 2010", "GPA 3.97"]}
+				],
 				"bullets": []
 			},
 			{
 				"heading": "Bachelor of Science, Computer Science",
-				"subsections": [[
-					"Worcester Polytechnic Institute", 
-					"Worcester, MA",
-					"2002 to 2006",
-					"GPA 3.99"
-				]],
+				"subsections": [
+					{"subheadings": ["Worcester Polytechnic Institute", "Worcester, MA", "2002 to 2006", "GPA 3.99"]}
+				],
 				"bullets": [
 					{"text": "Minors in philosophy and computer engineering", "bullets": []}
 				]

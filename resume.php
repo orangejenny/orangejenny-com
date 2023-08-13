@@ -48,8 +48,8 @@
 				</h4>
 				<?php foreach ($item->subsections as $subsection) { ?>
 					<ul class="horizontal">
-						<?php foreach ($subsection as $subitem) { ?>
-							<li><?php echo $subitem ?></li>
+						<?php foreach ($subsection->subheadings as $subheading) { ?>
+							<li><?php echo $subheading ?></li>
 						<?php } ?>
 					</ul>
 				<?php } ?>
