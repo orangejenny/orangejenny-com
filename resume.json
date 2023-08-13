@@ -21,30 +21,34 @@
                 "heading": "Dimagi, Inc.",
                 "heading_annotation": "Cambridge, MA",
                 "subsections": [
-                    {"subheadings": ["Senior Director of Product Engineering", "2022 to present"]},
-                    {"subheadings": ["Senior Engineer II", "2014 to 2022"]}
-                ],
-                "bullets": [
                     {
-                        "text": "Leadership",
-                        "bullets": [
-                            "Oversees technical strategy and execution for US Health division, leading team of 15",
-                            "Previously acted as engineering lead for US Health, Mission, and Software as a Service divisions"
-                        ]
+                        "subheadings": ["Senior Director of Product Engineering", "2022 to present"]
                     },
                     {
-                        "text": "Individual technical contributions",
+                        "subheadings": ["Senior Engineer II", "2014 to 2022"],
                         "bullets": [
-                            "The top contributor to commcare-hq, one of GitHub's 100 most valuable open source projects*",
-                            "Contributor to multiple technology stacks: Django, Java server, Android, and Node",
-                            "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase"
-                        ]
-                    },
-                    {
-                        "text": "Conference papers and presentations",
-                        "bullets": [
-                            "Schweers, J. & Deflaux, G. \"Design Sprints: Inspiring big changes in digital solutions.\" Presentation at 10th ICT4D Conference, Lusaka, Zambia, 2018.",
-                            "Schweers, J., Khalid, M., Underwood, H., Bishnoi, S., & Chhugani, M. \"mLabour: Design and Evaluation of a Mobile Partograph and Labour Ward Management Application.\" Paper presented at Humanitarian Technology 2016: Science, Systems, and Global Impact, Boston, MA."
+                            {
+                                "text": "Leadership",
+                                "bullets": [
+                                    "Oversees technical strategy and execution for US Health division, leading team of 15",
+                                    "Previously acted as engineering lead for US Health, Mission, and Software as a Service divisions"
+                                ]
+                            },
+                            {
+                                "text": "Individual technical contributions",
+                                "bullets": [
+                                    "The top contributor to commcare-hq, one of GitHub's 100 most valuable open source projects*",
+                                    "Contributor to multiple technology stacks: Django, Java server, Android, and Node",
+                                    "Led JavaScript modernization initiative in 10-year-old, 100K-line codebase"
+                                ]
+                            },
+                            {
+                                "text": "Conference papers and presentations",
+                                "bullets": [
+                                    "Schweers, J. & Deflaux, G. \"Design Sprints: Inspiring big changes in digital solutions.\" Presentation at 10th ICT4D Conference, Lusaka, Zambia, 2018.",
+                                    "Schweers, J., Khalid, M., Underwood, H., Bishnoi, S., & Chhugani, M. \"mLabour: Design and Evaluation of a Mobile Partograph and Labour Ward Management Application.\" Paper presented at Humanitarian Technology 2016: Science, Systems, and Global Impact, Boston, MA."
+                                ]
+                            }
                         ]
                     }
                 ]
@@ -53,34 +57,40 @@
                 "heading": "athenahealth",
                 "heading_annotation": "Watertown, MA",
                 "subsections": [
-                    {"subheadings": ["Senior Software Engineer", "2010 to 2014"]}
-                ],
-                "bullets": [
-                    {"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
-                    {"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
-                    {"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
+                    {
+                        "subheadings": ["Senior Software Engineer", "2010 to 2014"],
+                        "bullets": [
+                            {"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
+                            {"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
+                            {"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
+                        ]
+                    }
                 ]
             },
             {
                 "heading": "Carnegie Mellon University",
                 "heading_annotation": "Pittsburgh, PA",
                 "subsections": [
-                    {"subheadings": ["Software Developer", "2009 to 2010 (part-time)"]}
-                ],
-                "bullets": [
-                    {"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
+                    {
+                        "subheadings": ["Software Developer", "2009 to 2010 (part-time)"],
+                        "bullets": [
+                            {"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
+                        ]
+                    }
                 ]
             },
             {
                 "heading": "eBay, Inc.",
                 "heading_annotation": "San Jose, CA",
                 "subsections": [
-                    {"subheadings": ["Senior Software Engineer", "2006 to 2009"]}
-                ],
-                "bullets": [
-                    {"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
-                    {"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
-                    {"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
+                    {
+                        "subheadings": ["Senior Software Engineer", "2006 to 2009"],
+                        "bullets": [
+                            {"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
+                            {"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
+                            {"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
+                        ]
+                    }
                 ]
             }
         ],
@@ -88,34 +98,41 @@
             {
                 "heading": "Master of Arts, Applied Sociology",
                 "subsections": [
-                    {"subheadings": ["University of Massachusetts", "Boston, MA", "2021 to, optimistically, 2026"]}
-                ],
-                "bullets": [
-                    {"text": "Schweers, Jennifer. \"The Next Step: Current Sexual Lifestyles and Future Intentions.\" Socius, 9. https://doi.org/10.1177/23780231231188335"}
+                    {
+                        "subheadings": ["University of Massachusetts", "Boston, MA", "2021 to, optimistically, 2026"],
+                        "bullets": [
+                            {"text": "Schweers, Jennifer. \"The Next Step: Current Sexual Lifestyles and Future Intentions.\" Socius, 9. https://doi.org/10.1177/23780231231188335"}
+                        ]
+                    }
                 ]
             },
             {
                 "heading": "Continuing Education",
-                "subsections": [{}],
-                "bullets": [
-                    {"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
-                    {"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
-                ]
+                "subsections": [{
+                    "bullets": [
+                        {"text": "Harvard Extension School, graduate coursework in psychology, spring & summer 2021"},
+                        {"text": "eCornell, Certificte in Plant-Based Nutrition, spring 2019"}
+                    ]
+                }]
             },
             {
                 "heading": "Master of Human-Computer Interaction",
                 "subsections": [
-                    {"subheadings": ["Carnegie Mellon University", "Pittsburgh, PA", "2009 to 2010", "GPA 3.97"]}
-                ],
-                "bullets": []
+                    {
+                        "subheadings": ["Carnegie Mellon University", "Pittsburgh, PA", "2009 to 2010", "GPA 3.97"],
+                        "bullets": []
+                    }
+                ]
             },
             {
                 "heading": "Bachelor of Science, Computer Science",
                 "subsections": [
-                    {"subheadings": ["Worcester Polytechnic Institute", "Worcester, MA", "2002 to 2006", "GPA 3.99"]}
-                ],
-                "bullets": [
-                    {"text": "Minors in philosophy and computer engineering", "bullets": []}
+                    {
+                        "subheadings": ["Worcester Polytechnic Institute", "Worcester, MA", "2002 to 2006", "GPA 3.99"],
+                        "bullets": [
+                            {"text": "Minors in philosophy and computer engineering", "bullets": []}
+                        ]
+                    }
                 ]
             }
         ]

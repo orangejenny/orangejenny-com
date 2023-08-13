@@ -52,21 +52,21 @@
 							<li><?php echo $subheading ?></li>
 						<?php } ?>
 					</ul>
-				<?php } ?>
-				<ul class="vertical">
-				<?php foreach ($item->bullets as $bullet) { ?>
-					<li>
-						<?php echo $bullet->text ?>
-						<?php if ($bullet->bullets) { ?>
-							<ul>
-								<?php foreach ($bullet->bullets as $bullet) { ?>
-									<li><?php echo $bullet ?></li>
+					<ul class="vertical">
+						<?php foreach ($subsection->bullets as $bullet) { ?>
+							<li>
+								<?php echo $bullet->text ?>
+								<?php if ($bullet->bullets) { ?>
+									<ul>
+										<?php foreach ($bullet->bullets as $bullet) { ?>
+											<li><?php echo $bullet ?></li>
+										<?php } ?>
+									</ul>
 								<?php } ?>
-							</ul>
+							</li>
 						<?php } ?>
-					</li>
+					</ul>
 				<?php } ?>
-				</ul>
 			<?php } ?>
 		<?php } ?>
 	</div>
