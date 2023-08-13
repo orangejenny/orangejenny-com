@@ -62,9 +62,9 @@
                     {
                         "subheadings": ["Senior Software Engineer", "2010 to 2014"],
                         "bullets": [
-                            {"text": "Acted as tech lead for two cross-functional teams and managed three developers", "bullets": []},
-                            {"text": "Worked on redesign and re-implementation of core clinical experience", "bullets": []},
-                            {"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards", "bullets": []}
+                            {"text": "Acted as tech lead for two cross-functional teams and managed three developers"},
+                            {"text": "Worked on redesign and re-implementation of core clinical experience"},
+                            {"text": "Developed workflows to facilitate physician productivity and support client compliance with federal Meaningful Use standards"}
                         ]
                     }
                 ]
@@ -76,7 +76,7 @@
                     {
                         "subheadings": ["Software Developer", "2009 to 2010 (part-time)"],
                         "bullets": [
-                            {"text": "Developed features for StepGreen.org, a website that encourages sustainable living", "bullets": []}
+                            {"text": "Developed features for StepGreen.org, a website that encourages sustainable living"}
                         ]
                     }
                 ]
@@ -88,9 +88,9 @@
                     {
                         "subheadings": ["Senior Software Engineer", "2006 to 2009"],
                         "bullets": [
-                            {"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend", "bullets": []},
-                            {"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes", "bullets": []},
-                            {"text": "Twice recognized as a top performer within 200-person department", "bullets": []}
+                            {"text": "Developed and maintained components of eBay's core ad optimization platform, which manages $250 million annually in marketing spend"},
+                            {"text": "Architected system to move long-running processes offline, drastically reducing load times and browser crashes"},
+                            {"text": "Twice recognized as a top performer within 200-person department"}
                         ]
                     }
                 ]
@@ -121,8 +121,7 @@
                 "heading": "Master of Human-Computer Interaction",
                 "subsections": [
                     {
-                        "subheadings": ["Carnegie Mellon University", "Pittsburgh, PA", "2009 to 2010", "GPA 3.97"],
-                        "bullets": []
+                        "subheadings": ["Carnegie Mellon University", "Pittsburgh, PA", "2009 to 2010", "GPA 3.97"]
                     }
                 ]
             },
@@ -132,7 +131,7 @@
                     {
                         "subheadings": ["Worcester Polytechnic Institute", "Worcester, MA", "2002 to 2006", "GPA 3.99"],
                         "bullets": [
-                            {"text": "Minors in philosophy and computer engineering", "bullets": []}
+                            {"text": "Minors in philosophy and computer engineering"}
                         ]
                     }
                 ]
