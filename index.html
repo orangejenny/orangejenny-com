@@ -126,5 +126,15 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+                function expandCard(e) {
+                    const card = e.currentTarget;
+                    if (card.classList.contains("collapse")) {
+                        document.querySelectorAll(".card").forEach((node) => node.classList.add("collapse"));
+                        setTimeout(function () {card.classList.remove("collapse");}, 1000);     // wait for CSS transition on the closing card
+                    }
+                }
+                document.querySelectorAll(".card").forEach((node) => node.addEventListener("click", expandCard));
+        </script>
     </body>
 </html>
