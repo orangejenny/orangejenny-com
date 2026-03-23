@@ -1,3 +1,12 @@
+@orange:        #e07b39;
+@orange-light:  #f4b87a;
+@orange-tint:   #fff3e8;
+@orange-pale:   #fff8f2;
+@orange-border: #faddbb;
+@orange-text:   #c45e1a;
+@bg:            #fefcf8;
+@shadow:        #e8ddd4;
+
 * {
     box-sizing: border-box;
 }
@@ -7,8 +16,9 @@ body {
     font-size: 12px;
     color: #333;
     line-height: 1.5;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 0;
+    background-color: @bg;
 }
 
 a {
@@ -16,47 +26,127 @@ a {
     color: #154c79;
 }
 
-h3 {
-    margin-top: 20px;
-}
+// Header
 
-ul {
-    list-style-type: none;
-    margin: 20px 0 0 0;
-    padding: 0;
-    line-height: 2;
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background-color: #fff;
+    border-bottom: 3px solid @orange;
+    margin-bottom: 28px;
 
-    li {
-        margin-top: 10px;
+    .header-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+            height: 44px;
+            width: auto;
+        }
+    }
+
+    .site-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+
+        li {
+            margin: 0;
+
+            a {
+                font-weight: normal;
+                color: #555;
+                text-decoration: none;
+
+                &:hover {
+                    color: @orange;
+                }
+
+                i {
+                    color: @orange;
+                    margin-right: 4px;
+                }
+            }
+        }
     }
 }
 
+// Bio
+
+.bio-section {
+    max-width: 640px;
+    margin: 0 auto 32px auto;
+    padding: 0 24px;
+    text-align: center;
+
+    .bio-lead {
+        font-size: 22px;
+        font-weight: bold;
+        color: @orange;
+        margin-bottom: 10px;
+    }
+}
+
+// Cards
+
+.cards-section {
+    padding: 0 12px 40px 12px;
+}
+
 .card {
-    margin: 20px 10px;
-    padding: 10px;
-    box-shadow: 4px 4px 8px #999;
+    margin: 10px;
+    padding: 0;
+    box-shadow: 3px 3px 8px @shadow;
+    border-top: 3px solid @orange;
+    border-radius: 2px;
+    background-color: #fff;
+    overflow: hidden;
+
+    .card-title {
+        font-weight: bold;
+        padding: 10px 12px;
+        background-color: @orange-tint;
+        color: @orange-text;
+        border-bottom: 1px solid @orange-border;
+    }
+
+    .card-content {
+        padding: 12px;
+        max-height: 1000px;
+        transition: max-height 1s;
+    }
 
     &.collapse {
         cursor: pointer;
-        background-color: #eee;
+        border-top-color: @orange-light;
 
-        &:hover {
-            background-color: #fff;
+        .card-title {
+            background-color: @orange-pale;
+            color: #aaa;
+            border-bottom: none;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        &:hover .card-title {
+            background-color: @orange-tint;
+            color: @orange-text;
         }
 
         .card-content {
             max-height: 0;
             overflow: hidden;
+            padding: 0 12px;
         }
-    }
-
-    .card-title {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .card-content {
-        max-height: 1000px;
-        transition: max-height 1s;
     }
 }
